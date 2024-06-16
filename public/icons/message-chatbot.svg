@@ -1,0 +1,13 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="message-chatbot" clip-path="url(#clip0_2407_10144)">
+<path id="Vector" d="M2.6665 13.9999V5.33325C2.6665 4.80282 2.87722 4.29411 3.25229 3.91904C3.62736 3.54397 4.13607 3.33325 4.6665 3.33325H11.3332C11.8636 3.33325 12.3723 3.54397 12.7474 3.91904C13.1225 4.29411 13.3332 4.80282 13.3332 5.33325V9.33325C13.3332 9.86369 13.1225 10.3724 12.7474 10.7475C12.3723 11.1225 11.8636 11.3333 11.3332 11.3333H5.33317L2.6665 13.9999Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M6.3335 6H6.34016" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M9.6665 6H9.67317" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M6.3335 8.66675C6.55075 8.88848 6.81006 9.06463 7.09625 9.18489C7.38243 9.30515 7.68974 9.36709 8.00016 9.36709C8.31059 9.36709 8.61789 9.30515 8.90408 9.18489C9.19026 9.06463 9.44958 8.88848 9.66683 8.66675" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_2407_10144">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

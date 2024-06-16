@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("./SpaceGrotest/SpaceGrotesk-Regular.ttf"); /* IE9 Compatibility Mode */
+  src: url("./SpaceGrotest/SpaceGrotesk-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("./SpaceGrotest/SpaceGrotesk-Bold.ttf"); /* IE9 Compatibility Mode */
+  src: url("./SpaceGrotest/SpaceGrotesk-Bold.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sf-pro";
+  src: url("./sfpro/SFPRODISPLAYREGULAR.OTF");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sf-pro";
+  src: url("./sfpro/SFPRODISPLAYBOLD.OTF");
+  font-weight: bold;
+  font-style: normal;
+}
