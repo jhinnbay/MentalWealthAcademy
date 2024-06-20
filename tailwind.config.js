@@ -12,9 +12,9 @@ module.exports = {
     container: {
       center: true,
       padding: "16px",
-      screens: {
-        "2xl": "1400px",
-      },
+      // screens: {
+      //   "2xl": "1400px",
+      // },
     },
 
     extend: {
@@ -32,20 +32,22 @@ module.exports = {
         sf: ["sf-pro", "sans-serif"],
       },
       fontSize: {
-        "2xs": "0.625", // 10px
+        "2xs": "0.625rem", // 10px
         xs: ".75rem", // 12px
         sm: ".875rem", // 14px
         base: "1rem", // 16px
         lg: "1.125rem", // 18px
         xl: "1.25rem", // 20px
-        "2xl": "1.625rem", // 26px
-        "3xl": "1.875rem", // 30px
+        "2xl": "1.5rem", // 24px
+        "3xl": "2rem", // 32px
         "4xl": "2.25rem", // 36px
         "5xl": "3rem", // 48px
         "6xl": "4rem", // 64px
       },
       boxShadow: {
-        header: "0px 4px 8px 0px rgba(0, 0, 0, 0.25);",
+        default: "0px 4px 8px 0px rgba(0, 0, 0, 0.25)",
+        button:
+          "0px -4px 0px 0px rgba(21, 21, 21, 0.25) inset, 0px 2px 0px 0px rgba(172, 172, 172, 0.50) inset",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -95,6 +97,11 @@ module.exports = {
       },
       backgroundImage: {
         library: "url('/images/library_background.png')",
+        library_aside:
+          "linear-gradient(180deg, rgba(24, 24, 27, 0.90) 0%, rgba(24, 24, 28, 0.90) 100%)",
+        proposal:
+          "linear-gradient(0deg, rgba(224, 224, 224, 0.80) 0%, rgba(224, 224, 224, 0.80) 100%), conic-gradient(from 133deg at 34.75% 67.05%, #6BEFD0 0deg, #4CA8E3 360deg)",
+        button_grad: "linear-gradient(91deg, #CDC4FB 0%, #A4FCF5 99.74%)",
       },
       borderRadius: {
         lg: "var(--radius)",

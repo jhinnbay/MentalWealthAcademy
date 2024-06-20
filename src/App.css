@@ -85,3 +85,14 @@
     @apply font-spaceGrotesk font-bold;
   }
 }
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  @apply w-1 h-1;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#4a5568] rounded-full; /* Change color as needed */
+}
+::-webkit-scrollbar-track {
+  @apply bg-white; /* Change color as needed */
+}

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export const PublicHeader = () => {
   return (
-    <header className="bg-primary-background sticky top-0 w-full z-20  border-b border-primary-foreground shadow-header">
+    <header className="bg-primary-background sticky top-0 w-full z-20  border-b border-primary-foreground shadow-default">
       <div className="container">
         <div className="flex gap-[18px] items-center">
           <img src="/icons/Logo.svg" className="w-[75px] md:w-auto" />
@@ -26,14 +26,14 @@ export const PublicHeader = () => {
           <div className="flex gap-4 ms-auto">
             <Link
               to={"/library"}
-              className=" gap-1 flex-col items-center justify-center text-sm px-2  hidden xl:flex"
+              className=" gap-1 flex-col items-center justify-center text-sm p-2   hidden xl:flex  hover:bg-white/25 rounded-lg"
             >
               <img src="/icons/md-library.svg" width={20} height={20} />
               <span>Library</span>
             </Link>
             <Link
               to={"/marketplace"}
-              className=" hidden xl:flex gap-1 flex-col items-center justify-center text-sm px-2"
+              className=" hidden xl:flex gap-1 flex-col items-center justify-center text-sm p-2 hover:bg-white/25 rounded-lg"
             >
               <img
                 src="/icons/building-storefront.svg"
