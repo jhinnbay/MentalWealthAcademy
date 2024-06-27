@@ -9,7 +9,9 @@ export const PublicHeader = () => {
     <header className="bg-primary-background sticky top-0 w-full z-20  border-b border-primary-foreground shadow-default">
       <div className="container">
         <div className="flex gap-[18px] items-center">
+          <Link to="/">
           <img src="/icons/Logo.svg" className="w-[75px] md:w-auto" />
+          </Link>
           <h4 className="text-2xl  hidden md:flex">Mental Wealth Academy</h4>
           <div className="py-3 border-t border-b border-solid relative  items-center flex-grow hidden xl:flex">
             <Input
