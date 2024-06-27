@@ -11,12 +11,44 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+      padding: "16px",
+      // screens: {
+      //   "2xl": "1400px",
+      // },
     },
+
     extend: {
+      screens: {
+        xs: "420px", // Extra small devices (e.g., smartphones in portrait mode)
+        sm: "640px", // Small devices (e.g., smartphones in landscape mode)
+        md: "800px", // Medium devices (e.g., tablets)
+        lg: "1024px", // Large devices (e.g., desktops)
+        xl: "1200px", // Extra large devices (e.g., large desktops)
+        "2xl": "1650px", // 2x extra large devices (e.g., very large desktops)
+        "3xl": "1920px", // Example: Custom breakpoint for very large screens
+      },
+      fontFamily: {
+        spaceGrotesk: ["SpaceGrotesk", "sans-serif"],
+        sf: ["sf-pro", "sans-serif"],
+      },
+      fontSize: {
+        "2xs": "0.625rem", // 10px
+        xs: ".75rem", // 12px
+        sm: ".875rem", // 14px
+        base: "1rem", // 16px
+        lg: "1.125rem", // 18px
+        xl: "1.25rem", // 20px
+        "2xl": "1.5rem", // 24px
+        "3xl": "2rem", // 32px
+        "4xl": "2.25rem", // 36px
+        "5xl": "3rem", // 48px
+        "6xl": "4rem", // 64px
+      },
+      boxShadow: {
+        default: "0px 4px 8px 0px rgba(0, 0, 0, 0.25)",
+        button:
+          "0px -4px 0px 0px rgba(21, 21, 21, 0.25) inset, 0px 2px 0px 0px rgba(172, 172, 172, 0.50) inset",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -26,10 +58,21 @@ module.exports = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          "background-100": "hsl(var(--primary-background) / 0.1)",
+          "background-200": "hsl(var(--primary-background) / 0.2)",
+          "background-300": "hsl(var(--primary-background) / 0.3)",
+          "background-400": "hsl(var(--primary-background) / 0.4)",
+          "background-500": "hsl(var(--primary-background) / 0.5)",
+          "background-600": "hsl(var(--primary-background) / 0.6)",
+          "background-700": "hsl(var(--primary-background) / 0.7)",
+          "background-800": "hsl(var(--primary-background) / 0.8)",
+          "background-900": "hsl(var(--primary-background) / 0.9)",
+          background: "hsl(var(--primary-background))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          background: "hsl(var(--secondary-background))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -51,6 +94,14 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      backgroundImage: {
+        library: "url('/images/library_background.png')",
+        library_aside:
+          "linear-gradient(180deg, rgba(24, 24, 27, 0.90) 0%, rgba(24, 24, 28, 0.90) 100%)",
+        proposal:
+          "linear-gradient(0deg, rgba(224, 224, 224, 0.80) 0%, rgba(224, 224, 224, 0.80) 100%), conic-gradient(from 133deg at 34.75% 67.05%, #6BEFD0 0deg, #4CA8E3 360deg)",
+        button_grad: "linear-gradient(91deg, #CDC4FB 0%, #A4FCF5 99.74%)",
       },
       borderRadius: {
         lg: "var(--radius)",

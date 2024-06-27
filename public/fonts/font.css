@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("/fonts/SpaceGrotest/SpaceGrotesk-Regular.ttf"); /* IE9 Compatibility Mode */
+  src: url("/fonts/SpaceGrotest/SpaceGrotesk-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("/fonts/SpaceGrotest/SpaceGrotesk-Medium.ttf"); /* IE9 Compatibility Mode */
+  src: url("/fonts/SpaceGrotest/SpaceGrotesk-Medium.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("/fonts/SpaceGrotest/SpaceGrotesk-Bold.ttf"); /* IE9 Compatibility Mode */
+  src: url("/fonts/SpaceGrotest/SpaceGrotesk-Bold.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sf-pro";
+  src: url("/fonts/sfpro/SFPRODISPLAYREGULAR.OTF");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sf-pro";
+  src: url("/fonts/sfpro/SFPRODISPLAYBOLD.OTF");
+  font-weight: 700;
+  font-style: normal;
+}

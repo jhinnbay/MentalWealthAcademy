@@ -1,0 +1,15 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="compass" clip-path="url(#clip0_2407_10141)">
+<path id="Vector" d="M5.3335 10.6666L6.66683 6.66659L10.6668 5.33325L9.3335 9.33325L5.3335 10.6666Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M8 2V3.33333" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M8 12.6667V14.0001" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M2 8H3.33333" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M12.6665 8H13.9998" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_2407_10141">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>
