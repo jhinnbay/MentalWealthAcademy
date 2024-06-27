@@ -7,6 +7,7 @@ import { PublicLayout } from "../components/layouts/publicLayout";
 // render - login
 const Home = Loadable(lazy(() => import("../pages/Home")));
 const Library = Loadable(lazy(() => import("../pages/Library")));
+const MarketPlace = Loadable(lazy(() => import("../pages/MarketPlace")));
 
 const withLayout = (component) => <PublicLayout>{component}</PublicLayout>;
 
@@ -20,6 +21,10 @@ const PublicRoutes = {
     {
       path: "/library",
       element: withLayout(<Library />),
+    },
+    {
+      path: "/marketplace",
+      element: withLayout(<MarketPlace />),
     },
   ],
 };
