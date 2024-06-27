@@ -1,4 +1,5 @@
 // import React from 'react'
+import HomeCard from "@/components/cards/HomeCard";
 import {
   Carousel,
   CarouselContent,
@@ -92,9 +93,21 @@ export default function Home() {
             </p>
           </TabsContent>
           <div className="absolute bottom-0 right-0">
-            <img src="/images/Home_Animal.png" alt='Home_Animal' />
+            <img src="/images/Home_Animal.png" alt="Home_Animal" />
           </div>
         </Tabs>
+      </div>
+      <div className="mt-6">
+        <h2 className="text-[52px] font-bold">What to learn next?</h2>
+        <p className="mb-6 text-2xl">
+          Access a plethora of e-books and courses to further your educational
+          career.{" "}
+        </p>
+        <div className="mt-6 flex justify-center gap-5 flex-wrap">
+          {[1, 2, 3].map(() => (
+            <HomeCard />
+          ))}
+        </div>
       </div>
     </main>
   );
