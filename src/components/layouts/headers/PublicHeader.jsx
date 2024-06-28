@@ -2,15 +2,24 @@
 
 import { Input } from "@/components/ui/input";
 import { menuItems } from "@/data/menuItems";
+import { shortenAddress } from "@/lib/utils";
+import { usePrivy } from "@privy-io/react-auth";
 import { Link } from "react-router-dom";
+import { useAccount } from "wagmi";
 
 export const PublicHeader = () => {
+  const { connectOrCreateWallet, login } = usePrivy()
+  const { address } = useAccount()
+  const handleLogin = () => {
+    connectOrCreateWallet()
+  }
+
   return (
     <header className="bg-primary-background sticky top-0 w-full z-20  border-b border-primary-foreground shadow-default">
       <div className="container">
         <div className="flex gap-[18px] items-center">
           <Link to="/">
-          <img src="/icons/Logo.svg" className="w-[75px] md:w-auto" />
+            <img src="/icons/Logo.svg" className="w-[75px] md:w-auto" />
           </Link>
           <h4 className="text-2xl  hidden md:flex">Mental Wealth Academy</h4>
           <div className="py-3 border-t border-b border-solid relative  items-center flex-grow hidden xl:flex">
@@ -44,13 +53,19 @@ export const PublicHeader = () => {
               />
               <span>Marketplace</span>
             </Link>
-            <Link to={"/login"} className="flex items-center px-2">
-              Log in
-            </Link>
-            <Link className="border rounded-lg px-5 py-3 border-primary-foreground flex justify-center items-center gap-2">
-              Sync Account
-              <img src="/icons/sync_globe.svg" className=" hidden md:block" />
-            </Link>
+            {!address ? <>
+              <button onClick={handleLogin} className="flex items-center px-2">
+                Log in
+              </button>
+              <Link className="border rounded-lg px-5 py-3 border-primary-foreground flex justify-center items-center gap-2">
+                Sync Account
+                <img src="/icons/sync_globe.svg" className=" hidden md:block" />
+              </Link>
+            </> : <>
+              <Link className="border rounded-lg px-5 py-3 border-primary-foreground flex justify-center items-center gap-2">
+                {shortenAddress(address)}
+              </Link>
+            </>}
             <img src="/icons/menu.svg" className=" hidden xl:block" />
           </div>
         </div>
