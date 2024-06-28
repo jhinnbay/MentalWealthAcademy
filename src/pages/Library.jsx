@@ -195,7 +195,7 @@ const Library = () => {
           src="/images/Library_Animal.png"
           className="relative right-[-50px]"
         />
-      </aside> */}
+      <aside>
       {/* <main className="bg-library bg-fixed  min-h-[calc(100vh-133px)] bg-cover bg-left-top xl:ml-[275px]"> */}
       <main className="bg-library bg-fixed  bg-cover bg-left-top">
         <div className="bg-primary-background-700 py-9">
@@ -230,6 +230,7 @@ const Library = () => {
           </section>
         </div>
       </main>
+    </aside>
     </>
   );
 };
