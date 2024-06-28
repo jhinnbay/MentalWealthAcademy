@@ -12,9 +12,9 @@ module.exports = {
     container: {
       center: true,
       padding: "16px",
-      // screens: {
-      //   "2xl": "1400px",
-      // },
+      screens: {
+        "4xl": "2400px",
+      },
     },
 
     extend: {
@@ -102,6 +102,7 @@ module.exports = {
         proposal:
           "linear-gradient(0deg, rgba(224, 224, 224, 0.80) 0%, rgba(224, 224, 224, 0.80) 100%), conic-gradient(from 133deg at 34.75% 67.05%, #6BEFD0 0deg, #4CA8E3 360deg)",
         button_grad: "linear-gradient(91deg, #CDC4FB 0%, #A4FCF5 99.74%)",
+        marketPlace_grad: "linear-gradient(180deg, #222225 0%, #15151B 100%)",
       },
       borderRadius: {
         lg: "var(--radius)",

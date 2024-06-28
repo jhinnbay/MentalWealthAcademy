@@ -1,8 +1,8 @@
 import { ArticalCard } from "@/components/cards/ArticalCard";
 import { BooksCard } from "@/components/cards/BooksCard";
 import { ProposalCard } from "@/components/cards/ProposalCard";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
+// import { Button } from "@/components/ui/button";
+// import { Textarea } from "@/components/ui/textarea";
 
 import { Buffer } from "buffer";
 import { ethers } from "ethers";
@@ -157,7 +157,7 @@ const Library = () => {
 
   return (
     <>
-      <aside className="fixed left-0 top-[132px] bottom-0 w-[275px] bg-library_aside py-10 px-2 text-center hidden xl:flex flex-col gap-3 ">
+      {/* <aside className="fixed left-0 top-[132px] bottom-0 w-[275px] bg-library_aside py-10 px-2 text-center hidden xl:flex flex-col gap-3 ">
         <h2 className="text-3xl text-white ">Library Directory</h2>
         <div className="relative">
           {" "}
@@ -195,8 +195,9 @@ const Library = () => {
           src="/images/Library_Animal.png"
           className="relative right-[-50px]"
         />
-      </aside>
-      <main className="bg-library bg-fixed  min-h-[calc(100vh-133px)] bg-cover bg-left-top xl:ml-[275px]">
+      </aside> */}
+      {/* <main className="bg-library bg-fixed  min-h-[calc(100vh-133px)] bg-cover bg-left-top xl:ml-[275px]"> */}
+      <main className="bg-library bg-fixed  bg-cover bg-left-top">
         <div className="bg-primary-background-700 py-9">
           {" "}
           <section className="container">
