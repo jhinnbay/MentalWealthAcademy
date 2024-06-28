@@ -17,7 +17,7 @@ export const ArticalCard = () => {
         <img src="/icons/live-photo.svg" /> Link To IPFS Container
       </Button>
       <Button>
-        <img src="/icons/polygon-matric.png" /> Mint on Polygon
+        <img src="/icons/Base_Symbol_Black.svg" className="h-3 w-3 -mr-1" /> Mint on Base
       </Button>
     </div>
   );
