@@ -3,19 +3,40 @@
 import { Input } from "@/components/ui/input";
 import { menuItems } from "@/data/menuItems";
 import { shortenAddress } from "@/lib/utils";
-import { usePrivy } from "@privy-io/react-auth";
+import { usePrivy, useWallets } from "@privy-io/react-auth";
 import { Link } from "react-router-dom";
 import { useAccount } from "wagmi";
 
 export const PublicHeader = () => {
-  const { connectOrCreateWallet, login } = usePrivy()
+  const { connectOrCreateWallet, login, authenticated, isModalOpen, connectWallet, logout } = usePrivy()
   const { address } = useAccount()
-  const handleLogin = () => {
+  const { ready, wallets } = useWallets()
+  const handleLogin = async () => {
+    // const wallet = await wallets[0].getEthereumProvider()
+    // await wallet.request({
+    //   method: "eth_requestAccounts",
+    //   params: [{ eth_accounts: {} }]
+    // })
+    // logout()
+    // if (wallets[0].getEthersProvider()) {
+
+    // }
     connectOrCreateWallet()
   }
+  // console.log(ready, wallets, address, wallets?.length && wallets?.length > 0 && wallets[0].getEthersProvider())
+
+  const isConnected = wallets?.length && wallets?.length > 0
+  const connectedWallet = wallets ? wallets[0] : null
 
   return (
     <header className="bg-primary-background sticky top-0 w-full z-20  border-b border-primary-foreground shadow-default">
+      <div>
+        <div>
+          <div>
+
+          </div>
+        </div>
+      </div>
       <div className="container">
         <div className="flex gap-[18px] items-center">
           <Link to="/">
@@ -53,7 +74,7 @@ export const PublicHeader = () => {
               />
               <span>Marketplace</span>
             </Link>
-            {!address ? <>
+            {!connectedWallet ? <>
               <button onClick={handleLogin} className="flex items-center px-2">
                 Log in
               </button>
@@ -63,7 +84,7 @@ export const PublicHeader = () => {
               </Link>
             </> : <>
               <Link className="border rounded-lg px-5 py-3 border-primary-foreground flex justify-center items-center gap-2">
-                {shortenAddress(address)}
+                {shortenAddress(connectedWallet.address)}
               </Link>
             </>}
             <img src="/icons/menu.svg" className=" hidden xl:block" />
