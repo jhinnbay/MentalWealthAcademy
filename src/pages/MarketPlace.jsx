@@ -99,6 +99,11 @@ const MarketPlace = () => {
       return alert("Please connect your wallet to mint")
     }
     const provider123 = await connectedWallet.getEthersProvider()
+
+    if (a !== 84532) {
+      await provider123.send('wallet_switchEthereumChain', [{ chainId: '0x14a34' }])
+    }
+    
     // AbstractProvider
     const provider = await connectedWallet.getWeb3jsProvider()
     console.log(await provider.request({
@@ -131,9 +136,7 @@ const txResponse = await provider.request({
     // const a = await wallet.getBalance()
     // console.log(ethers.utils.formatEther(a))
     // //switch chain id
-    // if (a !== 84532) {
-    //   await provider.send('wallet_switchEthereumChain', [{ chainId: '0x14a34' }])
-    // }
+
     // const contract = new ethers.Contract('0x23Af6993e4faA987786f090ecAB7BdaB576e2A32', BookABI, provider)
     // const tx = await contract.connect(wallet).mint({
     //   value: ethers.utils.parseEther('0.001').toString()
