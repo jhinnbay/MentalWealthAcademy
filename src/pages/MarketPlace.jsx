@@ -99,11 +99,11 @@ const MarketPlace = () => {
       return alert("Please connect your wallet to mint")
     }
     const provider123 = await connectedWallet.getEthersProvider()
-
+    const a = await provider123.getNetwork()
     if (a !== 84532) {
       await provider123.send('wallet_switchEthereumChain', [{ chainId: '0x14a34' }])
     }
-    
+
     // AbstractProvider
     const provider = await connectedWallet.getWeb3jsProvider()
     console.log(await provider.request({
