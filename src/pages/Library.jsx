@@ -40,9 +40,6 @@ const Library = () => {
     // handleFileUpload(pdfFile)
   };
 
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
-  const signer = provider.getSigner();
-  const contract = new ethers.Contract(contractAddress, BookStorageABI, signer);
 
   const handleFileUpload = async () => {
     console.log("hi", pdfFile);
