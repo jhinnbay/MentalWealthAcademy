@@ -18,6 +18,7 @@ function App() {
           <PrivyProvider
             appId="clxybg1dl054hoktgwt7ref80"
             config={{
+              walletList: ['coinbase_wallet'], 
               // Customize Privy's appearance in your app
               appearance: {
                 theme: 'light',

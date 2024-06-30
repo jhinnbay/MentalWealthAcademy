@@ -11,6 +11,10 @@ import {
 import { usePrivy, useWallets } from "@privy-io/react-auth";
 import { ethers } from "ethers";
 import BookABI from "../../ABI/BookABI.json";
+import { Buffer } from "buffer";
+
+window.Buffer = Buffer;
+
 const filterTabs = [
   { label: "all", icon: "" },
   { label: "Articles", icon: "articles.png" },
@@ -94,13 +98,47 @@ const MarketPlace = () => {
     if (!connectedWallet) {
       return alert("Please connect your wallet to mint")
     }
-    const provider = await connectedWallet.getEthersProvider()
-    const wallet = provider.getSigner()
-    const contract = new ethers.Contract('0x23Af6993e4faA987786f090ecAB7BdaB576e2A32', BookABI, provider)
-    const tx = await contract.connect(wallet).mint({
-      value: ethers.utils.parseEther('0.001').toString()
-    })
-    await tx.wait(1)
+    const provider123 = await connectedWallet.getEthersProvider()
+    // AbstractProvider
+    const provider = await connectedWallet.getWeb3jsProvider()
+    console.log(await provider.request({
+      method: 'eth_chainId',
+      params: []
+
+    }))
+
+    const contract = new ethers.Contract('0x23Af6993e4faA987786f090ecAB7BdaB576e2A32', BookABI, provider123)
+
+    // Create the transaction object
+const tx = {
+  to: contract.address, // The address of the contract
+  from: connectedWallet.address, // The address sending the transaction
+  data: contract.interface.encodeFunctionData("mint", []), // Encoded contract function call
+  value: ethers.utils.parseEther('0.001').toHexString(), // Convert value to hex string
+};
+
+// Send the transaction
+const txResponse = await provider.request({
+  method: 'eth_sendTransaction',
+  params: [tx],
+});
+
+
+    // send mint transaction with abstractprovider
+
+
+    // const wallet = provider.getSigner()
+    // const a = await wallet.getBalance()
+    // console.log(ethers.utils.formatEther(a))
+    // //switch chain id
+    // if (a !== 84532) {
+    //   await provider.send('wallet_switchEthereumChain', [{ chainId: '0x14a34' }])
+    // }
+    // const contract = new ethers.Contract('0x23Af6993e4faA987786f090ecAB7BdaB576e2A32', BookABI, provider)
+    // const tx = await contract.connect(wallet).mint({
+    //   value: ethers.utils.parseEther('0.001').toString()
+    // })
+    // await tx.wait(1)
     alert('Minted successfully')
   }
   return (
