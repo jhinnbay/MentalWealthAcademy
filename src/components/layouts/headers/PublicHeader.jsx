@@ -6,6 +6,10 @@ import { shortenAddress } from "@/lib/utils";
 import { usePrivy, useWallets } from "@privy-io/react-auth";
 import { Link } from "react-router-dom";
 import { useAccount } from "wagmi";
+import { OnchainKitProvider, } from '@coinbase/onchainkit'
+import { base } from "viem/chains";
+import { Avatar, Identity, Name, Badge, Address } from '@coinbase/onchainkit/identity';
+const EAS_SCHEMA_ID = '0xf8b05c79f090979bf4a80270aba232dff11a10d9ca55c4f88de95317970f0de9';
 
 export const PublicHeader = () => {
   const { connectOrCreateWallet, login, authenticated, isModalOpen, connectWallet, logout } = usePrivy()
@@ -73,9 +77,26 @@ export const PublicHeader = () => {
                 <img src="/icons/sync_globe.svg" className=" hidden md:block" />
               </Link>
             </> : <>
-              <Link className="border rounded-lg px-5 py-3 border-primary-foreground flex justify-center items-center gap-2">
-                {shortenAddress(connectedWallet.address)}
-              </Link>
+              <OnchainKitProvider chain={base} schemaId={EAS_SCHEMA_ID}>
+                <Identity
+                  address={connectedWallet.address}
+                  schemaId="0xf8b05c79f090979bf4a80270aba232dff11a10d9ca55c4f88de95317970f0de9"
+                  className="border rounded-lg px-5 py-3 border-primary-foreground flex justify-center items-center gap-2"
+                >
+                  <Badge backgroundColor="#7DA1F8" borderColor="white" />
+                  <Avatar
+                    address={connectedWallet.address}
+                  />
+                  <Name
+
+                    address={connectedWallet.address}
+                  />
+                  <Address
+                    address={connectedWallet.address}
+
+                  />
+                </Identity>
+              </OnchainKitProvider>
             </>}
             <img src="/icons/menu.svg" className=" hidden xl:block" />
           </div>
