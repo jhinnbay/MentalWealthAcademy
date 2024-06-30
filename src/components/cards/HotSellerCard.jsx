@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
-export const HotSellerCard = ({ author, title, price, poster, credit }) => {
+export const HotSellerCard = ({ author, title, price, poster, credit, onClick }) => {
   return (
-    <div className="max-w-[230px]">
+    <div className="max-w-[270px] cursor-pointer" onClick={onClick}>
       <img src={poster} alt={title + " by " + author} />
       <h3 className="text-2xl">{title}</h3>
       <p className="text-lg">{author}</p>

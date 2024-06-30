@@ -8,7 +8,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
+import { usePrivy, useWallets } from "@privy-io/react-auth";
+import { ethers } from "ethers";
+import BookABI from "../../ABI/BookABI.json";
 const filterTabs = [
   { label: "all", icon: "" },
   { label: "Articles", icon: "articles.png" },
@@ -22,42 +24,42 @@ const hotSeller = [
     title: "EmberQuill Magazine",
     img: "/images/marketCardPlaceholder1.png",
     author: "Jhinn Bay",
-    price: "0.05 ETH",
+    price: "0.001 ETH",
     credit: "@gabriel.eth",
   },
   {
     title: "The Last War",
     img: "/images/marketCardPlaceholder2.png",
     author: "Cedric F.",
-    price: "0.05 ETH",
+    price: "0.001 ETH",
     credit: "@thelastwar.eth",
   },
   {
     title: "Head First",
     img: "/images/marketCardPlaceholder3.png",
     author: "VanityWxtch",
-    price: "0.05 ETH",
+    price: "0.001 ETH",
     credit: "Anonymous",
   },
   {
     title: "EmberQuill Magazine",
     img: "/images/marketCardPlaceholder1.png",
     author: "Jhinn Bay",
-    price: "0.05 ETH",
+    price: "0.001 ETH",
     credit: "@gabriel.eth",
   },
   {
     title: "The Last War",
     img: "/images/marketCardPlaceholder2.png",
     author: "Cedric F.",
-    price: "0.05 ETH",
+    price: "0.001 ETH",
     credit: "@thelastwar.eth",
   },
   {
     title: "Head First",
     img: "/images/marketCardPlaceholder3.png",
     author: "VanityWxtch",
-    price: "0.05 ETH",
+    price: "0.001 ETH",
     credit: "Anonymous",
   },
 ];
@@ -84,6 +86,23 @@ const author = [
 ];
 
 const MarketPlace = () => {
+  const {  } = usePrivy()
+  const { wallets } = useWallets()
+  const connectedWallet = wallets && wallets?.length && wallets?.length > 0 ? wallets[0] : null
+
+  const mint = async () => {
+    if (!connectedWallet) {
+      return alert("Please connect your wallet to mint")
+    }
+    const provider = await connectedWallet.getEthersProvider()
+    const wallet = provider.getSigner()
+    const contract = new ethers.Contract('0x23Af6993e4faA987786f090ecAB7BdaB576e2A32', BookABI, provider)
+    const tx = await contract.connect(wallet).mint({
+      value: ethers.utils.parseEther('0.001').toString()
+    })
+    await tx.wait(1)
+    alert('Minted successfully')
+  }
   return (
     <main>
       <section className="text-center my-7  hidden lg:block">
@@ -129,6 +148,7 @@ const MarketPlace = () => {
                           price={data?.price}
                           poster={data?.img}
                           credit={data?.credit}
+                          onClick={() => mint()}
                         />
                       </CarouselItem>
                     ))}

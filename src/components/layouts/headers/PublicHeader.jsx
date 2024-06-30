@@ -12,21 +12,11 @@ export const PublicHeader = () => {
   const { address } = useAccount()
   const { ready, wallets } = useWallets()
   const handleLogin = async () => {
-    // const wallet = await wallets[0].getEthereumProvider()
-    // await wallet.request({
-    //   method: "eth_requestAccounts",
-    //   params: [{ eth_accounts: {} }]
-    // })
-    // logout()
-    // if (wallets[0].getEthersProvider()) {
-
-    // }
     connectOrCreateWallet()
   }
   // console.log(ready, wallets, address, wallets?.length && wallets?.length > 0 && wallets[0].getEthersProvider())
 
-  const isConnected = wallets?.length && wallets?.length > 0
-  const connectedWallet = wallets ? wallets[0] : null
+  const connectedWallet = wallets && wallets?.length && wallets?.length > 0 ? wallets[0] : null
 
   return (
     <header className="bg-primary-background sticky top-0 w-full z-20  border-b border-primary-foreground shadow-default">
