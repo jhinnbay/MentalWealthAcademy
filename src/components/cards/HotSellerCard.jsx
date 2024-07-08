@@ -1,17 +1,33 @@
 import PropTypes from "prop-types";
 
-export const HotSellerCard = ({ author, title, price, poster, credit, onClick }) => {
+export const HotSellerCard = ({
+  description,
+  title,
+  price,
+  poster,
+  // credit,
+  onClick,
+}) => {
   return (
-    <div className="max-w-[270px] cursor-pointer" onClick={onClick}>
-      <img src={poster} alt={title + " by " + author} />
-      <h3 className="text-2xl">{title}</h3>
-      <p className="text-lg">{author}</p>
-      <div className="flex gap-2 flex-wrap mt-2">
-        <span className="px-2 flex-shrink-0 text-sm rounded-full border border-[#ACE1E8] bg-[#5F6FF9]">
-          {price}{" "}
+    <div
+      className="max-w-[271px] hover:bg-[rgba(0,213,99,0.25)] p-5 cursor-pointer"
+      onClick={onClick}
+    >
+      <img
+        src={poster}
+        alt={title + " by " + description}
+        className="border border-[#1F2937] rounded-lg overflow-hidden"
+      />
+      <h3 className="text-2xl flex gap-1 pt-1 align-top">
+        {title} <img src="/icons/Info.svg" className="flex-shrink-0 h-[15px]" />
+      </h3>
+      <p className="text-sm">{description}</p>
+      <div className="grid gap-2 grid-cols-2 justify-between mt-2">
+        <span className="px-3 py-5 flex  justify-center items-center text-nowrap  gap-1 text-white flex-shrink-0 text-sm bg-[#292929]">
+          <img src="/icons/currency-ethereum.svg" /> {price}{" "}
         </span>
-        <span className="px-2  flex-shrink-0  text-sm  rounded-full border border-[#ACE1E8] bg-[#5F6FF9]">
-          {credit}{" "}
+        <span className="px-3  py-5 justify-center items-center text-nowrap flex gap-1 text-white  flex-shrink-0  text-sm bg-[#171717]">
+          Purchase Now
         </span>
       </div>
     </div>
@@ -20,9 +36,10 @@ export const HotSellerCard = ({ author, title, price, poster, credit, onClick })
 
 // Define prop types for the component
 HotSellerCard.propTypes = {
-  author: PropTypes.string,
+  description: PropTypes.string,
   title: PropTypes.string,
   price: PropTypes.string,
   poster: PropTypes.string,
-  credit: PropTypes.string,
+  // credit: PropTypes.string,
+  onClick: PropTypes.func,
 };
