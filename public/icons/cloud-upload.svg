@@ -1,0 +1,11 @@
+<svg width="71" height="70" viewBox="0 0 71 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Media / Icon/Unfilled/cloud-upload">
+<path id="Vector" d="M35.5 48.4615L35.5 29.0769M35.5 29.0769L44.1154 37.6923M35.5 29.0769L26.8846 37.6923M20.4231 57.0769C13.2859 57.0769 7.5 51.2911 7.5 44.1538C7.5 38.4305 11.2206 33.5762 16.375 31.8775C16.2045 30.97 16.1154 30.0339 16.1154 29.0769C16.1154 20.7502 22.8656 14 31.1923 14C38.1743 14 44.0478 18.7459 45.7629 25.1878C46.6007 24.9161 47.4947 24.7692 48.4231 24.7692C53.1812 24.7692 57.0385 28.6265 57.0385 33.3846C57.0385 34.3844 56.8682 35.3444 56.555 36.2372C60.6148 37.7798 63.5 41.7068 63.5 46.3077C63.5 52.2554 58.6785 57.0769 52.7308 57.0769H20.4231Z" stroke="url(#paint0_linear_3171_367)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_3171_367" x1="35.5" y1="14" x2="35.5" y2="57.0769" gradientUnits="userSpaceOnUse">
+<stop stop-color="#ECECFF"/>
+<stop offset="1" stop-color="#E1E1FE"/>
+</linearGradient>
+</defs>
+</svg>

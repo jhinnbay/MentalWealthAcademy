@@ -18,15 +18,16 @@ export const HotSellerCard = ({
         alt={title + " by " + description}
         className="border border-[#1F2937] rounded-lg overflow-hidden"
       />
-      <h3 className="text-2xl flex gap-1 pt-1 align-top">
-        {title} <img src="/icons/Info.svg" className="flex-shrink-0 h-[15px]" />
-      </h3>
+      <div className="flex gap-1 pt-1 align-top ">
+        <h3 className="text-2xl  truncate">{title}</h3>{" "}
+        <img src="/icons/Info.svg" className="flex-shrink-0 h-[15px]" />
+      </div>
       <p className="text-sm">{description}</p>
       <div className="grid gap-2 grid-cols-2 justify-between mt-2">
-        <span className="px-3 py-5 flex  justify-center items-center text-nowrap  gap-1 text-white flex-shrink-0 text-sm bg-[#292929]">
+        <span className=" py-5 flex  justify-center items-center text-nowrap  gap-1 text-white flex-shrink-0 text-sm bg-[#292929]">
           <img src="/icons/currency-ethereum.svg" /> {price}{" "}
         </span>
-        <span className="px-3  py-5 justify-center items-center text-nowrap flex gap-1 text-white  flex-shrink-0  text-sm bg-[#171717]">
+        <span className=" py-5 justify-center items-center text-nowrap flex gap-1 text-white  flex-shrink-0  text-sm bg-[#171717]">
           Purchase Now
         </span>
       </div>

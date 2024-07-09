@@ -12,6 +12,7 @@ import { usePrivy, useWallets } from "@privy-io/react-auth";
 import { ethers } from "ethers";
 import BookABI from "../../ABI/BookABI.json";
 import { Buffer } from "buffer";
+import { UploadBook } from "@/components/dialogs/UploadBook";
 
 window.Buffer = Buffer;
 
@@ -202,7 +203,9 @@ const MarketPlace = () => {
               ))}
             </nav>
             <div className=" py-6 px-10 rounded-2xl">
-              <h2 className="text-6xl mb-5">Hottest Sellers</h2>
+              <h2 className="lg:text-7xl text-4xl mb-5 font-bold">
+                Hottest Sellers 🔥
+              </h2>
               <div className="px-4">
                 <Carousel opts={{ loop: true }}>
                   <CarouselContent>
@@ -294,7 +297,12 @@ const MarketPlace = () => {
       </section>
 
       <section className="container py-5">
-        <h2 className="text-7xl mb-5">Writer’s Marketplace</h2>
+        <div className="flex justify-between items-center">
+          <h2 className="lg:text-7xl text-4xl mb-5 font-bold">
+            Writer’s Marketplace
+          </h2>
+          <UploadBook />
+        </div>
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4  pb-2">
           {hotSeller?.map((data, i) => (
             <div
@@ -314,7 +322,7 @@ const MarketPlace = () => {
       </section>
 
       <section className="container py-5">
-        <h2 className="text-5xl mb-5">Newest Authors</h2>
+        <h2 className="lg:text-7xl text-4xl mb-5 font-bold">Newest Authors</h2>
         <div className="flex gap-5  overflow-x-auto pb-2">
           {" "}
           {author?.map((data, i) => (
