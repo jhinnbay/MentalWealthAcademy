@@ -12,6 +12,7 @@ import { usePrivy, useWallets } from "@privy-io/react-auth";
 import { ethers } from "ethers";
 import BookABI from "../../ABI/BookABI.json";
 import { Buffer } from "buffer";
+import { UploadBook } from "@/components/dialogs/UploadBook";
 
 window.Buffer = Buffer;
 
@@ -27,42 +28,64 @@ const hotSeller = [
   {
     title: "EmberQuill Magazine",
     img: "/images/marketCardPlaceholder1.png",
-    author: "Jhinn Bay",
+    description:
+      "Artwork by Jinzu Bei, Writing by Christopher Dow, Edits by TT. Haling ",
     price: "0.001 ETH",
     credit: "@gabriel.eth",
   },
   {
     title: "The Last War",
     img: "/images/marketCardPlaceholder2.png",
-    author: "Cedric F.",
+    description:
+      "Artwork by Jinzu Bei, Writing by Christopher Dow, Edits by TT. Haling ",
     price: "0.001 ETH",
     credit: "@thelastwar.eth",
   },
   {
     title: "Head First",
     img: "/images/marketCardPlaceholder3.png",
-    author: "VanityWxtch",
+    description:
+      "Artwork by Jinzu Bei, Writing by Christopher Dow, Edits by TT. Haling ",
     price: "0.001 ETH",
     credit: "Anonymous",
   },
   {
     title: "EmberQuill Magazine",
     img: "/images/marketCardPlaceholder1.png",
-    author: "Jhinn Bay",
+    description:
+      "Artwork by Jinzu Bei, Writing by Christopher Dow, Edits by TT. Haling ",
     price: "0.001 ETH",
     credit: "@gabriel.eth",
   },
   {
     title: "The Last War",
     img: "/images/marketCardPlaceholder2.png",
-    author: "Cedric F.",
+    description:
+      "Artwork by Jinzu Bei, Writing by Christopher Dow, Edits by TT. Haling ",
     price: "0.001 ETH",
     credit: "@thelastwar.eth",
   },
   {
     title: "Head First",
     img: "/images/marketCardPlaceholder3.png",
-    author: "VanityWxtch",
+    description:
+      "Artwork by Jinzu Bei, Writing by Christopher Dow, Edits by TT. Haling ",
+    price: "0.001 ETH",
+    credit: "Anonymous",
+  },
+  {
+    title: "The Last War",
+    img: "/images/marketCardPlaceholder2.png",
+    description:
+      "Artwork by Jinzu Bei, Writing by Christopher Dow, Edits by TT. Haling ",
+    price: "0.001 ETH",
+    credit: "@thelastwar.eth",
+  },
+  {
+    title: "Head First",
+    img: "/images/marketCardPlaceholder3.png",
+    description:
+      "Artwork by Jinzu Bei, Writing by Christopher Dow, Edits by TT. Haling ",
     price: "0.001 ETH",
     credit: "Anonymous",
   },
@@ -90,47 +113,53 @@ const author = [
 ];
 
 const MarketPlace = () => {
-  const {  } = usePrivy()
-  const { wallets } = useWallets()
-  const connectedWallet = wallets && wallets?.length && wallets?.length > 0 ? wallets[0] : null
+  const {} = usePrivy();
+  const { wallets } = useWallets();
+  const connectedWallet =
+    wallets && wallets?.length && wallets?.length > 0 ? wallets[0] : null;
 
   const mint = async () => {
     if (!connectedWallet) {
-      return alert("Please connect your wallet to mint")
+      return alert("Please connect your wallet to mint");
     }
-    const provider123 = await connectedWallet.getEthersProvider()
-    const a = await provider123.getNetwork()
+    const provider123 = await connectedWallet.getEthersProvider();
+    const a = await provider123.getNetwork();
     if (a !== 84532) {
-      await provider123.send('wallet_switchEthereumChain', [{ chainId: '0x14a34' }])
+      await provider123.send("wallet_switchEthereumChain", [
+        { chainId: "0x14a34" },
+      ]);
     }
 
     // AbstractProvider
-    const provider = await connectedWallet.getWeb3jsProvider()
-    console.log(await provider.request({
-      method: 'eth_chainId',
-      params: []
+    const provider = await connectedWallet.getWeb3jsProvider();
+    console.log(
+      await provider.request({
+        method: "eth_chainId",
+        params: [],
+      })
+    );
 
-    }))
-
-    const contract = new ethers.Contract('0x23Af6993e4faA987786f090ecAB7BdaB576e2A32', BookABI, provider123)
+    const contract = new ethers.Contract(
+      "0x23Af6993e4faA987786f090ecAB7BdaB576e2A32",
+      BookABI,
+      provider123
+    );
 
     // Create the transaction object
-const tx = {
-  to: contract.address, // The address of the contract
-  from: connectedWallet.address, // The address sending the transaction
-  data: contract.interface.encodeFunctionData("mint", []), // Encoded contract function call
-  value: ethers.utils.parseEther('0.001').toHexString(), // Convert value to hex string
-};
+    const tx = {
+      to: contract.address, // The address of the contract
+      from: connectedWallet.address, // The address sending the transaction
+      data: contract.interface.encodeFunctionData("mint", []), // Encoded contract function call
+      value: ethers.utils.parseEther("0.001").toHexString(), // Convert value to hex string
+    };
 
-// Send the transaction
-const txResponse = await provider.request({
-  method: 'eth_sendTransaction',
-  params: [tx],
-});
-
+    // Send the transaction
+    const txResponse = await provider.request({
+      method: "eth_sendTransaction",
+      params: [tx],
+    });
 
     // send mint transaction with abstractprovider
-
 
     // const wallet = provider.getSigner()
     // const a = await wallet.getBalance()
@@ -142,14 +171,14 @@ const txResponse = await provider.request({
     //   value: ethers.utils.parseEther('0.001').toString()
     // })
     // await tx.wait(1)
-    alert('Minted successfully')
-  }
+    alert("Minted successfully");
+  };
   return (
     <main>
-      <section className="text-center my-7  hidden lg:block">
+      <section className="text-center container my-7  hidden lg:block">
         <h2 className="text-xs">GET PAID FOR YOUR AUTHORSHIP</h2>
         <h1 className="text-7xl">Writer’s Marketplace</h1>
-        <h3 className="mt-7 bg-[#222225]  p-[38px] pb-0 text-white text-5xl truncate">
+        <h3 className="mt-7 bg-marketPlace_grad   p-[38px] pb-0 text-white text-5xl truncate">
           {" "}
           Discover your next NFT, Sell Your Work, Ethical Verification
         </h3>
@@ -157,7 +186,7 @@ const txResponse = await provider.request({
       <section className="container">
         <div className="grid grid-cols-6 gap-8 container border-t border-[#B4B4B4]">
           <div className="col-span-4">
-            <nav className="flex gap-9 py-3 container">
+            <nav className="flex gap-9 py-3 container overflow-x-auto">
               {filterTabs?.map((data, i) => (
                 <div
                   key={data?.label + i}
@@ -173,8 +202,10 @@ const txResponse = await provider.request({
                 </div>
               ))}
             </nav>
-            <div className="bg-marketPlace_grad text-white py-6 px-10 rounded-2xl">
-              <h2 className="text-6xl mb-5">Hottest Sellers</h2>
+            <div className=" py-6 px-10 rounded-2xl">
+              <h2 className="lg:text-7xl text-4xl mb-5 font-bold">
+                Hottest Sellers 🔥
+              </h2>
               <div className="px-4">
                 <Carousel opts={{ loop: true }}>
                   <CarouselContent>
@@ -184,7 +215,7 @@ const txResponse = await provider.request({
                         className="basis-1/3"
                       >
                         <HotSellerCard
-                          author={data?.author}
+                          description={data?.description}
                           title={data?.title}
                           price={data?.price}
                           poster={data?.img}
@@ -266,7 +297,32 @@ const txResponse = await provider.request({
       </section>
 
       <section className="container py-5">
-        <h2 className="text-5xl mb-5">Newest Authors</h2>
+        <div className="flex justify-between items-center">
+          <h2 className="lg:text-7xl text-4xl mb-5 font-bold">
+            Writer’s Marketplace
+          </h2>
+          <UploadBook />
+        </div>
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4  pb-2">
+          {hotSeller?.map((data, i) => (
+            <div
+              key={data?.title + data?.credit + i + "marketplace"}
+              className="flex-shrink-0   p-4 rounded-lg"
+            >
+              <HotSellerCard
+                description={data?.description}
+                title={data?.title}
+                price={data?.price}
+                poster={data?.img}
+                credit={data?.credit}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="container py-5">
+        <h2 className="lg:text-7xl text-4xl mb-5 font-bold">Newest Authors</h2>
         <div className="flex gap-5  overflow-x-auto pb-2">
           {" "}
           {author?.map((data, i) => (
@@ -276,26 +332,6 @@ const txResponse = await provider.request({
               description={data?.description}
               image={data?.image}
             />
-          ))}
-        </div>
-      </section>
-
-      <section className="container py-5">
-        <h2 className="text-7xl mb-5">Writer’s Marketplace</h2>
-        <div className="flex gap-4 overflow-x-auto pb-2">
-          {hotSeller?.map((data, i) => (
-            <div
-              key={data?.title + data?.credit + i + "marketplace"}
-              className="flex-shrink-0 bg-marketPlace_grad text-white  p-4 rounded-lg"
-            >
-              <HotSellerCard
-                author={data?.author}
-                title={data?.title}
-                price={data?.price}
-                poster={data?.img}
-                credit={data?.credit}
-              />
-            </div>
           ))}
         </div>
       </section>
