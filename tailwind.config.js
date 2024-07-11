@@ -21,11 +21,11 @@ module.exports = {
       screens: {
         xs: "420px", // Extra small devices (e.g., smartphones in portrait mode)
         sm: "640px", // Small devices (e.g., smartphones in landscape mode)
-        md: "800px", // Medium devices (e.g., tablets)
+        md: "900px", // Medium devices (e.g., tablets)
         lg: "1024px", // Large devices (e.g., desktops)
         xl: "1200px", // Extra large devices (e.g., large desktops)
-        "2xl": "1650px", // 2x extra large devices (e.g., very large desktops)
-        "3xl": "1920px", // Example: Custom breakpoint for very large screens
+        "2xl": "1400px", // 2x extra large devices (e.g., very large desktops)
+        "3xl": "1620px", // Example: Custom breakpoint for very large screens
       },
       fontFamily: {
         spaceGrotesk: ["SpaceGrotesk", "sans-serif"],
