@@ -61,9 +61,9 @@ export const UploadBook = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-2">
+          <div className="col-span-2 flex flex-col ">
             <h3 className="text-3xl font-medium"> Cover Art</h3>
-            <Label className="h-full relative cursor-pointer border-dashed border p-5 gap-2 items-center flex flex-col text-white border-white rounded-2xl bg-black">
+            <Label className="flex-grow relative cursor-pointer border-dashed border p-5 gap-2 items-center flex flex-col text-white border-white rounded-2xl bg-black">
               <Input
                 type="file"
                 className="w-full top-0 left-0 h-full absolute z-10 opacity-0 cursor-pointer "

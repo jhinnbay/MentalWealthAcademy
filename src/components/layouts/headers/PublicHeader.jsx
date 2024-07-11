@@ -40,7 +40,7 @@ export const PublicHeader = () => {
           <div className="py-3 border-t border-b border-solid relative  items-center flex-grow hidden xl:flex">
             <Input
               placeholder="Search"
-              className="bg-secondary-background max-h-[36px] pl-7 placeholder:text-secondary-foreground"
+              className="bg-secondary-background max-h-[36px] !pl-7 placeholder:text-secondary-foreground"
             />
             <img
               src="/icons/input-search.svg"
