@@ -23,12 +23,8 @@ export default function Home() {
           </div>
         </header>
         <div className="flex relative justify-between  bg-[#4c4c8d]  ">
-          <div className="p-6 flex-shrink-0">
-            <svg
-              viewBox="0 0 591 336"
-              fill="none"
-              className="max-w-[350px] w-full"
-            >
+          <div className="p-6 flex-shrink-0 w-[80%]">
+            <svg viewBox="0 0 591 336" fill="none" className=" w-full">
               <path
                 d="M8.448 100V10.4H39.808L55.296 88.48H57.6L73.088 10.4H104.448V100H88.064V22.816H85.76L70.4 100H42.496L27.136 22.816H24.832V100H8.448ZM121.323 100V10.4H178.923V25.76H138.219V47.136H175.339V62.496H138.219V84.64H179.691V100H121.323ZM192.198 100V10.4H224.326L242.118 88.48H244.422V10.4H261.062V100H228.934L211.142 21.92H208.838V100H192.198ZM298.684 100V25.76H272.572V10.4H341.692V25.76H315.58V100H298.684ZM338.804 100L362.356 10.4H391.796L415.348 100H397.94L393.076 80.288H361.076L356.212 100H338.804ZM365.044 64.672H389.108L378.228 21.024H375.924L365.044 64.672ZM426.073 100V10.4H442.969V84.64H483.929V100H426.073Z"
                 fill="#A59EC0"
@@ -75,7 +71,7 @@ export default function Home() {
               A digital library built on the Ethereum blockchain, to preserve
               the rich writings and history of humanity. The Future is ours.
             </p>
-            <div className="flex flex-col 2xl:flex-row gap-2">
+            <div className="flex flex-col 2xl:!flex-row gap-2">
               <Input
                 className="bg-[#DCDBE4] rounded-lg p-3 h-full border border-solid border-[#71a9fd]"
                 placeholder="YOUR EMAIL ADDRESS"
