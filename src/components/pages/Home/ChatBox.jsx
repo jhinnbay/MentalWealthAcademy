@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const ChatBox = () => {
   return (
@@ -16,9 +17,12 @@ export const ChatBox = () => {
         </div>
         <div className="mt-2">
           <h5 className="text-sm uppercase">Hey buddy! TIME TO CONNECT...</h5>
-          <Button className="uppercase border-white hover:bg-white duration-300 hover:text-black border border-solid rounded-sm bg-transparent w-full p-2 mt-2 text-white">
+          <Link
+            to={"/marketplace"}
+            className="uppercase flex justify-center items-center border-white hover:bg-white duration-300 hover:text-black border border-solid rounded-sm bg-transparent w-full p-2 mt-2 text-white"
+          >
             JOIN THE ACADEMY
-          </Button>
+          </Link>
         </div>
       </div>
     </div>
