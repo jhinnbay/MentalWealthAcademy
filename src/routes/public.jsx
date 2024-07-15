@@ -17,7 +17,7 @@ const PublicRoutes = {
   children: [
     {
       path: "/",
-      element: withLayout(<Home />),
+      element: <Home />,
     },
     {
       path: "/library",

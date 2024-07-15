@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 // type Theme = "dark" | "light" | "system";
 
 const initialState = {
-  theme: "system",
+  theme: "light",
   setTheme: () => null,
 };
 
@@ -12,7 +12,7 @@ const ThemeProviderContext = createContext(initialState);
 
 export function ThemeProvider({
   children,
-  defaultTheme = "system",
+  defaultTheme = "light",
   storageKey = "vite-ui-theme",
   ...props
 }) {

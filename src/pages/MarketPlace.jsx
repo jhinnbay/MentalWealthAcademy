@@ -184,8 +184,8 @@ const MarketPlace = () => {
         </h3>
       </section>
       <section className="container">
-        <div className="grid grid-cols-6 gap-8 container border-t border-[#B4B4B4]">
-          <div className="col-span-4">
+        <div className="grid grid-cols-1 2xl:grid-cols-6 gap-8 container border-t border-[#B4B4B4]">
+          <div className=" 2xl:col-span-4">
             <nav className="flex gap-9 py-3 container overflow-x-auto">
               {filterTabs?.map((data, i) => (
                 <div
@@ -212,7 +212,7 @@ const MarketPlace = () => {
                     {hotSeller?.map((data, i) => (
                       <CarouselItem
                         key={data?.title + data?.credit + i}
-                        className="basis-1/3"
+                        className="sm:basis-2/4 md:basis-1/3 flex justify-center"
                       >
                         <HotSellerCard
                           description={data?.description}
@@ -234,7 +234,7 @@ const MarketPlace = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-2 ">
+          <div className="2xl:col-span-2 ">
             <div className="rounded-lg flex flex-col overflow-hidden flex-shrink-0 min-h-[calc(100%-48px)] mt-12">
               <div className=" bg-[#1B1B1B] text-white ">
                 <div className="px-6 pt-8 flex">
@@ -303,11 +303,11 @@ const MarketPlace = () => {
           </h2>
           <UploadBook />
         </div>
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4  pb-2">
+        <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4  pb-2">
           {hotSeller?.map((data, i) => (
             <div
               key={data?.title + data?.credit + i + "marketplace"}
-              className="flex-shrink-0   p-4 rounded-lg"
+              className="flex-shrink-0 flex  justify-center  p-4 rounded-lg"
             >
               <HotSellerCard
                 description={data?.description}

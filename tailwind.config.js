@@ -21,11 +21,11 @@ module.exports = {
       screens: {
         xs: "420px", // Extra small devices (e.g., smartphones in portrait mode)
         sm: "640px", // Small devices (e.g., smartphones in landscape mode)
-        md: "800px", // Medium devices (e.g., tablets)
+        md: "900px", // Medium devices (e.g., tablets)
         lg: "1024px", // Large devices (e.g., desktops)
         xl: "1200px", // Extra large devices (e.g., large desktops)
-        "2xl": "1650px", // 2x extra large devices (e.g., very large desktops)
-        "3xl": "1920px", // Example: Custom breakpoint for very large screens
+        "2xl": "1350px", // 2x extra large devices (e.g., very large desktops)
+        "3xl": "1620px", // Example: Custom breakpoint for very large screens
       },
       fontFamily: {
         spaceGrotesk: ["SpaceGrotesk", "sans-serif"],
@@ -97,6 +97,7 @@ module.exports = {
       },
       backgroundImage: {
         library: "url('/images/library_background.png')",
+        progress: "url('/images/progress-bg.png')",
         library_aside:
           "linear-gradient(180deg, rgba(24, 24, 27, 0.90) 0%, rgba(24, 24, 28, 0.90) 100%)",
         proposal:
@@ -109,7 +110,18 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+
       keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        progress: {
+          "0%": { width: "0%" },
+          "50%": { width: "25%" },
+          "100%": { width: "0%" },
+        },
+
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -122,6 +134,8 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "marquee-left": "marquee 30s linear infinite",
+        progress: "progress 3s linear infinite",
       },
     },
   },
