@@ -17,8 +17,10 @@ export default function Home() {
   return (
     <main className="2xl:flex items-start p-2 relative gap-3">
       <div className="flex-grow mb-2 2xl:mb-0 flex flex-col 2xl:sticky 2xl:top-[8px] 2xl:h-[calc(100vh-16px)] border border-solid border-black rounded-lg overflow-hidden">
-        <header className="bg-[#4c4c8d] border-b border-white px-6 pb-5 pt-8">
-          <img src="/icons/landing_logo.svg" />
+        <header className="bg-[#4c4c8d] px-6 ">
+          <div className=" py-6  border-b-2 border-white">
+            <img src="/icons/landing_logo.svg" />
+          </div>
         </header>
         <div className="flex relative justify-between  bg-[#4c4c8d]  ">
           <div className="p-6 flex-shrink-0">
@@ -49,10 +51,10 @@ export default function Home() {
                 filter: "drop-shadow(rgba(0, 0, 0, 0.25) -64px 0px 0px)",
               }}
             />
-            <img
+            {/* <img
               src="/images/landingTooltip.png"
               className="absolute  w-[150px] top-[50%] hidden md:block"
-            />
+            /> */}
           </div>
         </div>
         <div className="flex overflow-hidden w-full bg-[#2BD178] border-y border-y-[#1a213d]">
@@ -94,7 +96,7 @@ export default function Home() {
                 filter: "drop-shadow(rgba(0, 0, 0, 0.25) -64px 0px 0px)",
               }}
             />
-            <img src="/images/landingTooltip.png" className="absolute  ml-16" />
+            {/* <img src="/images/landingTooltip.png" className="absolute  ml-16" /> */}
           </div>
         </div>
       </div>
