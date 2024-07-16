@@ -17,7 +17,7 @@ import { UploadBook } from "@/components/dialogs/UploadBook";
 window.Buffer = Buffer;
 
 const filterTabs = [
-  { label: "all", icon: "" },
+  { label: "All", icon: "" },
   { label: "Articles", icon: "articles.png" },
   { label: "Magazines", icon: "comic.png" },
   { label: "Anime & Manga", icon: "animeBook.png" },
@@ -29,23 +29,22 @@ const hotSeller = [
     title: "EmberQuill Magazine",
     img: "/images/marketCardPlaceholder1.png",
     description:
-      "Artwork by Jinzu Bei, Writing by Christopher Dow, Edits by TT. Haling ",
+      "Artwork & Writing by Jinzu Bei, Edits by TT. Haling",
     price: "0.001 ETH",
     credit: "@gabriel.eth",
   },
   {
-    title: "The Last War",
-    img: "/images/marketCardPlaceholder2.png",
+    title: "Fleeting Thought",
+    img: "/images/FleetingThought.jpg",
     description:
-      "Artwork by Jinzu Bei, Writing by Christopher Dow, Edits by TT. Haling ",
+      "Artwork by Midjourney AI, Writing by 0xJP",
     price: "0.001 ETH",
     credit: "@thelastwar.eth",
   },
   {
-    title: "Head First",
+    title: "Academy Design",
     img: "/images/marketCardPlaceholder3.png",
-    description:
-      "Artwork by Jinzu Bei, Writing by Christopher Dow, Edits by TT. Haling ",
+    description: "Artwork & Writing by Jhinn Bay.",
     price: "0.001 ETH",
     credit: "Anonymous",
   },
@@ -66,10 +65,10 @@ const hotSeller = [
     credit: "@thelastwar.eth",
   },
   {
-    title: "Head First",
-    img: "/images/marketCardPlaceholder3.png",
+    title: "Goryo Chandra",
+    img: "/images/GoryoChandra.png",
     description:
-      "Artwork by Jinzu Bei, Writing by Christopher Dow, Edits by TT. Haling ",
+      "Artwork & Writing By JB ",
     price: "0.001 ETH",
     credit: "Anonymous",
   },
@@ -82,10 +81,10 @@ const hotSeller = [
     credit: "@thelastwar.eth",
   },
   {
-    title: "Head First",
-    img: "/images/marketCardPlaceholder3.png",
+    title: "Onchainomics",
+    img: "/images/Onchainomics.png",
     description:
-      "Artwork by Jinzu Bei, Writing by Christopher Dow, Edits by TT. Haling ",
+      "Writing by 183Aaros, Artwork by Midjourney AI",
     price: "0.001 ETH",
     credit: "Anonymous",
   },
@@ -240,7 +239,7 @@ const MarketPlace = () => {
                 <div className="px-6 pt-8 flex">
                   <div className="flex-grow">
                     <h3 className="text-xl">
-                      $WEALTH Tokens Power Our Author’s Marketplace
+                      $WEALTH Tokens Power Our Marketplace
                     </h3>
                     <p className="text-xs">
                       Refer a friend for FREE tokens or join our discord to chat
@@ -251,9 +250,11 @@ const MarketPlace = () => {
                         <img src="/icons/plusIcon.svg" />
                         Invite Friend
                       </Button>
+                      <a href="https://discord.gg/NMuFJ2QvGq" target="_blank" rel="noopener noreferrer">
                       <Button className="bg-[#343434] border border-[#595959] text-[#7A7FED]">
                         Join Discord
                       </Button>
+                      </a>
                     </div>
                   </div>
                   <img

@@ -37,13 +37,9 @@ const faqList = [
     question: "3. How Can I Be Apart Of This?",
     answer: (
       <>
-        Mental Wealth Academy helps both writers and readers. Writers can share
-        their work easily and get paid fairly. Readers can find lots of great
-        books and support the authors they like. Everyone can use special tokens
-        to vote on how the platform works. This means you have a say in how
-        things are run. You can also buy and collect unique digital books. All
-        of this happens on a safe and clear system called blockchain. This makes
-        sure everything is fair for everyone involved.
+        Join the Mental Wealth Academy discord. Everyone can earn and receive tokens
+        to be official members of the community. Once you're in, we got you. Earn money by uploading works of authorship,
+        vote on proposals sort of like 'community notes' and more.
       </>
     ),
   },
