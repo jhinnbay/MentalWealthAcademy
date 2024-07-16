@@ -34,7 +34,7 @@ const hotSeller = [
     credit: "@gabriel.eth",
   },
   {
-    title: "A Fleeting Thought",
+    title: "Fleeting Thought",
     img: "/images/FleetingThought.jpg",
     description:
       "Artwork by Midjourney AI, Writing by 0xJP",
