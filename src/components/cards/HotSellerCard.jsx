@@ -10,13 +10,13 @@ export const HotSellerCard = ({
 }) => {
   return (
     <div
-      className="max-w-[271px] hover:bg-[rgba(0,213,99,0.25)] p-5 cursor-pointer"
+      className="max-w-[271px] hover:bg-[rgba(0,213,99,0.25)] p-5 cursor-pointer rounded-xl"
       onClick={onClick}
     >
       <img
         src={poster}
         alt={title + " by " + description}
-        className="border border-[#1F2937] rounded-lg overflow-hidden"
+        className="border border-[#1F2937] rounded-xl overflow-hidden"
       />
       <div className="flex gap-1 pt-1 align-top ">
         <h3 className="text-2xl  truncate">{title}</h3>{" "}
