@@ -11,7 +11,7 @@ export const LibraryCard = () => {
       <h5>Jhinn bay</h5>
       <Button className="bg-black_grad text-white">
         <img
-          src="/public/icons/sparkles.svg"
+          src="/icons/sparkles.svg"
           style={{
             filter:
               " brightness(0) saturate(100%) invert(78%) sepia(90%) saturate(1124%) hue-rotate(323deg) brightness(100%) contrast(102%)",

@@ -10,7 +10,7 @@ export const HotSellerCard = ({
 }) => {
   return (
     <div
-      className="max-w-[271px] hover:bg-[rgba(0,213,99,0.25)] p-5 cursor-pointer"
+      className="max-w-[271px] w-full hover:bg-[rgba(0,213,99,0.25)] p-5 cursor-pointer"
       onClick={onClick}
     >
       <img
