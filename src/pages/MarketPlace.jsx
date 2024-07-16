@@ -17,7 +17,7 @@ import { UploadBook } from "@/components/dialogs/UploadBook";
 window.Buffer = Buffer;
 
 const filterTabs = [
-  { label: "all", icon: "" },
+  { label: "All", icon: "" },
   { label: "Articles", icon: "articles.png" },
   { label: "Magazines", icon: "comic.png" },
   { label: "Anime & Manga", icon: "animeBook.png" },
