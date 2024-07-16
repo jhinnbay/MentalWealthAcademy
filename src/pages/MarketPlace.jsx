@@ -240,7 +240,7 @@ const MarketPlace = () => {
                 <div className="px-6 pt-8 flex">
                   <div className="flex-grow">
                     <h3 className="text-xl">
-                      $WEALTH Tokens Power Our Author’s Marketplace
+                      $WEALTH Tokens Power Our Marketplace
                     </h3>
                     <p className="text-xs">
                       Refer a friend for FREE tokens or join our discord to chat
@@ -251,9 +251,11 @@ const MarketPlace = () => {
                         <img src="/icons/plusIcon.svg" />
                         Invite Friend
                       </Button>
+                      <a href="https://discord.gg/NMuFJ2QvGq" target="_blank" rel="noopener noreferrer">
                       <Button className="bg-[#343434] border border-[#595959] text-[#7A7FED]">
                         Join Discord
                       </Button>
+                      </a>
                     </div>
                   </div>
                   <img
