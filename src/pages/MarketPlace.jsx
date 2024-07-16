@@ -26,8 +26,7 @@ const filterTabs = [
 
 const hotSeller = [
   {
-    title: "EmberQuill 
-      Magazine",
+    title: "EmberQuill Magazine",
     img: "/images/marketCardPlaceholder1.png",
     description:
       "Artwork & Writing by Jinzu Bei, Edits by TT. Haling",
@@ -35,8 +34,7 @@ const hotSeller = [
     credit: "@gabriel.eth",
   },
   {
-    title: "A Fleeting 
-      Thought",
+    title: "A Fleeting Thought",
     img: "/images/FleetingThought.jpg",
     description:
       "Artwork by Midjourney AI, Writing by 0xJP",
