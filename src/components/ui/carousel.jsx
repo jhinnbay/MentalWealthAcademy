@@ -105,7 +105,9 @@ const Carousel = React.forwardRef((
         role="region"
         aria-roledescription="carousel"
         {...props}>
+        <div className="overflow-hidden">
         {children}
+      </div>
       </div>
     </CarouselContext.Provider>)
   );
