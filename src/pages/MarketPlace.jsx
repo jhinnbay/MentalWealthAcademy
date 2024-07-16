@@ -29,15 +29,15 @@ const hotSeller = [
     title: "EmberQuill Magazine",
     img: "/images/marketCardPlaceholder1.png",
     description:
-      "Artwork by Jinzu Bei, Writing by Christopher Dow, Edits by TT. Haling ",
+      "Artwork & Writing by Jinzu Bei, Edits by TT. Haling",
     price: "0.001 ETH",
     credit: "@gabriel.eth",
   },
   {
-    title: "The Last War",
+    title: "A Fleeting Thought",
     img: "/images/marketCardPlaceholder2.png",
     description:
-      "Artwork by Jinzu Bei, Writing by Christopher Dow, Edits by TT. Haling ",
+      "Artwork by Midjourney AI, Writing by 0xJP",
     price: "0.001 ETH",
     credit: "@thelastwar.eth",
   },
