@@ -42,9 +42,9 @@ const hotSeller = [
     credit: "@thelastwar.eth",
   },
   {
-    title: "Head First",
+    title: "Academy Design",
     img: "/images/marketCardPlaceholder3.png",
-    description: "Artwork by Jinzu Bei, Writing by Christopher Dow, Edits by TT. Haling ",
+    description: "Artwork & Writing by Jhinn Bay.",
     price: "0.001 ETH",
     credit: "Anonymous",
   },
