@@ -81,10 +81,10 @@ const hotSeller = [
     credit: "@thelastwar.eth",
   },
   {
-    title: "Head First",
-    img: "/images/marketCardPlaceholder3.png",
+    title: "Onchainomics",
+    img: "/images/Onchainomics.png",
     description:
-      "Artwork by Jinzu Bei, Writing by Christopher Dow, Edits by TT. Haling ",
+      "Writing by 183Aaros, Artwork by Midjourney AI",
     price: "0.001 ETH",
     credit: "Anonymous",
   },
