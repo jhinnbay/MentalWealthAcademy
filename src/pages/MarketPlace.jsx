@@ -35,7 +35,7 @@ const hotSeller = [
   },
   {
     title: "A Fleeting Thought",
-    img: "/images/marketCardPlaceholder2.png",
+    img: "/images/FleetingThought.jpg",
     description:
       "Artwork by Midjourney AI, Writing by 0xJP",
     price: "0.001 ETH",
