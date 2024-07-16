@@ -9,7 +9,8 @@ import { ethers } from "ethers";
 import { create } from "ipfs-http-client";
 import { useState } from "react";
 import BookStorageABI from "../../ABI/bookStorageABI.json";
-
+import { LibraryCard } from "@/components/cards/LibraryCard";
+import { RequestForBook } from "@/components/pages/library/RequestForBook";
 
 const pinataApiKey = import.meta.env.VITE_PINATA_API_KEY;
 const pinataSecretApiKey = import.meta.env.VITE_PINATA_API_SECRET;
@@ -26,20 +27,18 @@ const ipfs = create({
   },
 });
 const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS;
-console.log(contractAddress, pinataApiKey)
+console.log(contractAddress, pinataApiKey);
 
 const Library = () => {
-
   const [pdfFile, setPdfFile] = useState(null);
   const [ipfsHash, setIpfsHash] = useState("");
   const [allBooks, setAllBooks] = useState([]);
-  
+
   const handleFileChange = (e) => {
     setPdfFile(e.target.files[0]);
     // const pdfFile = e.target.files[0];
     // handleFileUpload(pdfFile)
   };
-
 
   const handleFileUpload = async () => {
     console.log("hi", pdfFile);
@@ -155,80 +154,72 @@ const Library = () => {
   };
 
   return (
-    <>
-      <aside className="fixed left-0 top-[132px] bottom-0 w-[275px] bg-library_aside py-10 px-2 text-center hidden xl:flex flex-col gap-3 ">
-        <h2 className="text-3xl text-white ">Library Directory</h2>
-        <div className="relative">
-          {" "}
-          <Textarea placeholder="Search CID, Keyword or Author..." />{" "}
-          <img
-            src="/icons/report-search.svg"
-            className="absolute right-1 top-1"
-          />
-        </div>
-        <Button className="bg-[#46BF7E]" size="lg">
-          <img src="/icons/filter.svg" />
-          Filter
-        </Button>
-        <Button className="bg-[#8B81FF]" size="lg">
-          <img src="/icons/input-search.png" />
-          Search
-        </Button>
-        <div className="flex gap-7 items-center text-white">
-          <span className="block border-b flex-grow" />
-          or <span className="block border-b  flex-grow" />
-        </div>
-        {/* <input type="file" onChange={handleFileChange} className="w-full" /> */}
-        <div className="upload-container">
-              <input className="mr-2 text-white" type="file" onChange={handleFileChange} />
-              {/* <button onClick={handleFileUpload}>Upload PDF</button> */}
+    <main>
+      <div className="bg-primary-background-700 py-9">
+        <section className="container">
+          <div className="bg-library bg-center bg-cover p-6 rounded-lg text-white">
+            <div className="flex gap-2 items-center">
+              <h6 className="text-2xs sm:!text-2xl">Play Video</h6>{" "}
+              <Button className="aspect-square w-[54px] rounded-sm bg-[rgba(255,255,255,0.5)]">
+                <img src="/icons/Play.svg" />
+              </Button>{" "}
             </div>
-        <Button className="bg-[#FF596D]" size="lg" onClick={handleFileUpload} >
-          <img src="/icons/upload.svg" />
-          Upload A Book
-        </Button>
-        <Button variant="gradient" size="lg">
-          Digital Library Card <img src="/icons/globe.svg" />
-        </Button>
-        <img
-          src="/images/Library_Animal.png"
-          className="relative right-[-50px]"
-        />
-      </aside>
-      <main className="bg-library bg-fixed  min-h-[calc(100vh-133px)] bg-cover bg-left-top xl:ml-[275px]">
-        <div className="bg-primary-background-700 py-9">
-          {" "}
-          <section className="container">
-            <h1 className="text-2xl">Latest DAO Proposals</h1>
-            <div className="flex gap-3 overflow-x-auto my-12 pb-1">
-              {[1, 2, 3, 4, 5, 6, 7].map((data, i) => (
-                <ProposalCard key={"proposal_card" + data + "" + i} />
-              ))}
-            </div>
-          </section>
-          <section className="container">
-            <h3 className="text-xs">FEATURED ARTICLES</h3>
-            <h2 className="text-2xl md:text-4xl">
-              Check out this month’s new articles.
-            </h2>
-            <div className="flex gap-3 overflow-x-auto mb-12 mt-3 pb-1">
-              {[1, 2, 3, 4, 5, 6, 7].map((data, i) => (
-                <ArticalCard key={"proposal_card" + data + "" + i} />
-              ))}
-            </div>
-          </section>
-          <section className="container">
-            <h3 className="text-xs">FEATURED LIBRARY BOOKS</h3>
-            <h2 className="text-2xl md:text-4xl">Check out a library book.</h2>
-            <div className="flex gap-3 overflow-x-auto mb-12 mt-3 pb-1">
-              {[1, 2, 3, 4, 5, 6, 7].map((data, i) => (
-                <BooksCard key={"proposal_card" + data + "" + i} />
-              ))}
-            </div>
-          </section>
-        </div>
-      </main>
-    </>
+            <h3
+              className="text-xs sm:!text-3xl  font-bold"
+              style={{ lineHeight: "unset" }}
+            >
+              Support Students By <br />
+              Decentralizing Textbooks
+            </h3>
+          </div>
+        </section>
+        <section className="container py-7">
+          <h3 className="text-xs">FEATURED LIBRARY BOOKS</h3>
+          <h2 className="text-2xl md:text-5xl font-bold">
+            Find Your Next Book.
+          </h2>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <LibraryCard />
+            <LibraryCard />
+            <LibraryCard />
+            <LibraryCard />
+            <LibraryCard />
+            <LibraryCard />
+            <LibraryCard />
+            <LibraryCard />
+          </div>
+        </section>
+        <RequestForBook />
+        {/* <section className="container">
+          <h1 className="text-2xl">Latest DAO Proposals</h1>
+          <div className="flex gap-3 overflow-x-auto my-12 pb-1">
+            {[1, 2, 3, 4, 5, 6, 7].map((data, i) => (
+              <ProposalCard key={"proposal_card" + data + "" + i} />
+            ))}
+          </div>
+        </section>
+        <section className="container">
+          <h3 className="text-xs">FEATURED ARTICLES</h3>
+          <h2 className="text-2xl md:text-4xl">
+            Check out this month’s new articles.
+          </h2>
+          <div className="flex gap-3 overflow-x-auto mb-12 mt-3 pb-1">
+            {[1, 2, 3, 4, 5, 6, 7].map((data, i) => (
+              <ArticalCard key={"proposal_card" + data + "" + i} />
+            ))}
+          </div>
+        </section>
+        <section className="container">
+          <h3 className="text-xs">FEATURED LIBRARY BOOKS</h3>
+          <h2 className="text-2xl md:text-4xl">Check out a library book.</h2>
+          <div className="flex gap-3 overflow-x-auto mb-12 mt-3 pb-1">
+            {[1, 2, 3, 4, 5, 6, 7].map((data, i) => (
+              <BooksCard key={"proposal_card" + data + "" + i} />
+            ))}
+          </div>
+        </section> */}
+      </div>
+    </main>
   );
 };
 export default Library;
