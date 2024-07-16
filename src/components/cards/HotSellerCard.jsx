@@ -16,7 +16,7 @@ export const HotSellerCard = ({
       <img
         src={poster}
         alt={title + " by " + description}
-        className="border border-[#1F2937] rounded-lg overflow-hidden w-[230px] h-[320px]  object-cover"
+        className="border border-[#1F2937] rounded-xl overflow-hidden w-[230px] h-[320px]  object-cover"
       />
       <div className="flex gap-1 pt-1 align-top ">
         <h3 className="text-2xl  ">{title}</h3>{" "}
