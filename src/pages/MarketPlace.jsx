@@ -65,10 +65,10 @@ const hotSeller = [
     credit: "@thelastwar.eth",
   },
   {
-    title: "Head First",
-    img: "/images/marketCardPlaceholder3.png",
+    title: "Goryo Chandra",
+    img: "/images/GoryoChandra.png",
     description:
-      "Artwork by Jinzu Bei, Writing by Christopher Dow, Edits by TT. Haling ",
+      "Artwork & Writing By JB ",
     price: "0.001 ETH",
     credit: "Anonymous",
   },
