@@ -19,8 +19,8 @@ export const HotSellerCard = ({
         className="border border-[#1F2937] rounded-lg overflow-hidden"
       />
       <div className="flex gap-1 pt-1 align-top ">
-        <h3 className="text-2xl  truncate">{title}</h3>{" "}
-        <img src="/icons/Info.svg" className="flex-shrink-0 h-[15px]" />
+        <h3 className="text-2xl  ">{title}</h3>{" "}
+        {/* <img src="/icons/Info.svg" className="flex-shrink-0 h-[15px]" /> */}
       </div>
       <p className="text-sm">{description}</p>
       <div className="grid gap-2 grid-cols-2 justify-between mt-2">
