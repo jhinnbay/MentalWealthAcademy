@@ -10,17 +10,17 @@ export const HotSellerCard = ({
 }) => {
   return (
     <div
-      className="max-w-[271px] hover:bg-[rgba(0,213,99,0.25)] p-5 cursor-pointer rounded-xl"
+      className="max-w-[271px] w-full hover:bg-[rgba(0,213,99,0.25)] p-5 cursor-pointer"
       onClick={onClick}
     >
       <img
         src={poster}
         alt={title + " by " + description}
-        className="border border-[#1F2937] rounded-xl overflow-hidden"
+        className="border border-[#1F2937] rounded-xl overflow-hidden w-[230px] h-[320px]  object-cover"
       />
       <div className="flex gap-1 pt-1 align-top ">
-        <h3 className="text-2xl  truncate">{title}</h3>{" "}
-        <img src="/icons/Info.svg" className="flex-shrink-0 h-[15px]" />
+        <h3 className="text-2xl  ">{title}</h3>{" "}
+        {/* <img src="/icons/Info.svg" className="flex-shrink-0 h-[15px]" /> */}
       </div>
       <p className="text-sm">{description}</p>
       <div className="grid gap-2 grid-cols-2 justify-between mt-2">

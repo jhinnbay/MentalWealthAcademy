@@ -174,10 +174,10 @@ const MarketPlace = () => {
   };
   return (
     <main>
-      <section className="text-center container my-7  hidden lg:block">
+      <section className="text-center container my-7">
         <h2 className="text-xs">GET PAID FOR YOUR AUTHORSHIP</h2>
-        <h1 className="text-7xl">Writer’s Marketplace</h1>
-        <h3 className="mt-7 bg-marketPlace_grad   p-[38px] pb-0 text-white text-5xl truncate">
+        <h1 className="text-3xl lg:text-7xl ">Writer’s Marketplace</h1>
+        <h3 className="mt-7 bg-marketPlace_grad   p-[38px] pb-0 text-white text-2xl lg:text-5xl ">
           {" "}
           Discover your next NFT, Sell Your Work, Ethical Verification
         </h3>
@@ -298,13 +298,13 @@ const MarketPlace = () => {
       </section>
 
       <section className="container py-5">
-        <div className="flex justify-between items-center">
-          <h2 className="lg:text-7xl text-4xl mb-5 font-bold">
+        <div className="flex justify-between items-center  mb-5">
+          <h2 className="lg:text-7xl text-4xl font-bold">
             Writer’s Marketplace
           </h2>
           <UploadBook />
         </div>
-        <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4  pb-2">
+        <div className="flex flex-wrap gap-3 justify-center pb-2">
           {hotSeller?.map((data, i) => (
             <div
               key={data?.title + data?.credit + i + "marketplace"}
