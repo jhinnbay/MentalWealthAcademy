@@ -176,7 +176,7 @@ const Library = () => {
         <section className="container py-7">
           <h3 className="text-xs">FEATURED LIBRARY BOOKS</h3>
           <h2 className="text-2xl md:text-5xl font-bold">
-            Find Your Next Book.
+            Books.
           </h2>
           <div className="flex flex-wrap gap-3 justify-center">
             <LibraryCard />
@@ -190,7 +190,7 @@ const Library = () => {
           </div>
         </section>
         <RequestForBook />
-        {/* <section className="container">
+         <section className="container">
           <h1 className="text-2xl">Latest DAO Proposals</h1>
           <div className="flex gap-3 overflow-x-auto my-12 pb-1">
             {[1, 2, 3, 4, 5, 6, 7].map((data, i) => (
@@ -217,7 +217,7 @@ const Library = () => {
               <BooksCard key={"proposal_card" + data + "" + i} />
             ))}
           </div>
-        </section> */}
+        </section>
       </div>
     </main>
   );
