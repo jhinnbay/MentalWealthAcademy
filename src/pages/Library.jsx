@@ -190,7 +190,7 @@ const Library = () => {
           </div>
         </section>
         <RequestForBook />
-        {*/   <section className="container">
+        {/* <section className="container">
           <h1 className="text-2xl">Latest DAO Proposals</h1>
           <div className="flex gap-3 overflow-x-auto my-12 pb-1">
             {[1, 2, 3, 4, 5, 6, 7].map((data, i) => (
