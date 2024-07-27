@@ -175,9 +175,7 @@ const Library = () => {
         </section>
         <section className="container py-7">
           <h3 className="text-xs">FEATURED LIBRARY BOOKS</h3>
-          <h2 className="text-2xl md:text-5xl font-bold">
-            Books.
-          </h2>
+          <h2 className="text-2xl md:text-5xl font-bold">Books.</h2>
           <div className="flex flex-wrap gap-3 justify-center">
             <LibraryCard />
             <LibraryCard />
@@ -197,7 +195,7 @@ const Library = () => {
               <ProposalCard key={"proposal_card" + data + "" + i} />
             ))}
           </div>
-        </section>
+        </section>*/}
         <section className="container">
           <h3 className="text-xs">FEATURED ARTICLES</h3>
           <h2 className="text-2xl md:text-4xl">
