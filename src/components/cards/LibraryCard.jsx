@@ -8,16 +8,17 @@ export const LibraryCard = () => {
         className="max-h-[281px] shadow-default "
       />
       <h4 className=" font-bold">Read, Write, Own</h4>
-      <h5>Jhinn bay</h5>
-      <Button className="bg-black_grad text-white">
-        <img
+      <h5 className="text-sm">Jhinn bay</h5>
+      <Button className="bg-black_grad text-white p-3">
+        Download
+        {/* <img
           src="/icons/sparkles.svg"
           style={{
             filter:
               " brightness(0) saturate(100%) invert(78%) sepia(90%) saturate(1124%) hue-rotate(323deg) brightness(100%) contrast(102%)",
           }}
         />{" "}
-        Mint A Copy
+        Mint A Copy */}
       </Button>
     </div>
   );

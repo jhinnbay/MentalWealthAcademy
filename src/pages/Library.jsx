@@ -175,8 +175,36 @@ const Library = () => {
         </section>
         <section className="container py-7">
           <h3 className="text-xs">FEATURED LIBRARY BOOKS</h3>
-          <h2 className="text-2xl md:text-5xl font-bold">Books.</h2>
-          <div className="flex flex-wrap gap-3 justify-center">
+          <h2 className="text-2xl md:text-5xl font-bold">Books</h2>
+          <div className="flex overflow-x-auto gap-3 ">
+            <LibraryCard />
+            <LibraryCard />
+            <LibraryCard />
+            <LibraryCard />
+            <LibraryCard />
+            <LibraryCard />
+            <LibraryCard />
+            <LibraryCard />
+          </div>
+        </section>
+        <section className="container py-7">
+          <h3 className="text-xs">FEATURED AUDIOBOOKS</h3>
+          <h2 className="text-2xl md:text-5xl font-bold">Audiobooks</h2>
+          <div className="flex overflow-x-auto gap-3 ">
+            <LibraryCard />
+            <LibraryCard />
+            <LibraryCard />
+            <LibraryCard />
+            <LibraryCard />
+            <LibraryCard />
+            <LibraryCard />
+            <LibraryCard />
+          </div>
+        </section>
+        <section className="container py-7">
+          <h3 className="text-xs">STAYING UPDATED</h3>
+          <h2 className="text-2xl md:text-5xl font-bold">Latest Articles</h2>
+          <div className="flex overflow-x-auto gap-3 ">
             <LibraryCard />
             <LibraryCard />
             <LibraryCard />
