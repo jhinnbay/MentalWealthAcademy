@@ -17,7 +17,7 @@ export const ChatBox = () => {
         <div className="mt-2">
           <h5 className="text-sm uppercase">Hey buddy! TIME TO CONNECT...</h5>
           <Link
-            to={"/marketplace"}
+            to={"/library"}
             className="uppercase flex justify-center items-center border-white hover:bg-white duration-300 hover:text-black border border-solid rounded-sm bg-transparent w-full p-2 mt-2 text-white"
           >
             JOIN THE ACADEMY
