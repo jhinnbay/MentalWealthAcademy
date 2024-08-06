@@ -194,7 +194,6 @@ const Library = () => {
               />
             ))}
           </div>
-        </section>
         {/* Books  */}
         <section className="container py-7">
           <h3 className="text-xs font-bold">FEATURED LIBRARY BOOKS</h3>
