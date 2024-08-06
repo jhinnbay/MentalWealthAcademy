@@ -219,7 +219,7 @@ const Library = () => {
               />
             ))}
           </div>
-
+          </section>
 
         <section className="container">
           <h3 className="text-xs font-bold">EMPOWERED BY YOU</h3>
