@@ -181,7 +181,6 @@ const Library = () => {
             </h3>
           </div>
         </section>
-                </section>
         {/* Articals  */}
         <section className="container py-7">
           <h3 className="text-xs font-bold">STAYING UPDATED</h3>
@@ -194,6 +193,7 @@ const Library = () => {
               />
             ))}
           </div>
+        </section>
         {/* Books  */}
         <section className="container py-7">
           <h3 className="text-xs font-bold">FEATURED LIBRARY BOOKS</h3>
