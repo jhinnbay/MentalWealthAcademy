@@ -74,27 +74,27 @@ export const audioBooksData = [
 ];
 export const articalsData = [
   {
-    title: "Mental Wealth Magazine August 2024",
+    title: "UX Designer Guide To Web3",
     author: "Jhinn bay",
     coverArt: "/images/Mental Wealth Magazine August 2024.png",
   },
   {
-    title: "Amaan’s Planet",
+    title: "Artist's Guide To Web3",
     author: "Amaan",
     coverArt: "/images/Amaan’s Planet.jpeg",
   },
   {
-    title: "Umar’s World Of Code",
+    title: "Trader's Guide To Web3",
     author: "Umar Farooq",
     coverArt: "/images/Umar’s World Of Code.jpeg",
   },
   {
-    title: "Nadda Flower Pfp",
+    title: "Dev's Guide To Web3",
     author: "Nadda",
     coverArt: "/images/Nadda Flower Pfp.png",
   },
   {
-    title: "Zunair’s Journey",
+    title: "Human Guide To Web3",
     author: "Zunair",
     coverArt: "/images/Zunair’s Journey.jpeg",
   },
