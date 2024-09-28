@@ -74,7 +74,7 @@ export const audioBooksData = [
 ];
 export const articalsData = [
   {
-    title: "UX Designer Guide To Web3",
+    title: "Designer Guide To Web3",
     author: "Jhinn bay",
     coverArt: "/images/Mental Wealth Magazine August 2024.png",
   },
