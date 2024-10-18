@@ -44,13 +44,7 @@ export default function Home() {
             </svg>
           </div>
           <div className=" absolute block 2xl:hidden bottom-0 right-0">
-            <img
-              src="/images/bunnyBot.png"
-              className="absolute min-w-[350px] w-[350px] aspect-square bottom-0 right-0"
-              style={{
-                filter: "drop-shadow(rgba(0, 0, 0, 0.25) -64px 0px 0px)",
-              }}
-            />
+            <iframe src="https://shaderpark.com/embed/-O8Xpl8n0_qLSj8VG4St" frameborder="0"></iframe>
             {/* <img
               src="/images/landingTooltip.png"
               className="absolute  w-[150px] top-[50%] hidden md:block"
