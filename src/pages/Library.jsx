@@ -181,19 +181,6 @@ const Library = () => {
             </h3>
           </div>
         </section>
-        {/* Articals  */}
-        <section className="container py-7">
-          <h3 className="text-xs font-bold">STAYING UPDATED</h3>
-          <h2 className="text-2xl md:text-5xl font-bold">Latest Articles</h2>
-          <div className="flex overflow-x-auto gap-3 ">
-            {articalsData.map((data, i) => (
-              <ArticalCard
-                key={"proposal_card" + data?.title + "" + i}
-                data={data}
-              />
-            ))}
-          </div>
-        </section>
         {/* Books  */}
         <section className="container py-7">
           <h3 className="text-xs font-bold">FEATURED LIBRARY BOOKS</h3>
@@ -220,6 +207,19 @@ const Library = () => {
             ))}
           </div>
           </section>
+          {/* Articals  */}
+        <section className="container py-7">
+          <h3 className="text-xs font-bold">STAYING UPDATED</h3>
+          <h2 className="text-2xl md:text-5xl font-bold">Latest Articles</h2>
+          <div className="flex overflow-x-auto gap-3 ">
+            {articalsData.map((data, i) => (
+              <ArticalCard
+                key={"proposal_card" + data?.title + "" + i}
+                data={data}
+              />
+            ))}
+          </div>
+        </section>
 
         <section className="container">
           <h3 className="text-xs font-bold">EMPOWERED BY YOU</h3>
