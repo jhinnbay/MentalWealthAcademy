@@ -23,7 +23,7 @@ function App() {
               appearance: {
                 theme: 'light',
                 accentColor: '#676FFF',
-                logo: 'https://your-logo-url',
+                logo: 'https://imgur.com/a/FuuYlvC',
               },
               // Create embedded wallets for users who don't have a wallet
               embeddedWallets: {
