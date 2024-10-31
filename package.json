@@ -13,7 +13,7 @@
     "@coinbase/onchainkit": "^0.23.4",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "@nomiclabs/hardhat-ethers": "^2.2.3",
-    "@openzeppelin/contracts": "^4.7.2",
+    "@openzeppelin/contracts": "^5.1.0",
     "@privy-io/react-auth": "^1.73.0",
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-dialog": "^1.1.1",
