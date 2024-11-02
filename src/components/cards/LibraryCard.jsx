@@ -16,7 +16,7 @@ export const LibraryCard = ({ data }) => {
         {data?.author}
       </h5>
       <Button className="bg-black_grad text-base text-white p-3">
-        Download
+        Rent
       </Button>
     </div>
   );
