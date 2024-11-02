@@ -80,7 +80,8 @@ export const PublicHeader = () => {
               <img src="/icons/newspaper.svg" width={20} height={20} />
               <span>DAO</span>
             </Link>
-            <Link
+            
+            /* <Link
               to={"/marketplace"}
               className=" hidden xl:flex gap-1 flex-col items-center justify-center text-sm p-2 hover:bg-white/25 rounded-lg"
             >
@@ -91,6 +92,8 @@ export const PublicHeader = () => {
               />
               <span>Marketplace</span>
             </Link>
+            */
+            
             {!connectedWallet ? (
               <>
                 <button
