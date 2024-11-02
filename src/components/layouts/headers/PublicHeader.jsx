@@ -79,21 +79,7 @@ export const PublicHeader = () => {
             >
               <img src="/icons/newspaper.svg" width={20} height={20} />
               <span>DAO</span>
-            </Link>
-            
-            /* <Link
-              to={"/marketplace"}
-              className=" hidden xl:flex gap-1 flex-col items-center justify-center text-sm p-2 hover:bg-white/25 rounded-lg"
-            >
-              <img
-                src="/icons/building-storefront.svg"
-                width={20}
-                height={20}
-              />
-              <span>Marketplace</span>
-            </Link>
-            */
-            
+            </Link> 
             {!connectedWallet ? (
               <>
                 <button
@@ -152,20 +138,6 @@ export const PublicHeader = () => {
                   >
                     <img src="/icons/newspaper.svg" width={20} height={20} />
                     <span>DAO</span>
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  {" "}
-                  <Link
-                    to={"/marketplace"}
-                    className=" gap-1 items-center justify-center text-sm   flex  hover:bg-white/25 rounded-lg"
-                  >
-                    <img
-                      src="/icons/building-storefront.svg"
-                      width={20}
-                      height={20}
-                    />
-                    <span>Marketplace</span>
                   </Link>
                 </DropdownMenuItem>
                 {/* <DropdownMenuItem>
