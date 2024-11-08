@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "@coinbase/onchainkit/styles.css";
+import "./App.css";
 
 localStorage.theme = 'light'
 
