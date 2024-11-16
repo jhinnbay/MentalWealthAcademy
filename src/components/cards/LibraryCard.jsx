@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import { Button } from "../ui/button";
 import BookDetails from "../modals/BookDetails";
+import { RentBookDialog } from "../dialogs/RentBook";
 
 export const LibraryCard = ({ data }) => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -27,14 +28,15 @@ export const LibraryCard = ({ data }) => {
       <h5 className="text-sm" style={{ letterSpacing: "-0.42px" }}>
         {data?.author}
       </h5>
-      <Button className="bg-black_grad text-base text-white p-3" onClick={handleRentClick}>
+      {/* <Button className="bg-black_grad text-base text-white p-3" onClick={handleRentClick}>
         Rent
-      </Button>
-      <BookDetails 
+      </Button> */}
+      <RentBookDialog book={data} />
+      {/* <BookDetails 
         isOpen={isModalOpen} 
         onClose={handleCloseModal} 
         bookData={data} // Pass the clicked book data to the modal
-      />
+      /> */}
     </div>
   );
 };
