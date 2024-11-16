@@ -27,7 +27,7 @@ export const RentBookDialog = ({ book }) => {
         <div className="flex flex-wrap justify-center gap-5">
           <img
             src={book?.coverArt}
-            className="max-h-[410px] w-[250px] object-contain object-center"
+            className="max-h-[410px] w-[250px] object-contain object-center shadow-[0px_6px_21.6px_0px_rgba(0,_0,_0,_0.25)]"
           />
           <div className="text-white font-spaceGrotesk leading-5 max-w-[590px]">
             <div className="border border-solid border-[#BCBCBC] p-5 rounded-md bg-[rgba(0,0,0,0.10)] shadow-[0px_-4px_0px_0px_rgba(21,_21,_21,_0.25)_inset]">
