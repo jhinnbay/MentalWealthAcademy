@@ -6,76 +6,75 @@
   padding: 10px; /* Adjust padding as needed */
 }
 
+/* Scroll Text Wrapper */
+.scroll-text-wrapper {
+  align-items: center;
+  background-color: #000000;
+  display: flex;
+  gap: 10px;
+  height: 45px;
+  justify-content: center;
+  padding: 0 10px 10px 10px;
+  position: relative;
+  width: 100%;
+}
 
-  /* Scroll Text Wrapper */
-  .scroll-text-wrapper {
-    align-items: center;
-    background-color: #000000;
-    display: flex;
-    gap: 10px;
-    height: 45px;
-    justify-content: center;
-    padding: 10px;
-    position: relative;
-    width: 100%;
-  }
+.scroll-text-wrapper .text-wrapper {
+  color: #ffffff;
+  font-family: "Sora-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 77px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
   
-  .scroll-text-wrapper .text-wrapper {
-    color: #ffffff;
-    font-family: "Sora-Regular", Helvetica;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 77px;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-  }
-  
-  /* Hero Section */
-  .hero {
-    align-items: flex-start;
-    background-color: #ffffff40;
-    border: 1px solid #ffffff;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 12px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .hero .frame {
-    align-items: flex-start;
-    align-self: stretch;
-    background-image: url(./frame-427319658.png);
-    background-position: center;
-    background-size: cover;
-    border-radius: 8px;
-    display: flex;
-    height: 161px;
-    justify-content: space-between;
-    overflow: hidden;
-    padding: 0 0 0 24px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .hero .div {
-    height: 161px;
-    margin-left: -24px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .hero .element {
-    height: 161px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
+/* Hero Section */
+.hero {
+  align-items: flex-start;
+  background-color: #ffffff40;
+  border: 1px solid #ffffff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  position: relative;
+  width: 100%;
+}
+
+.hero .frame {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: white; /* Add white background */
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  display: flex;
+  height: 161px;
+  justify-content: center; /* Center the image horizontally */
+  overflow: hidden;
+  padding: 12px; /* Add padding */
+  position: relative;
+  width: 100%;
+}
+
+.hero .image-container {
+  display: flex;
+  align-items: center; /* Center the image vertically */
+  justify-content: center; /* Center the image horizontally */
+  height: 100%;
+  width: 100%;
+}
+
+.hero .heroimage {
+  max-width: 100%; /* Ensure the image doesn't overflow */
+  max-height: 100%; /* Ensure the image doesn't overflow */
+  object-fit: contain; /* Fit the image inside the container */
+  padding: 10px;
+}
 
 .SigninButton{
     align-items: center;

@@ -6,7 +6,7 @@ import { EventCard } from "@/components/pages/Home/EventCard";
 import { AIClassCard } from "@/components/pages/Home/AIClassCard";
 import { SigninButton } from "@/components/pages/Home/SigninButton";
 import { MoreOptionsButton } from "@/components/pages/Home/MoreOptionsButton";
-
+import { Footer } from "@/components/pages/Home/Footer";
 import { NewIPFSLibrary } from "@/components/pages/Home/newIPFSLibrary";
 import { Sidebar } from "@/components/pages/Home/Sidebar";
 
@@ -74,9 +74,7 @@ const App = () => {
       </div>
 
       {/* Footer */}
-      <footer className="footer">
-        <p>footer</p>
-      </footer>
+      <Footer/>
     </div>
   );
 };

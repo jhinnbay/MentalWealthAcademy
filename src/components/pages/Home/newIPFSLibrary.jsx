@@ -8,10 +8,8 @@ export const NewIPFSLibrary = () => {
       <div className="ipfs-inner px-3 py-4 bg-[#0d0d19] text-white rounded-md">
         <div className=" rounded-md ipfs-bg-progress object-cover px-3 py-4 bg-center ">
           <div className="flex justify-between">
-            <div className="flex-1 flex flex-col justify-center">
               <h6 className="text-sm uppercase">message</h6>
               <h6 className="text-sm">INCOMING</h6>
-            </div>
           </div>
           <div className="flex border-white mt-2 border-solid border rounded-sm">
             <div className="animate-progress h-4 bg-white "></div>
