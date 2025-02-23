@@ -1,0 +1,20 @@
+import "./style.css";
+import sparkleswhite from "./icons/sparkles-white.svg";
+
+export const DiscordCard = () => {
+    return (
+    <div className="DiscordCard">
+        <div className="DiscordCard-wrapper">
+            <p className="DiscordCard-text-wrapper">
+                ://JOIN OUR DISCORD
+            </p>
+        </div>
+        <div className="DiscordCard-bckg">
+            <div className="DiscordCard-button"> {/* JOIN THE DISCORD */}
+            <div className="DiscordCard-text-wrapper2">JOIN THE DISCORD</div>
+            <img className="sparkles-white" alt="sparkles-white" src= {sparkleswhite} />
+      </div>
+        </div>
+    </div>
+    );
+};

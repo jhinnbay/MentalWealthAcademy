@@ -1,0 +1,446 @@
+
+  /* Scroll Text Wrapper */
+  .scroll-text-wrapper {
+    align-items: center;
+    background-color: #000000;
+    display: flex;
+    gap: 10px;
+    height: 45px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .scroll-text-wrapper .text-wrapper {
+    color: #ffffff;
+    font-family: "Sora-Regular", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 77px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  /* Hero Section */
+  .hero {
+    align-items: flex-start;
+    background-color: #ffffff40;
+    border: 1px solid #ffffff;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .hero .frame {
+    align-items: flex-start;
+    align-self: stretch;
+    background-image: url(./frame-427319658.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    display: flex;
+    height: 161px;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0 0 0 24px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .hero .div {
+    height: 161px;
+    margin-left: -24px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .hero .element {
+    height: 161px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+.SigninButton{
+    align-items: center;
+    background:rgb(235.79, 235.79, 255)100%;
+    color: #333; /* Dark gray text */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 0 16px 16px 16px;
+    font-size: 14px; /* Adjust font size */
+    font-weight: bold; /* Adjust font weight */
+    display: inline-flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    gap: 12px; /* Adjust gap between icon and text */
+    height: 47px;
+    width: 100%
+  }
+
+.MoreOptionsButton{
+  background-color: #CDFFE6;
+  color: #1A1E1D; /* Dark gray text */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 0 16px 16px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  gap: 5px; /* Adjust gap between icon and text */
+  height: 47px;
+  width: 100%
+}
+
+.PremiumMembershipCard{
+    background-color: #000000;
+    height: 367px;
+    width: 100%;
+    border-radius: 16px 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.MintPremiumMembership{
+    background-color: #FFFFFF;
+    display: flex;
+    gap: 10px;
+    height: 38px;
+    width: 336px;
+    border-radius: 8px 8px 8px 8px;
+    padding: 10px;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+}
+
+.TopHalfCard{
+    height: 245px;
+    width: 100%;
+    padding: 10px;
+}
+
+.MembershipCardPreview{
+    display: flex;
+    justify-content: center; /* Horizontally center items */
+    align-items: center; /* Vertically center items */
+    gap: 12px;
+    padding-left: 16px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: 119px;
+    width: 100%;
+}
+
+.gain-access-wrapper{
+    height: 80px;
+    width: 169px;
+    font-size: 12px;
+    color: #FFFFFF;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.MembershipBckgFrame{
+    background-image: url("src/components/pages/Home/images/membershipcardbckg.png");
+    border-radius: 10px 10px 10px 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 14px;
+    padding-left: 14px; 
+    height:202px;
+}
+
+.academy-pass{
+    height:18px;
+    width:144px
+}
+
+/*DiscordCard*/
+.DiscordCard{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px 16px 0px 0px;
+    padding: 10px;
+    background:rgb(235.79, 235.79, 255)100%;
+    color: #1A1E1D;
+}
+
+.DiscordCard-text-wrapper{
+    height: 12px;
+    width: 137px;
+    font-size: 12px;
+}
+
+.DiscordCard-bckg{
+    background-image: url("src/components/pages/Home/images/discordcardbckg.png");
+    object-fit: contain;
+    background-size: 100vh;
+    height: 235px;
+    width: 100%;
+    border-radius: 14px 14px 14px 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 14px;
+    padding-left: 14px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+.DiscordCard-button{
+    font-size: 12px;
+    color:#FFFFFF;
+    padding:10px;
+    background-color: #494A79;
+    display:flex;
+    height: 38px;
+    width: 100%;
+    border-radius: 8px 8px 8px 8px;
+    border-color: rgb(193, 193, 215)100%;
+    border-width: 1px;
+    padding: 10px;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    gap: 10px;
+}
+
+/* Event Card */
+.EventCard{
+    border-radius: 0 0 16px 16px;
+    background-color: #FFFFFF;
+    height: 502px;
+    width: 383px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-width: 2px;
+    border-color: #000000;
+    background:rgb(235.79, 235.79, 255)100%;
+
+}
+.EventCard .EventCard-text-wrapper{
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+}
+
+.EventCard .EventCard-apple-touch{
+    width: 299px;
+    height: 299px;
+    margin-top: 67px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.AIClassCard{
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    height: 245px;
+    width: 384px;
+    padding: 10px;
+    border-width: 2px;
+    border-color: #000000;
+    background:rgb(235.79, 235.79, 255)100%;
+}
+.AIClassCard .AIClassCard-text-wrapper{
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    font-size: 12px;
+}
+.AIClassCard-inner{
+    width: 100%;
+    height: 202px;
+    align-items: center;
+    background-color: #141c2c;
+    border-radius: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 14px;
+    padding-left: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    gap: 5px;
+}
+
+.AIClassCard .AIClassCard-button{
+    font-size: 12px;
+    color:#FFFFFF;
+    padding:10px;
+    background-color: #2def7e;
+    display:flex;
+    height: 38px;
+    width: 100%;
+    border-radius: 8px 8px 8px 8px;
+    padding: 10px;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    gap: 10px;
+}
+
+.FAQCard{
+    width: 384px;
+    height: 239px;
+}
+
+.FAQ-1,.FAQ-2,.FAQ-3{
+    background-color: #F3F3F3;
+    height:47px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-width: 1px;
+    border-color: #000000;
+}
+
+.FAQ-1{
+    border-radius: 12px 12px 0 0 ;
+}
+
+.FAQ-links-wrapper{
+    background-color: #F3F3F3;
+    height:98px;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 16px;
+    padding-left: 16px;
+    border-width: 1px;
+    border-color: #000000;
+    border-radius: 0 0 12px 12px;
+}
+
+.content{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 42px;
+}
+
+.content-pt1{
+  display: flex;
+  flex: 2; /* Takes 2 parts of the available space */
+  flex-direction: column;
+    /* background-color: #dc0000; */
+  justify-content: space-between;
+}
+
+.content-pt2{
+  display: flex;
+  flex-direction: row;
+  /* background-color: #00dc04; */
+  gap:30px;
+  justify-content: space-between;
+}
+
+.content-pt3{
+  display: flex;
+  flex-direction: column;
+  /* background-color: #0004dc; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-pt4{
+  display: flex;
+  flex: 1;
+  max-width: 33.333%;
+}
+
+.content-pt0{ 
+  display: flex;
+  width: 100%;
+  flex:1;
+  flex-direction: row;
+  /* background-color: #dcca00; */
+  gap: 40px
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  padding-right: 122px;
+  padding-left: 100px;
+}
+
+/*IPFSLibrary*/
+/*background:#141C2C, rgb(235.79, 235.79, 255)*/
+
+.HomeLibraryBento{
+  height: 245px;
+  width: 100%;
+  background:#141C2C;
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 16px 16px 16px 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 14px;
+  padding-left: 14px; 
+}
+.HomeLibraryBento-button{
+  height: 38px;
+  width: 100%;
+  border-radius: 8px;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+.IPFS-library-button{
+    height: 38px;
+    width: calc(100% - 110px); /* Adjust for padding (80px left + 30px right) */
+    border-radius: 8px;
+    background: #ebebeb;
+    padding: 50px 30px 50px 80px; /* Top, Right, Bottom, Left */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+   /* Ensures padding is included in the width */
+}
+
+.IPFS-library{
+  height: 202px;
+  width: 364px;
+  border: none;
+  border-radius: 14px 14px 14px 14px;
+}
+
+/*fix this*/
+.HomeLibraryBento-message{
+  position: relative;
+}
+
+.HomeLibraryBento-message .text-wrapper-5 {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Ensure text is above the image */
+}
+
+.HomeLibraryBento-message .img {
+  position: relative;
+  z-index: 0; /* Ensure image is below the text */
+}

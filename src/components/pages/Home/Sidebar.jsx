@@ -1,10 +1,10 @@
-import { ChatBox } from "./ChatBox";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+
 const faqList = [
   {
     id: "1",
@@ -44,29 +44,27 @@ const faqList = [
     ),
   },
 ];
+
 export const Sidebar = () => {
   return (
-    <div className="flex flex-col gap-2">
-      <ChatBox />
-      <div className="rounded-lg border bg-white border-solid border-black overflow-hidden">
-        <Accordion type="single" collapsible>
-          {faqList?.map((data, i) => (
-            <AccordionItem key={data?.question + i} value={`faqaccordion-${i}`}>
-              <AccordionTrigger className="border-black font-bold p-6">
-                {data?.question}
-              </AccordionTrigger>
-              <AccordionContent className="bg-[#e6e6e6] p-6">
-                {data?.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+    <div className="rounded-lg border bg-white border-solid border-black overflow-hidden">
+      <Accordion type="single" collapsible>
+        {faqList?.map((data, i) => (
+          <AccordionItem key={data?.question + i} value={`faqaccordion-${i}`}>
+            <AccordionTrigger className="border-black font-bold p-6">
+              {data?.question}
+            </AccordionTrigger>
+            <AccordionContent className="bg-[#e6e6e6] p-6">
+              {data?.answer}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
 
-        <div className="flex justify-end flex-col items-end p-6 text-sm">
-          <span>Whitepaper</span>
-          <span>Discord</span>
-          <span>Contract</span>
-        </div>
+      <div className="flex justify-end flex-col items-end p-6 text-sm">
+        <span>Whitepaper</span>
+        <span>Discord</span>
+        <span>Contract</span>
       </div>
     </div>
   );

@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import Logo from "./images/Logo.png";
 
 export const ChatBox = () => {
   return (
-    <div className="rounded-lg border-[3px] p-6 border-solid border-black">
-      <h6 className="text-sm">/CHAT/Library</h6>
+    <div className="ipfs">
+      <h6 className="flex justify-center items-center text-black">IPFS://LIBRARY</h6>
       <div className="px-3 py-4 bg-[#0d0d19] text-white rounded-md">
         <div className=" rounded-md bg-progress object-cover px-3 py-4 bg-center ">
           <div className="flex justify-between ">
@@ -15,13 +16,16 @@ export const ChatBox = () => {
           </div>
         </div>
         <div className="mt-2">
-          <h5 className="text-sm uppercase">Hey buddy! TIME TO CONNECT...</h5>
-          <Link
-            to={"/library"}
-            className="uppercase flex justify-center items-center border-white hover:bg-white duration-300 hover:text-black border border-solid rounded-sm bg-transparent w-full p-2 mt-2 text-white"
-          >
-            JOIN THE ACADEMY
-          </Link>
+          <h5 className="text-sm uppercase">LET’S CHECK OUT SOME BOOKS...</h5>
+          <div className="libBento-button flex gap-[10px]">
+            <Link
+              to={"/library"}
+              className="bg-[#ebebeb] uppercase flex justify-center items-center rounded-sm w-full p-2 mt-2 text-black"
+            >
+              ENTER THE ACADEMY
+            <img className="img" alt="Logo" src={Logo} />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

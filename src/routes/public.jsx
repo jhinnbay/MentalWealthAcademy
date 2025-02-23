@@ -6,7 +6,7 @@ import { PublicLayout } from "../components/layouts/publicLayout";
 import MarketPlace from "@/pages/MarketPlace";
 import Library from "@/pages/Library";
 // render - login
-const Home = Loadable(lazy(() => import("../pages/Home")));
+const Home = Loadable(lazy(() => import("../pages/Home_new"))); //new updated page
 // const Library = Loadable(lazy(() => import("../pages/Library")));
 // const MarketPlace = Loadable(lazy(() => import("../pages/MarketPlace")));
 
