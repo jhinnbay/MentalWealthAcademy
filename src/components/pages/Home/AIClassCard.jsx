@@ -6,7 +6,7 @@ export const AIClassCard = () => {
         <div className="AIClassCard">
             <div className="AIClassCard-wrapper">
                 <div className="AIClassCard-text-wrapper">
-                    <p style={{ color: 'black' }}>AI CLASS SCHEDULER</p>
+                <h6 className="flex justify-center items-center text-black">AI CLASS SCHEDULER</h6>
                 </div>
             </div>
             <div className="AIClassCard-inner">

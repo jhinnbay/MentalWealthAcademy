@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
 import Logo from "./images/Logo.png";
 
-export const ChatBox = () => {
+export const NewIPFSLibrary = () => {
   return (
     <div className="ipfs">
       <h6 className="flex justify-center items-center text-black">IPFS://LIBRARY</h6>
-      <div className="px-3 py-4 bg-[#0d0d19] text-white rounded-md">
-        <div className=" rounded-md bg-progress object-cover px-3 py-4 bg-center ">
-          <div className="flex justify-between ">
-            <h6 className="text-sm uppercase">message</h6>
-            <h6 className="text-sm">INCOMING</h6>
+      <div className="ipfs-inner px-3 py-4 bg-[#0d0d19] text-white rounded-md">
+        <div className=" rounded-md ipfs-bg-progress object-cover px-3 py-4 bg-center ">
+          <div className="flex justify-between">
+            <div className="flex-1 flex flex-col justify-center">
+              <h6 className="text-sm uppercase">message</h6>
+              <h6 className="text-sm">INCOMING</h6>
+            </div>
           </div>
           <div className="flex border-white mt-2 border-solid border rounded-sm">
             <div className="animate-progress h-4 bg-white "></div>
@@ -20,7 +22,7 @@ export const ChatBox = () => {
           <div className="libBento-button flex gap-[10px]">
             <Link
               to={"/library"}
-              className="bg-[#ebebeb] uppercase flex justify-center items-center rounded-sm w-full p-2 mt-2 text-black"
+              className="IPFS-library-button uppercase flex justify-center items-center rounded-sm w-full p-2 mt-2 text-black"
             >
               ENTER THE ACADEMY
             <img className="img" alt="Logo" src={Logo} />

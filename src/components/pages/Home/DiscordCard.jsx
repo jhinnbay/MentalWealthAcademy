@@ -5,10 +5,9 @@ export const DiscordCard = () => {
     return (
     <div className="DiscordCard">
         <div className="DiscordCard-wrapper">
-            <p className="DiscordCard-text-wrapper">
-                ://JOIN OUR DISCORD
-            </p>
-        </div>
+        <h6 className="flex justify-center items-center text-black">://JOIN OUR DISCORD
+        </h6>
+    </div>
         <div className="DiscordCard-bckg">
             <div className="DiscordCard-button"> {/* JOIN THE DISCORD */}
             <div className="DiscordCard-text-wrapper2">JOIN THE DISCORD</div>

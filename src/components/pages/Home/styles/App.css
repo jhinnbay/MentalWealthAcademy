@@ -39,7 +39,7 @@ body {
   flex: 1; /* Takes up half the height */
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Space between Card 1 and buttons */
+  gap: 10px; /* Space between Card 1 and buttons */
 }
 
 /* Card 1 */
@@ -51,20 +51,6 @@ body {
   flex: 1; /* Takes up 1/2 of the height */
 }
 
-/* Buttons */
-.button-1,
-.button-2 {
-  /* background-color: #4caf50; Green */
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  flex: 1; /* Takes up 1/2 of the height */
-}
-
-.button-2 {
-  /* background-color: #f44336; Red */
-}
 
 /* Card 2 */
 .card-2 {
