@@ -47,7 +47,7 @@ const faqList = [
 
 export const Sidebar = () => {
   return (
-    <div className="rounded-lg border bg-white border-solid border-black overflow-hidden">
+    <div className="faq-card rounded-lg border bg-white border-solid border-black overflow-hidden">
       <Accordion type="single" collapsible>
         {faqList?.map((data, i) => (
           <AccordionItem key={data?.question + i} value={`faqaccordion-${i}`}>

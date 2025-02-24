@@ -125,7 +125,7 @@
     display: flex;
     gap: 10px;
     height: 38px;
-    width: 336px;
+    width: 100%;
     border-radius: 8px 8px 8px 8px;
     padding: 10px;
     align-items: center; /* Vertically center content */
@@ -229,8 +229,8 @@
 .EventCard{
     border-radius: 0 0 16px 16px;
     background-color: #FFFFFF;
-    height: 502px;
-    width: 383px;
+    height: 100%;
+    width: 100%;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-right: 10px;
@@ -246,20 +246,42 @@
     justify-content: center; /* Horizontally center content */
 }
 
-.EventCard .EventCard-apple-touch{
-    width: 299px;
-    height: 299px;
-    margin-top: 67px;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
+.EventCard .EventCard-apple-touch {
+  width: 100%; /* Make the container responsive */
+  max-width: 299px; /* Set a maximum width */
+  height: auto; /* Allow height to adjust based on aspect ratio */
+  aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
+  margin-top: 67px;
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.EventCard .EventCard-apple-touch {
+  width: 100%; /* Make the container responsive */
+  max-width: 299px; /* Set a maximum width */
+  height: auto; /* Allow height to adjust based on aspect ratio */
+  aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
+  margin-top: 67px;
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.EventCard .apple-touch-icon {
+  width: 75%;
+  object-fit: contain;
 }
 
 .AIClassCard{
     border-radius: 16px;
     background-color: #FFFFFF;
     height: 245px;
-    width: 384px;
+    width: 100%;
     padding: 10px;
     border-width: 2px;
     border-color: #000000;
