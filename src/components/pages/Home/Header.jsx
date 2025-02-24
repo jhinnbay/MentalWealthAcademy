@@ -1,12 +1,12 @@
 import "./style.css";
-import heroImage from "./images/mwa-header.png"; // Import the image
+import headerImage from "./images/mwa-header.png"; // Import the image
 
-export const Hero = () => {
+export const Header = () => {
   return (
     <div className="hero">
       <div className="frame">
         <div className="image-container">
-          <img className="heroimage" alt="Hero Section" src={heroImage} />
+          <img className="heroimage" alt="Header" src={headerImage} />
         </div>
       </div>
     </div>

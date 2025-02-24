@@ -1,4 +1,4 @@
-import { Hero } from "@/components/pages/Home/Hero";
+import { Header } from "@/components/pages/Home/Header";
 import { MintPremiumMembership } from "@/components/pages/Home/MintPremiumMembership";
 import { ScrollTextWrapper } from "@/components/pages/Home/ScrollTextWrapper";
 import { DiscordCard } from "@/components/pages/Home/DiscordCard";
@@ -17,7 +17,7 @@ const App = () => {
     <div className="bento-website">
       {/* Header */}
       <header className="header">
-        <Hero/>
+        <Header/>
       </header>
 
       <ScrollTextWrapper/>
