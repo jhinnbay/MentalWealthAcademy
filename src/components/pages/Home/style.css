@@ -1,5 +1,5 @@
 .ipfs-bg-progress {
-  background-image: url('public/images/ipfs-incoming-bg.png'); /* Replace with your image path */
+  background-image: url("public/images/ipfs-incoming-bg.png"); /* Replace with your image path */
   background-size: cover; /* Ensures the image covers the div */
   background-position: center; /* Centers the image */
   border-radius: 24px 8px 24px 8px; /* Adjust corner roundness if needed */
@@ -9,7 +9,7 @@
 /* Scroll Text Wrapper */
 .scroll-text-wrapper {
   align-items: center;
-  background-color: #000000;
+  background-color: transparent;
   display: flex;
   gap: 10px;
   height: 45px;
@@ -30,7 +30,7 @@
   white-space: nowrap;
   width: fit-content;
 }
-  
+
 /* Hero Section */
 .hero {
   align-items: flex-start;
@@ -76,26 +76,25 @@
   padding: 10px;
 }
 
-.SigninButton{
-    align-items: center;
-    background:rgb(235.79, 235.79, 255)100%;
-    color: #333; /* Dark gray text */
-    border: none; /* Remove default border */
-    padding: 10px 20px; /* Adjust padding as needed */
-    border-radius: 0 16px 16px 16px;
-    font-size: 14px; /* Adjust font size */
-    font-weight: bold; /* Adjust font weight */
-    display: inline-flex; /* Use flexbox for alignment */
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
-    gap: 12px; /* Adjust gap between icon and text */
-    height: 47px;
-    width: 100%
-  }
+.SigninButton {
+  align-items: center;
+  background: #ececff 100%;
+  color: #333; /* Dark gray text */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 0 16px 16px 16px;
+  font-size: 14px; /* Adjust font size */
+  font-weight: bold; /* Adjust font weight */
+  display: inline-flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  gap: 12px; /* Adjust gap between icon and text */
+  height: 47px;
+  width: 100%;
+}
 
-.MoreOptionsButton{
-  background-color: #CDFFE6;
-  color: #1A1E1D; /* Dark gray text */
+.MoreOptionsButton {
+  color: #1a1e1d; /* Dark gray text */
   border: none; /* Remove default border */
   padding: 10px 20px; /* Adjust padding as needed */
   border-radius: 0 16px 16px 16px;
@@ -106,144 +105,143 @@
   justify-content: center; /* Horizontally center content */
   gap: 5px; /* Adjust gap between icon and text */
   height: 47px;
-  width: 100%
+  width: 100%;
 }
 
-.PremiumMembershipCard{
-    background-color: #000000;
-    height: 367px;
-    width: 100%;
-    border-radius: 16px 16px 16px 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: relative;
+.PremiumMembershipCard {
+  background-color: #000000;
+  height: 367px;
+  width: 100%;
+  border-radius: 16px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
 }
 
-.MintPremiumMembership{
-    background-color: #FFFFFF;
-    display: flex;
-    gap: 10px;
-    height: 38px;
-    width: 100%;
-    border-radius: 8px 8px 8px 8px;
-    padding: 10px;
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
+.MintPremiumMembership {
+  background-color: #ffffff;
+  display: flex;
+  gap: 10px;
+  height: 38px;
+  width: 100%;
+  border-radius: 8px 8px 8px 8px;
+  padding: 10px;
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
 }
 
-.TopHalfCard{
-    height: 245px;
-    width: 100%;
-    padding: 10px;
+.TopHalfCard {
+  height: 245px;
+  width: 100%;
+  padding: 10px;
 }
 
-.MembershipCardPreview{
-    display: flex;
-    justify-content: center; /* Horizontally center items */
-    align-items: center; /* Vertically center items */
-    gap: 12px;
-    padding-left: 16px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    height: 119px;
-    width: 100%;
+.MembershipCardPreview {
+  display: flex;
+  justify-content: center; /* Horizontally center items */
+  align-items: center; /* Vertically center items */
+  gap: 12px;
+  padding-left: 16px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  height: 119px;
+  width: 100%;
 }
 
-.gain-access-wrapper{
-    height: 80px;
-    width: 169px;
-    font-size: 12px;
-    color: #FFFFFF;
-    font-weight: 500;
-    padding: 10px;
+.gain-access-wrapper {
+  height: 80px;
+  width: 169px;
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 10px;
 }
 
-.MembershipBckgFrame{
-    background-image: url("src/components/pages/Home/images/membershipcardbckg.png");
-    border-radius: 10px 10px 10px 10px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-right: 14px;
-    padding-left: 14px; 
-    height:202px;
+.MembershipBckgFrame {
+  background-image: url("src/components/pages/Home/images/membershipcardbckg.png");
+  border-radius: 10px 10px 10px 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 14px;
+  padding-left: 14px;
+  height: 202px;
 }
 
-.academy-pass{
-    height:18px;
-    width:144px
+.academy-pass {
+  height: 18px;
+  width: 144px;
 }
 
 /*DiscordCard*/
-.DiscordCard{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    border-radius: 16px 16px 0px 0px;
-    padding: 10px;
-    background:rgb(235.79, 235.79, 255)100%;
-    color: #1A1E1D;
+.DiscordCard {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px 16px 0px 0px;
+  padding: 10px;
+  background: rgb(235.79, 235.79, 255) 100%;
+  color: #1a1e1d;
 }
 
-.DiscordCard-text-wrapper{
-    height: 12px;
-    width: 137px;
-    font-size: 12px;
+.DiscordCard-text-wrapper {
+  height: 12px;
+  width: 137px;
+  font-size: 12px;
 }
 
-.DiscordCard-bckg{
-    background-image: url("src/components/pages/Home/images/discordcardbckg.png");
-    object-fit: contain;
-    background-size: 100vh;
-    height: 235px;
-    width: 100%;
-    border-radius: 14px 14px 14px 14px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-right: 14px;
-    padding-left: 14px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: relative;
+.DiscordCard-bckg {
+  background-image: url("src/components/pages/Home/images/discordcardbckg.png");
+  object-fit: contain;
+  background-size: 100vh;
+  height: 235px;
+  width: 100%;
+  border-radius: 14px 14px 14px 14px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 14px;
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
 }
-.DiscordCard-button{
-    font-size: 12px;
-    color:#FFFFFF;
-    padding:10px;
-    background-color: #494A79;
-    display:flex;
-    height: 38px;
-    width: 100%;
-    border-radius: 8px 8px 8px 8px;
-    border-color: rgb(193, 193, 215)100%;
-    border-width: 1px;
-    padding: 10px;
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
-    gap: 10px;
+.DiscordCard-button {
+  font-size: 12px;
+  color: #ffffff;
+  padding: 10px;
+  background-color: #494a79;
+  display: flex;
+  height: 38px;
+  width: 100%;
+  border-radius: 8px 8px 8px 8px;
+  border-color: rgb(193, 193, 215) 100%;
+  border-width: 1px;
+  padding: 10px;
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  gap: 10px;
 }
 
 /* Event Card */
-.EventCard{
-    border-radius: 0 0 16px 16px;
-    background-color: #FFFFFF;
-    height: 100%;
-    width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-right: 10px;
-    padding-left: 10px;
-    border-width: 2px;
-    border-color: #000000;
-    background:rgb(235.79, 235.79, 255)100%;
-
+.EventCard {
+  border-radius: 0 0 16px 16px;
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-width: 2px;
+  border-color: #000000;
+  background: rgb(235.79, 235.79, 255) 100%;
 }
-.EventCard .EventCard-text-wrapper{
-    display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
+.EventCard .EventCard-text-wrapper {
+  display: flex;
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
 }
 
 .EventCard .EventCard-apple-touch {
@@ -273,82 +271,81 @@
 }
 
 .EventCard .apple-touch-icon {
-  width: 75%;
+  width: 100%;
   object-fit: contain;
 }
 
-.AIClassCard{
-    border-radius: 16px;
-    background-color: #FFFFFF;
-    height: 245px;
-    width: 100%;
-    padding: 10px;
-    border-width: 2px;
-    border-color: #000000;
-    background:rgb(235.79, 235.79, 255)100%;
+.AIClassCard {
+  border-radius: 16px;
+  background-color: #ffffff;
+  height: 245px;
+  width: 100%;
+  padding: 10px;
+  border-width: 2px;
+  border-color: #000000;
+  background: rgb(235.79, 235.79, 255) 100%;
 }
-.AIClassCard .AIClassCard-text-wrapper{
-    display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
-    font-size: 12px;
+.AIClassCard .AIClassCard-text-wrapper {
+  display: flex;
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  font-size: 12px;
 }
-.AIClassCard-inner{
-    width: 100%;
-    height: 202px;
-    align-items: center;
-    background-color: #141c2c;
-    border-radius: 14px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-right: 14px;
-    padding-left: 14px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: relative;
-    gap: 5px;
-}
-
-.AIClassCard .AIClassCard-button{
-    font-size: 12px;
-    color:#FFFFFF;
-    padding:10px;
-    background-color: #2def7e;
-    display:flex;
-    height: 38px;
-    width: 100%;
-    border-radius: 8px 8px 8px 8px;
-    padding: 10px;
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
-    gap: 10px;
+.AIClassCard-inner {
+  width: 100%;
+  align-items: center;
+  background-color: #141c2c;
+  border-radius: 14px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 14px;
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  gap: 5px;
 }
 
-.content{
+.AIClassCard .AIClassCard-button {
+  font-size: 12px;
+  color: #ffffff;
+  padding: 10px;
+  background-color: #2def7e;
+  display: flex;
+  height: 38px;
+  width: 100%;
+  border-radius: 8px 8px 8px 8px;
+  padding: 10px;
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  gap: 10px;
+}
+
+.content {
   display: flex;
   flex-direction: row;
   gap: 10px;
   margin-top: 42px;
 }
 
-.content-pt1{
+.content-pt1 {
   display: flex;
   flex: 2; /* Takes 2 parts of the available space */
   flex-direction: column;
-    /* background-color: #dc0000; */
+  /* background-color: #dc0000; */
   justify-content: space-between;
 }
 
-.content-pt2{
+.content-pt2 {
   display: flex;
   flex-direction: row;
   /* background-color: #00dc04; */
-  gap:30px;
+  gap: 30px;
   justify-content: space-between;
 }
 
-.content-pt3{
+.content-pt3 {
   display: flex;
   flex-direction: column;
   /* background-color: #0004dc; */
@@ -356,22 +353,22 @@
   justify-content: space-between;
 }
 
-.content-pt4{
+.content-pt4 {
   display: flex;
   flex: 1;
   max-width: 33.333%;
 }
 
-.content-pt0{ 
+.content-pt0 {
   display: flex;
   width: 100%;
-  flex:1;
+  flex: 1;
   flex-direction: row;
   /* background-color: #dcca00; */
-  gap: 40px
+  gap: 40px;
 }
 
-.box{
+.box {
   display: flex;
   flex-direction: column;
   background-color: #000000;
@@ -382,18 +379,18 @@
 /*IPFSLibrary*/
 /*background:#141C2C, rgb(235.79, 235.79, 255)*/
 
-.HomeLibraryBento{
+.HomeLibraryBento {
   height: 245px;
   width: 100%;
-  background:#141C2C;
+  background: #141c2c;
   padding: 10px 20px; /* Adjust padding as needed */
   border-radius: 16px 16px 16px 16px;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-right: 14px;
-  padding-left: 14px; 
+  padding-left: 14px;
 }
-.HomeLibraryBento-button{
+.HomeLibraryBento-button {
   height: 38px;
   border-radius: 8px;
   padding-top: 50px;
@@ -401,17 +398,17 @@
   padding-bottom: 50px;
   padding-left: 80px;
 }
-.IPFS-library-button{
-    border-radius: 8px;
-    background: #ebebeb;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    box-sizing: border-box; 
+.IPFS-library-button {
+  border-radius: 8px;
+  background: #ebebeb;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-sizing: border-box;
 }
 
 /*fix this*/
-.HomeLibraryBento-message{
+.HomeLibraryBento-message {
   position: relative;
 }
 
@@ -441,8 +438,8 @@
   flex: 1; /* Allow inner content to expand and fill space */
   display: flex;
   flex-direction: column;
-} 
+}
 
-.ipfs-inner{
+.ipfs-inner {
   padding: 14px 12px;
 }

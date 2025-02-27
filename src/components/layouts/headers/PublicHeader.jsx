@@ -1,20 +1,7 @@
 // import React from "react";
 
 import { Input } from "@/components/ui/input";
-import { menuItems } from "@/data/menuItems";
 // import { shortenAddress } from "@/lib/utils";
-import { usePrivy, useWallets } from "@privy-io/react-auth";
-import { Link } from "react-router-dom";
-import { useAccount } from "wagmi";
-import { OnchainKitProvider } from "@coinbase/onchainkit";
-import { base } from "viem/chains";
-import {
-  Avatar,
-  Identity,
-  Name,
-  Badge,
-  Address,
-} from "@coinbase/onchainkit/identity";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -23,6 +10,19 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { OnchainKitProvider } from "@coinbase/onchainkit";
+import {
+  Address,
+  Avatar,
+  Badge,
+  Identity,
+  Name,
+} from "@coinbase/onchainkit/identity";
+import { usePrivy, useWallets } from "@privy-io/react-auth";
+import { Menu } from "lucide-react";
+import { Link } from "react-router-dom";
+import { base } from "viem/chains";
+import { useAccount } from "wagmi";
 
 const EAS_SCHEMA_ID =
   "0xf8b05c79f090979bf4a80270aba232dff11a10d9ca55c4f88de95317970f0de9";
@@ -47,7 +47,7 @@ export const PublicHeader = () => {
     wallets && wallets?.length && wallets?.length > 0 ? wallets[0] : null;
 
   return (
-    <header className="bg-primary-background sticky top-0 w-full z-20  border-b border-primary-foreground shadow-default">
+    <header className="bg-header sticky top-0 w-full z-20  border-b border-black shadow-default pt-6">
       {/* <div>
         <div>
           <div></div>
@@ -56,17 +56,14 @@ export const PublicHeader = () => {
       <div className="container">
         <div className="flex gap-[18px] items-center">
           <Link to="/">
-            <img src="/icons/Logo.svg" className="w-[75px] md:w-auto" />
+            <img src="/icons/header_logo.svg" className="w-[75px] md:w-auto" />
           </Link>
-          <h4
-            className="text-2xl font-bold  hidden md:flex"
-            style={{ letterSpacing: "-1.68px" }}
-          >
+          <h4 className="text-2xl font-bold  hidden md:flex tracking-[-1.68px]">
             Mental Wealth Academy
           </h4>
 
           <div className="flex gap-4 ms-auto">
-            <Link
+            {/* <Link
               to={"/library"}
               className=" gap-1 flex-col items-center justify-center text-sm p-2   hidden xl:flex  hover:bg-white/25 rounded-lg"
             >
@@ -79,7 +76,7 @@ export const PublicHeader = () => {
             >
               <img src="/icons/newspaper.svg" width={20} height={20} />
               <span>DAO</span>
-            </Link> 
+            </Link> */}
             {!connectedWallet ? (
               <>
                 <button
@@ -89,12 +86,12 @@ export const PublicHeader = () => {
                   Log in
                 </button>
                 <Link className="border rounded-lg px-5 py-3 border-primary-foreground flex justify-center items-center gap-2">
-                  Sync Account
-                  <img
-                    src="/icons/sync_globe.svg"
-                    className=" hidden md:block"
-                  />
+                  Connect Account
+                  <img src="/icons/eth.svg" className=" hidden md:block" />
                 </Link>
+                <button>
+                  <Menu />
+                </button>
               </>
             ) : (
               <>

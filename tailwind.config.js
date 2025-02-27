@@ -21,6 +21,7 @@ module.exports = {
       screens: {
         xs: "420px", // Extra small devices (e.g., smartphones in portrait mode)
         sm: "640px", // Small devices (e.g., smartphones in landscape mode)
+        small_tablet: "768px",
         md: "900px", // Medium devices (e.g., tablets)
         lg: "1024px", // Large devices (e.g., desktops)
         xl: "1200px", // Extra large devices (e.g., large desktops)
@@ -48,6 +49,7 @@ module.exports = {
         default: "0px 4px 8px 0px rgba(0, 0, 0, 0.25)",
         button:
           "0px -4px 0px 0px rgba(21, 21, 21, 0.25) inset, 0px 2px 0px 0px rgba(172, 172, 172, 0.50) inset",
+        "button-shadow": "0px 0px 2px 1px #63F1BB33",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -105,6 +107,21 @@ module.exports = {
         button_grad: "linear-gradient(91deg, #CDC4FB 0%, #A4FCF5 99.74%)",
         black_grad: "linear-gradient(180deg, #222225 0%, #15151B 100%)",
         marketPlace_grad: "linear-gradient(90deg,#5F6FF9 0%,#5DF4CF 100%)",
+        home_banner:
+          "linear-gradient(139.92deg, #000105 -30.32%, #2B2E40 -1.32%, #000001 30.77%, #2F313D 47.26%, #000106 68.53%, #0A0E1C 73.87%, #090B14 78.98%, #151826 102.74%, #2D303E 112.94%)",
+        premium: "url('/images/premium.png')",
+        generate_btn:
+          "linear-gradient(90.83deg, #44E990 0.21%, #16BD8B 70.21%)",
+        footer:
+          "linear-gradient(165deg, #000105 -30.32%, #2B2E40 -1.32%, #000001 30.77%, #2F313D 47.26%, #000106 68.53%, #0A0E1C 73.87%, #090B14 78.98%, #151826 102.74%, #2D303E 112.94%)",
+        class_scheduler: "url('/images/class.png')",
+        header: "linear-gradient(180deg, #ECECFF 0%, #E1E1FE 100%)",
+        dashboard_tab:
+          "linear-gradient(139.92deg, #FAFBFF -30.32%, #CCCFDD -1.32%, #FEFEFF 30.77%, #B8BBC9 47.26%, #F9FBFF 68.53%, #E4E7F5 77%, #D9DCEA 102.74%, #C1C4D2 112.94%)",
+        dashboard_tab_active:
+          "linear-gradient(0deg, #53AAB0, #53AAB0), radial-gradient(90.63% 873.63% at 39.29% 23.44%, rgba(84, 171, 177, 0) 0%, rgba(133, 238, 179, 0.71) 51.52%, rgba(84, 171, 177, 0) 100%) ",
+        active_proposal:
+          "linear-gradient(90.83deg, #44E990 0.21%, #16BD8B 70.21%)",
       },
       borderRadius: {
         lg: "var(--radius)",
