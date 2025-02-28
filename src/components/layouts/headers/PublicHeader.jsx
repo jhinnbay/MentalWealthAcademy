@@ -19,7 +19,6 @@ import {
   Name,
 } from "@coinbase/onchainkit/identity";
 import { usePrivy, useWallets } from "@privy-io/react-auth";
-import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 import { base } from "viem/chains";
 import { useAccount } from "wagmi";
@@ -89,9 +88,6 @@ export const PublicHeader = () => {
                   Connect Account
                   <img src="/icons/eth.svg" className=" hidden md:block" />
                 </Link>
-                <button>
-                  <Menu />
-                </button>
               </>
             ) : (
               <>
@@ -110,7 +106,7 @@ export const PublicHeader = () => {
               </>
             )}
             <DropdownMenu>
-              <DropdownMenuTrigger className=" flex xl:!hidden justify-center items-center">
+              <DropdownMenuTrigger className=" flex justify-center items-center">
                 {" "}
                 <img src="/icons/menu.svg" />
               </DropdownMenuTrigger>

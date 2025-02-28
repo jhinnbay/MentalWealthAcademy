@@ -50,6 +50,12 @@ module.exports = {
         button:
           "0px -4px 0px 0px rgba(21, 21, 21, 0.25) inset, 0px 2px 0px 0px rgba(172, 172, 172, 0.50) inset",
         "button-shadow": "0px 0px 2px 1px #63F1BB33",
+        inner: "0px -4px 1px 0px #FFFFFF40 inset",
+        membership_card:
+          " 0px -0.75px 0px 0px #000000,  0px 0px 4px 0px #00000059",
+      },
+      dropShadow: {
+        library_img: "0px 6px 21.6px 0px #00000040",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -99,6 +105,7 @@ module.exports = {
       },
       backgroundImage: {
         library: "url('/images/library_bg.png')",
+        library_tablet: "url('/images/tablet_view.png')",
         progress: "url('/images/progress-bg.png')",
         library_aside:
           "linear-gradient(180deg, rgba(24, 24, 27, 0.90) 0%, rgba(24, 24, 28, 0.90) 100%)",
@@ -119,9 +126,17 @@ module.exports = {
         dashboard_tab:
           "linear-gradient(139.92deg, #FAFBFF -30.32%, #CCCFDD -1.32%, #FEFEFF 30.77%, #B8BBC9 47.26%, #F9FBFF 68.53%, #E4E7F5 77%, #D9DCEA 102.74%, #C1C4D2 112.94%)",
         dashboard_tab_active:
-          "linear-gradient(0deg, #53AAB0, #53AAB0), radial-gradient(90.63% 873.63% at 39.29% 23.44%, rgba(84, 171, 177, 0) 0%, rgba(133, 238, 179, 0.71) 51.52%, rgba(84, 171, 177, 0) 100%) ",
+          "linear-gradient(0deg, #53AAB0, #53AAB0), radial-gradient(90.63% 873.63% at 39.29% 23.44%, rgba(84, 171, 177, 0) 0%, rgba(133, 238, 179, 0.71) 51.52%, rgba(84, 171, 177, 0) 100%)  ",
         active_proposal:
           "linear-gradient(90.83deg, #44E990 0.21%, #16BD8B 70.21%)",
+        sync_account: "linear-gradient(180deg, #222225 0%, #15151B 100%)",
+        average_bg: "url('/images/average_bg.jpeg')",
+        votes: "linear-gradient(180deg, #ECECFF 0%, #E1E1FE 100%)",
+        membership_card_outer:
+          "linear-gradient(180deg, #C3C3C3 0%, #343434 50.5%, #FFFFFF 100%)",
+        membership_card: "linear-gradient(180deg, #C7C7C7 0%, #7B7B7B 100%)",
+        library_bg:
+          "linear-gradient(180deg, #ECECFF 0%, #E1E1FE 100%), linear-gradient(0deg, #CFCAFF, #CFCAFF)",
       },
       borderRadius: {
         lg: "var(--radius)",

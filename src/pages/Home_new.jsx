@@ -93,7 +93,9 @@ const App = () => {
       </section>
 
       {/* Footer */}
-      <Footer />
+      <div className="container">
+        <Footer />
+      </div>
     </div>
   );
 };
