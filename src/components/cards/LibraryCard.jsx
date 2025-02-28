@@ -1,7 +1,5 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { Button } from "../ui/button";
-import BookDetails from "../modals/BookDetails";
 import { RentBookDialog } from "../dialogs/RentBook";
 
 export const LibraryCard = ({ data }) => {
@@ -19,10 +17,7 @@ export const LibraryCard = ({ data }) => {
     <div className="p-5 h-full flex text-center flex-shrink-0 flex-col gap-2 justify-between w-[288px] max-w-full hover:bg-white/50 duration-300 rounded-lg">
       <img
         src={data?.coverArt || "/images/books_placeholder.png"}
-        className="h-[281px] object-contain"
-        style={{
-          filter: "drop-shadow(0px 6px 21.6px rgba(0, 0, 0, 0.25))",
-        }}
+        className="h-[281px] object-contain drop-shadow-library_img"
       />
       <h4 className="font-bold">{data?.title}</h4>
       <h5 className="text-sm" style={{ letterSpacing: "-0.42px" }}>
@@ -32,9 +27,9 @@ export const LibraryCard = ({ data }) => {
         Rent
       </Button> */}
       <RentBookDialog book={data} />
-      {/* <BookDetails 
-        isOpen={isModalOpen} 
-        onClose={handleCloseModal} 
+      {/* <BookDetails
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
         bookData={data} // Pass the clicked book data to the modal
       /> */}
     </div>

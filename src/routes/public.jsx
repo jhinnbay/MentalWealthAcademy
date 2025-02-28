@@ -1,10 +1,11 @@
 import { lazy } from "react";
 
 // project import
+import { Dashboard } from "@/pages/Dashboard";
+import Library from "@/pages/Library";
+import MarketPlace from "@/pages/MarketPlace";
 import Loadable from "../components/Loadable";
 import { PublicLayout } from "../components/layouts/publicLayout";
-import MarketPlace from "@/pages/MarketPlace";
-import Library from "@/pages/Library";
 // render - login
 const Home = Loadable(lazy(() => import("../pages/Home_new"))); //new updated page
 // const Library = Loadable(lazy(() => import("../pages/Library")));
@@ -26,6 +27,10 @@ const PublicRoutes = {
     {
       path: "/marketplace",
       element: withLayout(<MarketPlace />),
+    },
+    {
+      path: "/dashboard",
+      element: withLayout(<Dashboard />),
     },
   ],
 };

@@ -1,24 +1,20 @@
 import { ArticalCard } from "@/components/cards/ArticalCard";
-import { BooksCard } from "@/components/cards/BooksCard";
 import { ProposalCard } from "@/components/cards/ProposalCard";
 import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
 
-import { Buffer } from "buffer";
-import { ethers } from "ethers";
-import { create } from "ipfs-http-client";
-import { useState } from "react";
-import BookStorageABI from "../../ABI/bookStorageABI.json";
 import { LibraryCard } from "@/components/cards/LibraryCard";
-import { RequestForBook } from "@/components/pages/library/RequestForBook";
+import { Footer } from "@/components/pages/Home/Footer";
 import {
   articalsData,
   audioBooksData,
   booksData,
   proposalData,
 } from "@/data/library_items";
-import { Link } from "react-router-dom";
-import { Input } from "@/components/ui/input";
+import { Buffer } from "buffer";
+import { ethers } from "ethers";
+import { create } from "ipfs-http-client";
+import { useState } from "react";
+import BookStorageABI from "../../ABI/bookStorageABI.json";
 
 const pinataApiKey = import.meta.env.VITE_PINATA_API_KEY;
 const pinataSecretApiKey = import.meta.env.VITE_PINATA_API_SECRET;
@@ -163,130 +159,89 @@ const Library = () => {
 
   return (
     <main>
-      <div className="bg-primary-background-700 py-9">
-        <section className="container">
-          <div className="bg-library bg-center bg-cover p-6 rounded-lg text-white ">
-            <div className="flex gap-2 items-center invisible opacity-0">
-              <h6 className="text-2xs sm:!text-2xl">Play Video</h6>{" "}
-              <Button className="aspect-square w-[54px] rounded-sm bg-[rgba(255,255,255,0.5)]">
-                <img src="/icons/Play.svg" />
-              </Button>{" "}
+      <div className="md:!pt-9 pt-5">
+        <section className="">
+          <div className="md:!border border-none border-white md:!p-3 bg-[#FFFFFF40] rounded-2xl">
+            <div className="md:!bg-library bg-library_tablet  md:!bg-center bg-right bg-cover p-6 rounded-lg text-white ">
+              <div className="flex gap-2 items-center invisible opacity-0">
+                <h6 className="text-2xs sm:!text-2xl">Play Video</h6>{" "}
+                <Button className="aspect-square w-[54px] rounded-sm bg-[rgba(255,255,255,0.5)]">
+                  <img src="/icons/Play.svg" />
+                </Button>{" "}
+              </div>
+              <h3
+                className="text-xs sm:!text-3xl  font-bold invisible opacity-0"
+                style={{ lineHeight: "unset" }}
+              >
+                Support Students By <br />
+                Decentralizing Textbooks
+              </h3>
             </div>
-            <h3
-              className="text-xs sm:!text-3xl  font-bold invisible opacity-0"
-              style={{ lineHeight: "unset" }}
-            >
-              Support Students By <br />
-              Decentralizing Textbooks
-            </h3>
-          </div>
-        </section>
-        {/* Books  */}
-        <section className="container py-7">
-          <h3 className="text-xs font-bold">FEATURED LIBRARY BOOKS</h3>
-          <h2 className="text-2xl md:text-5xl font-bold">Books</h2>
-          <div className="flex overflow-x-auto gap-3 ">
-            {booksData.map((data, i) => (
-              <LibraryCard
-                key={"library books" + data.title + "" + i}
-                data={data}
-              />
-            ))}
-          </div>
-        </section>
-        {/* Audio Books  */}
-        <section className="container py-7">
-          <h3 className="text-xs font-bold">FEATURED AUDIOBOOKS</h3>
-          <h2 className="text-2xl md:text-5xl font-bold">Audiobooks</h2>
-          <div className="flex overflow-x-auto gap-3 ">
-            {audioBooksData.map((data, i) => (
-              <LibraryCard
-                key={"audiobook" + data.title + "" + i}
-                data={data}
-              />
-            ))}
-          </div>
-          </section>
-          {/* Articals  */}
-        <section className="container py-7">
-          <h3 className="text-xs font-bold">STAYING UPDATED</h3>
-          <h2 className="text-2xl md:text-5xl font-bold">Latest Articles</h2>
-          <div className="flex overflow-x-auto gap-3 ">
-            {articalsData.map((data, i) => (
-              <ArticalCard
-                key={"proposal_card" + data?.title + "" + i}
-                data={data}
-              />
-            ))}
           </div>
         </section>
 
-        <section className="container">
-          <h3 className="text-xs font-bold">EMPOWERED BY YOU</h3>
-          <h2 className="text-2xl md:text-5xl font-bold">DAO Voting</h2>
-          <div className="flex overflow-x-auto gap-3 ">
-            {proposalData.map((data, i) => (
-              <ProposalCard
-                key={"proposal_card" + data.title + "" + i}
-                data={data}
-              />
-            ))}
-          </div>
-        </section>
-        {/* library footer   */}
-        <footer className=" container  mt-[62px] text-[#E5E5E5]">
-          <div className="p-[20px_40px_0px_40px] lg:p-[48px_112px_0px_112px] bg-black_grad">
-            <div className="py-[64px] flex flex-col gap-[64px]">
-              <div className="flex flex-wrap justify-between gap-8">
-                <div>
-                  <img src="/icons/Company Footer Placeholder.png" />
-                  <div className="flex flex-wrap gap-6 items-center mt-7">
-                    {["About", "Blog", "Careers", "Whitepaper"].map((data) => (
-                      <Link href="#" key={"footer_menu" + data}>
-                        {data}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-                <div className="w-[430px] max-w-full">
-                  <p>
-                    Get the latest updates about Mental Wealth Academy’s new
-                    features, proposals, and product updates.
-                  </p>
-                  <div className="mt-6 gap-2 flex items-center">
-                    <Input placeholder="Ethereum Address" />
-                    <Button
-                      className="bg-[#262626] text-white font-semibold border-0 p-4 py-2"
-                      style={{
-                        filter:
-                          "drop-shadow( 0px 0px 8.8px rgba(99, 102, 241, 1) )",
-                      }}
-                    >
-                      Send
-                    </Button>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-wrap justify-between gap-8">
-                <div className="flex justify-center items-center gap-4">
-                  {" "}
-                  {[
-                    "/icons/facebook.svg",
-                    "/icons/instagram.svg",
-                    "/icons/twitter.svg",
-                    "/icons/linkedIn.svg",
-                  ].map((data) => (
-                    <img src={data} key={data + "social icon"} />
+        <div className=" mt-5">
+          <div className="border border-white md:!p-6 p-3 bg-[#FFFFFF40] rounded-2xl">
+            <div className="bg-[#CFCAFF] md:!py-6  md:!px-4 p-3 rounded-xl">
+              {/* Books  */}
+              <div className="py-7 ">
+                <h3 className="text-xs font-bold">FEATURED LIBRARY BOOKS</h3>
+                <h2 className="text-2xl md:text-5xl font-bold">
+                  Featured Books
+                </h2>
+                <div className="flex overflow-x-auto gap-3 ">
+                  {booksData.map((data, i) => (
+                    <LibraryCard
+                      key={"library books" + data.title + "" + i}
+                      data={data}
+                    />
                   ))}
                 </div>
-                <div className="flex justify-center items-center gap-8">
-                  <Link href="#">Terms of Service</Link>
-                  <Link href="#">Privacy Policy</Link>
+              </div>
+              {/* Audio Books  */}
+              <div className=" py-7">
+                <h3 className="text-xs font-bold">FEATURED AUDIOBOOKS</h3>
+                <h2 className="text-2xl md:text-5xl font-bold">Audiobooks</h2>
+                <div className="flex overflow-x-auto gap-3 ">
+                  {audioBooksData.map((data, i) => (
+                    <LibraryCard
+                      key={"audiobook" + data.title + "" + i}
+                      data={data}
+                    />
+                  ))}
                 </div>
+              </div>
+              {/* Articals  */}
+              <div className=" py-7">
+                <h3 className="text-xs font-bold">STAYING UPDATED</h3>
+                <h2 className="text-2xl md:text-5xl font-bold">
+                  Latest Articles
+                </h2>
+                <div className="flex overflow-x-auto gap-3 ">
+                  {articalsData.map((data, i) => (
+                    <ArticalCard
+                      key={"proposal_card" + data?.title + "" + i}
+                      data={data}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              <h3 className="text-xs font-bold">EMPOWERED BY YOU</h3>
+              <h2 className="text-2xl md:text-5xl font-bold">DAO Voting</h2>
+              <div className="flex overflow-x-auto gap-3 ">
+                {proposalData.map((data, i) => (
+                  <ProposalCard
+                    key={"proposal_card" + data.title + "" + i}
+                    data={data}
+                  />
+                ))}
               </div>
             </div>
           </div>
-        </footer>
+        </div>
+
+        <Footer />
       </div>
     </main>
   );
