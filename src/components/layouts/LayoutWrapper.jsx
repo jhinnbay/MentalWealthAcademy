@@ -9,7 +9,7 @@ export const LayoutWrapper = ({ children }) => {
     <section className="pt-5">
       <div className="container">
         <div className="md:!bg-home_banner bg-transparent rounded-t-2xl sm:!pt-5 sm:!px-5  pt-3 px-3">
-          <div className="h-auto w-full gap-4 flex-wrap flex items-center pb-3">
+          <div className="h-auto w-full gap-4 flex-wrap md:!flex hidden items-center pb-3">
             <Link
               to="/library"
               data-state={route.pathname === "/library" ? "active" : ""}

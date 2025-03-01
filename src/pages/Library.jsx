@@ -161,7 +161,7 @@ const Library = () => {
     <main>
       <div className="md:!pt-9 pt-5">
         <section className="">
-          <div className="md:!border border-none border-white md:!p-3 bg-[#FFFFFF40] rounded-2xl">
+          <div className="md:!border border-none border-white md:!p-3 bg-[#FFFFFF40] md:!rounded-2xl">
             <div className="md:!bg-library bg-library_tablet  md:!bg-center bg-right bg-cover p-6 rounded-lg text-white ">
               <div className="flex gap-2 items-center invisible opacity-0">
                 <h6 className="text-2xs sm:!text-2xl">Play Video</h6>{" "}
@@ -181,10 +181,10 @@ const Library = () => {
         </section>
 
         <div className=" mt-5">
-          <div className="border border-white md:!p-6 p-3 bg-[#FFFFFF40] rounded-2xl">
-            <div className="bg-[#CFCAFF] md:!py-6  md:!px-4 p-3 rounded-xl">
+          <div className="md:!border border-none border-white md:!p-6 p-3 md:!bg-[#FFFFFF40] md:!rounded-2xl">
+            <div className="md:!bg-[#CFCAFF] md:!py-6  md:!px-4 p-3 rounded-xl">
               {/* Books  */}
-              <div className="py-7 ">
+              <div className="py-7 md:!bg-transparent sm:!bg-[#ECECEC] md:!rounded-none md:!p-0 sm:!rounded-lg sm:!p-2">
                 <h3 className="text-xs font-bold">FEATURED LIBRARY BOOKS</h3>
                 <h2 className="text-2xl md:text-5xl font-bold">
                   Featured Books
