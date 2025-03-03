@@ -53,9 +53,12 @@ module.exports = {
         inner: "0px -4px 1px 0px #FFFFFF40 inset",
         membership_card:
           " 0px -0.75px 0px 0px #000000,  0px 0px 4px 0px #00000059",
+        landing_header: "0px 15px 44.7px 0px #DBE64C26",
+        carousel_btn: "0px 1px 6.5px 0px #89EFD0",
       },
       dropShadow: {
         library_img: "0px 6px 21.6px 0px #00000040",
+        sync_account: "0px 2px 4px 0px #00000021",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -137,6 +140,31 @@ module.exports = {
         membership_card: "linear-gradient(180deg, #C7C7C7 0%, #7B7B7B 100%)",
         library_bg:
           "linear-gradient(180deg, #ECECFF 0%, #E1E1FE 100%), linear-gradient(0deg, #CFCAFF, #CFCAFF)",
+        mimbership:
+          "linear-gradient(139.92deg, #FAFBFF -30.32%, #CCCFDD -1.32%, #FEFEFF 30.77%, #B8BBC9 47.26%, #F9FBFF 68.53%, #E4E7F5 77%, #D9DCEA 102.74%, #C1C4D2 112.94%)",
+        mimbership_banner: "url('/images/membership.png')",
+        mimbership_btn:
+          "linear-gradient(120.82deg, #E6A940 1.82%, #FFFBE0 21.15%, #EDCB46 37.47%, #F9D998 66.15%, #816B36 83.45%, #D0A72B 100.71%)",
+        academy: "url('/images/academy.png')",
+        classroom: "url('/images/classroom.png')",
+        classroom_btn:
+          "linear-gradient(90.83deg, #E9444C 0.21%, #943031 70.21%)",
+        discord: "url('/images/discord.png')",
+        landing_bg:
+          "url('/images/landing_bg.png'), linear-gradient(0deg, rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)) ",
+        landing_header_top:
+          "radial-gradient(97.14% 97.14% at 50% 2.86%, #4D2AFF 0%, #4D2CA9 32%, #271484 74%, #1F1FE5 100%)",
+        next_gen:
+          "radial-gradient(96% 107.22% at 88.4% 4%, #2F9A66 0%, #4D2CA9 32%, #148457 74%, #1CDCCF 88%, #0B8B5A 100%)",
+        vector: "url('/images/vector.png')",
+        fancy_btn: "linear-gradient(180deg, #C7C7C7 0%, #7B7B7B 100%)",
+        fancy_btn_outer:
+          "linear-gradient(180deg, #C3C3C3 0%, #343434 50.5%, #FFFFFF 100%)",
+        layer:
+          "linear-gradient(180deg, rgba(30, 72, 144, 0) 0%, rgba(255, 255, 255, 0.62) 100%)",
+        ai_agent: "url('/images/ai_agent.png')",
+        features: "url('/images/features.png')",
+        skull: "url('/images/skull.png')",
       },
       borderRadius: {
         lg: "var(--radius)",

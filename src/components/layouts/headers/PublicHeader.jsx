@@ -80,13 +80,13 @@ export const PublicHeader = () => {
               <>
                 <button
                   onClick={handleLogin}
-                  className="flex items-center px-2"
+                  className="sm:!flex hidden items-center px-2"
                 >
                   Log in
                 </button>
-                <Link className="border rounded-lg px-5 py-3 border-primary-foreground flex justify-center items-center gap-2">
-                  Connect Account
-                  <img src="/icons/eth.svg" className=" hidden md:block" />
+                <Link className="border rounded-lg px-3 sm:px-5 py-3 border-primary-foreground flex justify-center items-center gap-2 bg-[#79EABA] sm:bg-transparent">
+                  <span className=" hidden sm:block">Connect Account</span>
+                  <img src="/icons/eth.svg" />
                 </Link>
               </>
             ) : (
@@ -133,15 +133,15 @@ export const PublicHeader = () => {
                     <span>DAO</span>
                   </Link>
                 </DropdownMenuItem>
-                {/* <DropdownMenuItem>
-                    {" "}
-                    <button
-                      onClick={handleLogin}
-                      className=" gap-1 w-full items-center justify-start text-sm   flex  hover:bg-white/25 rounded-lg"
-                    >
-                      Log in
-                    </button>
-                  </DropdownMenuItem> */}
+                <DropdownMenuItem className="sm:!hidden flex">
+                  {" "}
+                  <button
+                    onClick={handleLogin}
+                    className=" gap-1 w-full items-center justify-start text-sm   flex  hover:bg-white/25 rounded-lg"
+                  >
+                    Log in
+                  </button>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
