@@ -11,6 +11,20 @@ export const LayoutWrapper = ({ children }) => {
         <div className="md:!bg-home_banner bg-transparent rounded-t-2xl sm:!pt-5 sm:!px-5  pt-3 px-3">
           <div className="h-auto w-full gap-4 flex-wrap md:!flex hidden items-center pb-3">
             <Link
+              to="/home"
+              data-state={route.pathname === "/home" ? "active" : ""}
+              className={cn(
+                "flex-1 flex items-center justify-center bg-dashboard_tab text-black md:!py-5 py-2.5 rounded-full border border-black data-[state=active]:bg-dashboard_tab_active data-[state=active]:text-white data-[state=active]:!border-[#CDFFE6] group gap-3 min-w-32"
+              )}
+            >
+              <img
+                src="/icons/whitepaper.svg"
+                alt="library"
+                className="group-data-[state=active]:invert"
+              />{" "}
+              Home
+            </Link>
+            <Link
               to="/library"
               data-state={route.pathname === "/library" ? "active" : ""}
               className={cn(
@@ -51,20 +65,6 @@ export const LayoutWrapper = ({ children }) => {
                 className="group-data-[state=active]:invert-0 invert"
               />{" "}
               Voting
-            </Link>
-            <Link
-              to="/whitepaper"
-              data-state={route.pathname === "/whitepaper" ? "active" : ""}
-              className={cn(
-                "flex-1 flex items-center justify-center bg-dashboard_tab text-black md:!py-5 py-2.5 rounded-full border border-black data-[state=active]:bg-dashboard_tab_active data-[state=active]:text-white data-[state=active]:!border-[#CDFFE6] group gap-3 min-w-32"
-              )}
-            >
-              <img
-                src="/icons/whitepaper.svg"
-                alt="library"
-                className="group-data-[state=active]:invert"
-              />{" "}
-              Whitepapper
             </Link>
           </div>
           <div>{children}</div>
