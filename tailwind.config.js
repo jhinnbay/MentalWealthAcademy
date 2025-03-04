@@ -31,6 +31,8 @@ module.exports = {
       fontFamily: {
         spaceGrotesk: ["SpaceGrotesk", "sans-serif"],
         sf: ["sf-pro", "sans-serif"],
+        ibmPlexMono: ["IBM Plex Mono", "monospace"],
+        sora: ["Sora", "sans-serif"],
       },
       fontSize: {
         "2xs": "0.625rem", // 10px
@@ -55,6 +57,7 @@ module.exports = {
           " 0px -0.75px 0px 0px #000000,  0px 0px 4px 0px #00000059",
         landing_header: "0px 15px 44.7px 0px #DBE64C26",
         carousel_btn: "0px 1px 6.5px 0px #89EFD0",
+        carousel_card: "0px 1px 10.4px 0px #2E2CA666",
       },
       dropShadow: {
         library_img: "0px 6px 21.6px 0px #00000040",
@@ -165,6 +168,11 @@ module.exports = {
         ai_agent: "url('/images/ai_agent.png')",
         features: "url('/images/features.png')",
         skull: "url('/images/skull.png')",
+        carousel_bg: "linear-gradient(180deg, #ECECFF 0%, #E1E1FE 100%)",
+        reserve_text:
+          "radial-gradient(61.79% 87.16% at 81.37% 10.92%, #37A375 0%, #6DF1B9 100%)",
+        crpto_card:
+          "linear-gradient(120.82deg, #E6A940 1.82%, #FFFBE0 21.15%, #EDCB46 37.47%, #F9D998 66.15%, #816B36 83.45%, #D0A72B 100.71%)",
       },
       borderRadius: {
         lg: "var(--radius)",
