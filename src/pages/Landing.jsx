@@ -5,8 +5,23 @@ import {
   CarouselContent,
   CarouselItem,
   CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Clock, Copy, Globe, Menu } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Crypto_Prices } from "@/data/landing";
+import { cn } from "@/lib/utils";
+import {
+  ChevronLeft,
+  Clock,
+  Copy,
+  Globe,
+  Menu,
+  MoveDown,
+  MoveUp,
+  Plus,
+  Undo2,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Landing = () => {
@@ -16,12 +31,12 @@ export const Landing = () => {
         <div className="2xl:!max-w-7xl mx-auto container space-y-5">
           <div className="border border-[#74C465] rounded-xl shadow-landing_header overflow-hidden">
             <div className="xs:!flex hidden items-center justify-between border-b border-[#74C465] bg-landing_header_top rounded-[12px_12px_0px_0px] p-3">
-              <p className="text-2xs text-[#74C465]">
-                <span className="text-2xs border border-[#74C465] p-1.5 text-white rounded-lg mr-2">
+              <p className="text-2xs text-[#74C465] font-normal font-sora tracking-wider">
+                <span className="text-2xs border border-[#74C465] p-1.5 text-white rounded-lg mr-2 ">
                   Academy
                 </span>
                 {"//  "} New Library Books
-                <span className="text-[#222F5B] bg-[#74C465] p-1.5 rounded-lg ml-2 text-2xs">
+                <span className="text-[#222F5B] bg-[#74C465] p-1.5 rounded-lg ml-2 text-2xs uppercase">
                   Explore Now!
                 </span>
               </p>
@@ -47,10 +62,11 @@ export const Landing = () => {
                 />
               </Link>
               <div className="flex items-center justify-center  h-full py-6 flex-1 px-3">
-                <p className="text-center flex-1 text-white text-2xl leading-none font-spaceGrotesk  ">
-                  Mental Wealth <br />{" "}
-                  <span className="font-bold">Academy</span>
-                </p>
+                <img
+                  src="/icons/mental.svg"
+                  alt="mental"
+                  className=" ml-auto"
+                />
                 <Button className="p-1 ml-auto bg-transparent text-[#74C465] border-none hover:shadow-none">
                   <Menu />
                 </Button>
@@ -81,17 +97,17 @@ export const Landing = () => {
           <p className="text-center text-[clamp(16px,2vw,24px)] text-[#F6F8ED] font-spaceGrotesk">
             Lifetime Access To Classrooms, No More Subscriptions.
           </p>
-          <div className="relative pt-10">
+          <div className="relative pt-20">
             <img
               src="/images/next_gen.png"
               alt="next genration"
-              className="lg:!max-w-xl aspect-square lg:!-mb-[15%] sm:!-mb-[20%] -mb-[30%] mx-auto object-cover"
+              className="lg:!max-w-xl aspect-square absolute top-5 left-1/2 -translate-x-1/2 object-cover"
             />
             <div className="bg-next_gen rounded-[64px] sm:!py-14 p-5 sm:!px-10 bg-cover relative z-30">
               <h3 className="text-center text-white font-bold text-[clamp(24px,4vw,62px)] font-spaceGrotesk">
                 Offering Next-Gen Access To...
               </h3>
-              <p className="text-center text-[clamp(14px,2vw,24px)] text-white font-spaceGrotesk">
+              <p className="text-center text-[clamp(14px,2vw,24px)] text-white font-spaceGrotesk font-light">
                 Digital Classrooms, Spaces, POAPs, Resources/Tools{" "}
               </p>
               <div className="grid lg:!grid-cols-3 small_tablet:!grid-cols-2 grid-cols-1 gap-5 py-10">
@@ -170,93 +186,112 @@ export const Landing = () => {
           </div>
         </div>
       </section>
-      <section className="py-10  relative">
+      <section className="py-10">
         <div className="container">
-          <div className="flex gap-10 2xl:!w-2/3 w-full small_tablet:!flex-row flex-col 2xl:!pb-0 md:!pb-40">
-            <img
-              src="/images/next_gen.png"
-              alt="next genration"
-              className="h-full aspect-square sm:!max-w-max max-w-44"
-            />
-            <div className="bg-ai_agent bg-cover border border-[#74C465] rounded-3xl py-7 px-6 w-full flex-1">
-              <div className="flex items-center justify-between flex-wrap">
-                <div className="flex items-center gap-3">
-                  <img
-                    src="/icons/data.svg"
-                    alt="data science"
-                    className="w-10 h-10"
-                  />
-                  <p className="font-bold text-[clamp(24px,4vw,40px)] text-white font-spaceGrotesk">
-                    AI Agent Rubi{" "}
+          <div className="relative">
+            <div className="flex gap-10 2xl:!w-2/3 w-full small_tablet:!flex-row flex-col 2xl:!pb-0 md:!pb-40 md:!pl-10 pl-0">
+              <img
+                src="/images/next_gen.png"
+                alt="next genration"
+                className="h-full aspect-square sm:!max-w-max max-w-44"
+              />
+              <div className="bg-ai_agent bg-cover border border-[#74C465] rounded-3xl py-7 px-6 w-full flex-1">
+                <div className="flex items-center justify-between flex-wrap">
+                  <div className="flex items-center gap-3">
+                    <img
+                      src="/icons/data.svg"
+                      alt="data science"
+                      className="w-10 h-10"
+                    />
+                    <p className="font-bold text-[clamp(24px,4vw,40px)] text-white font-spaceGrotesk">
+                      AI Agent Rubi{" "}
+                    </p>
+                  </div>
+                  <div className="space-y-1 ml-auto">
+                    <div className="flex gap-2.5 justify-center items-center w-full text-white bg-landing_header_top p-2 rounded-lg">
+                      <p className="self-stretch my-auto text-sm">
+                        Total Portfolio Breakdown
+                      </p>
+                      <Clock className="w-4 h-4" />
+                    </div>
+                    <p className="font-bold font-spaceGrotesk text-white text-sm text-right">
+                      <span>Treasury 240E </span>
+                      <span className="text-[rgb(149,244,146)]">+758%</span>
+                    </p>{" "}
+                  </div>
+                </div>
+                <div className={`mt-8 text-xs leading-6 text-white`}>
+                  <p>
+                    Introducing Rubi AI, 456ghz of data, translated into our
+                    quantum computation educational model. Our newest
+                    computational assistants designed to delve into the
+                    intricate dynamics of science & educational reformation and
+                    deliver advanced level pathways to knowledge and
+                    higher-learning. Become a master at what you love and what
+                    interests you. Legendary tech-stack harnesses the power of
+                    collective intelligence, enabling analyzation and predictive
+                    learning with unprecedented accuracy. Our knowledge
+                    consensus, equalizing contribution towards a vast pool of
+                    knowledge that transcends traditional boundaries. The New
+                    Digital World.{" "}
+                    <span className="text-[#1115ff]" role="button" tabIndex={0}>
+                      See more
+                    </span>
                   </p>
                 </div>
-                <div className="space-y-1 ml-auto">
-                  <div className="flex gap-2.5 justify-center items-center w-full text-white bg-landing_header_top p-2 rounded-lg">
-                    <p className="self-stretch my-auto text-sm">
-                      Total Portfolio Breakdown
-                    </p>
-                    <Clock className="w-4 h-4" />
-                  </div>
-                  <p className="font-bold font-spaceGrotesk text-white text-sm text-right">
-                    <span>Treasury 240E </span>
-                    <span className="text-[rgb(149,244,146)]">+758%</span>
-                  </p>{" "}
-                </div>
-              </div>
-              <div className={`mt-8 text-xs leading-6 text-white`}>
-                <p>
-                  Introducing Rubi AI, 456ghz of data, translated into our
-                  quantum computation educational model. Our newest
-                  computational assistants designed to delve into the intricate
-                  dynamics of science & educational reformation and deliver
-                  advanced level pathways to knowledge and higher-learning.
-                  Become a master at what you love and what interests you.
-                  Legendary tech-stack harnesses the power of collective
-                  intelligence, enabling analyzation and predictive learning
-                  with unprecedented accuracy. Our knowledge consensus,
-                  equalizing contribution towards a vast pool of knowledge that
-                  transcends traditional boundaries. The New Digital World.{" "}
-                  <span className="text-[#1115ff]" role="button" tabIndex={0}>
-                    See more
-                  </span>
+                <p
+                  className="z-10 mt-0 mr-9 text-xs font-bold text-right text-yellow-300 max-md:mr-2.5"
+                  role="status"
+                  aria-label="Current ETH price in USD"
+                >
+                  1 ETH = $3,834
                 </p>
               </div>
-              <p
-                className="z-10 mt-0 mr-9 text-xs font-bold text-right text-yellow-300 max-md:mr-2.5"
-                role="status"
-                aria-label="Current ETH price in USD"
-              >
-                1 ETH = $3,834
-              </p>
             </div>
+            <img
+              src="/images/tooltip.png"
+              alt="next genration"
+              className="h-72 md:!absolute right-0 md:!-bottom-28 ml-auto"
+            />
           </div>
-          <img
-            src="/images/tooltip.png"
-            alt="next genration"
-            className="h-72 md:!absolute right-0 md:!-bottom-20 ml-auto"
-          />
         </div>
       </section>
       <section className="pt-20 bg-[#0E0E0E]">
         <div className="container">
-          <div className="grid md:!grid-cols-2 grid-cols-1 gap-5">
-            <div className="space-y-3">
-              <h4 className="text-[clamp(30px,4vw,48px)] font-bold text-white leading-none">
-                Academy
-              </h4>
-              <p className="text-[clamp(24px,4vw,42px)] font-semibold text-[#B2B2B2] leading-tight">
-                Lorem episom marikus bealo expersectie els insoas ta ldaoendo.
-              </p>
-              <p className="text-xl text-[#B2B2B2] leading-tight">
-                Knowledge is power. Access the digital library chain in your
-                private, secure library where devs can upload and share
-                resources, repeat books, and lend and vote on changes.
-              </p>
-              <Button className="shadow-membership_card bg-fancy_btn max-w-32 w-full justify-center rounded-full h-auto py-3 text-[#F6F8ED] sm:!text-xl text-base font-bold border border-black">
-                Explore
-              </Button>
+          <div className="grid xl:!grid-cols-5 lg:!grid-cols-2 grid-cols-1 gap-5">
+            <div className="space-y-16 md:!pl-10 pl-0 pb-5 xl:!col-span-2">
+              <div className="space-y-3.5">
+                <h4 className="text-[clamp(30px,4vw,48px)] font-bold text-white leading-none">
+                  Academy
+                </h4>
+                <p className="text-[clamp(24px,4vw,42px)] font-semibold text-[#B2B2B2] leading-none">
+                  Lorem episom marikus bealo expersectie els insoas ta ldaoendo.
+                </p>
+                <p className="md:!text-xl text-base text-[#B2B2B2] !leading-tight">
+                  Knowledge is power. Access the digital library chain in your
+                  private, secure library where devs can upload and share
+                  resources, repeat books, and lend and vote on changes.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <p className="md:!text-xl text-base text-[#8F8F8F] !leading-tight font-sora font-normal">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Accedere ad bibliothecam digitalem in privata et secure
+                  catena, ubi developeri possunt resources communicare, libros
+                  iterare, mutare, et mutationes suffragari. In hac bibliotheca
+                  decentralizata, scientia manet libera et accessibilis omnibus
+                  qui eam quaerunt. Per innovationem et collaborationem, membra
+                  communitatis possunt libros recensere, novum contentum addere,
+                  et de futuro bibliothecae digitalis deliberare. Scientia est
+                  potentia, et haec potestas nunc in manibus tuis est.
+                </p>
+
+                <Button className="shadow-membership_card bg-fancy_btn max-w-32 w-full justify-center rounded-full h-auto py-3 text-[#F6F8ED] sm:!text-xl text-base font-bold border border-black">
+                  Explore
+                </Button>
+              </div>
             </div>
-            <div className="relative">
+            <div className="relative xl:!col-span-3 col-span-1">
               <img
                 src="/images/home.png"
                 alt="home "
@@ -268,7 +303,7 @@ export const Landing = () => {
       </section>
       <section className="py-20 bg-features bg-cover">
         <div className="container">
-          <div className="max-w-3xl mx-auto space-y-5">
+          <div className="max-w-3xl mx-auto space-y-5 ">
             <h2 className="font-bold font-spaceGrotesk text-[clamp(24px,4vw,48px)] text-white text-center leading-tight">
               <span className="text-[#DBE64C]">Friendly features</span> built
               for easy-collaboration
@@ -295,15 +330,53 @@ export const Landing = () => {
             </div>
           </div>
           <div className="grid md:!grid-cols-2 grid-cols-1 gap-10 items-center mt-10">
-            <div className="rounded-3xl p-5 bg-[#F6F8ED]">
-              <Carousel className="py-12">
+            <div className="rounded-3xl p-5 bg-carousel_bg">
+              <Carousel className="py-5" opts={{ dots: true }}>
                 <CarouselContent>
-                  {Array?.from({ length: 5 }, (_, i) => (
-                    <CarouselItem key={i}>
-                      <div className="space-y-3 max-w-xl mx-auto">
-                        <h5 className="text-center font-bold text-black text-[clamp(24px,4vw,32px)] font-spaceGrotesk">
-                          $Academy: Point System
-                        </h5>
+                  <CarouselItem className="md:!py-10 py-5">
+                    <div className="space-y-3 md:!w-3/4 w-full mx-auto">
+                      <h5 className="text-center font-bold text-black text-[clamp(24px,4vw,32px)] font-spaceGrotesk">
+                        $Academy: Point System
+                      </h5>
+                      <div className="flex items-center  gap-4 max-w-sm mx-auto">
+                        <img
+                          src="/icons/gem.svg"
+                          alt="gems"
+                          className="w-9 h-9"
+                        />
+                        <p className="text-sm text-[#1E4890]">382 Gems</p>
+                      </div>
+                      <div className="max-w-sm mx-auto p-2 rounded-full border border-black bg-[#D6A1FF]"></div>
+                      <p className="text-sm leading-tight font-ibmPlexMono tracking-wide">
+                        Academy Shards are the tipping system for authorship.
+                        Each week you start off with a free supply of 100
+                        $ACADEMY. Use them to show love to authors and artists
+                        you love.
+                      </p>
+                      <div className="flex items-center  gap-4 max-w-sm mx-auto">
+                        <img
+                          src="/icons/tomato.svg"
+                          alt="gems"
+                          className="w-9 h-9"
+                        />
+                        <p className="text-sm text-[#1E4890]">12 Tomatoes</p>
+                      </div>
+                      <div className="max-w-sm mx-auto p-2 rounded-full border border-black bg-[#E24C4C]"></div>
+                      <p className="text-sm leading-tight font-ibmPlexMono tracking-wide">
+                        Tomatoes are the downvoting system token. These can be
+                        purchased in packs. Throw them at articles you think
+                        aren’t helpful, or just plain stupid! There’s a special
+                        math! If an article receives a certain amount of
+                        tomatoes to shards, it gets BOO’d off the platform!
+                      </p>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem className="md:!py-10 py-5">
+                    <div className="space-y-7 md:!w-3/4 w-full mx-auto">
+                      <h5 className="text-center font-bold text-black text-[clamp(24px,4vw,32px)] font-spaceGrotesk">
+                        Academy Gems Are Rewards!{" "}
+                      </h5>
+                      <div className="rounded-xl sm:!p-10 p-5 space-y-4 bg-white shadow-carousel_card">
                         <div className="flex items-center  gap-4 max-w-sm mx-auto">
                           <img
                             src="/icons/gem.svg"
@@ -313,12 +386,22 @@ export const Landing = () => {
                           <p className="text-sm text-[#1E4890]">382 Gems</p>
                         </div>
                         <div className="max-w-sm mx-auto p-2 rounded-full border border-black bg-[#D6A1FF]"></div>
-                        <p className="text-sm leading-normal tracking-wide">
+                        <p className="text-sm leading-tight tracking-wide font-ibmPlexMono">
                           Academy Shards are the tipping system for authorship.
                           Each week you start off with a free supply of 100
                           $ACADEMY. Use them to show love to authors and artists
                           you love.
                         </p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem className="md:!py-10 py-5">
+                    <div className="space-y-7 md:!w-3/4 w-full mx-auto">
+                      <h5 className="text-center font-bold text-black text-[clamp(24px,4vw,32px)] font-spaceGrotesk">
+                        Throw Tomatoes To Downvote!{" "}
+                      </h5>
+
+                      <div className="sm:!p-10 p-5 rounded-xl space-y-4 bg-white shadow-carousel_card">
                         <div className="flex items-center  gap-4 max-w-sm mx-auto">
                           <img
                             src="/icons/tomato.svg"
@@ -328,7 +411,7 @@ export const Landing = () => {
                           <p className="text-sm text-[#1E4890]">12 Tomatoes</p>
                         </div>
                         <div className="max-w-sm mx-auto p-2 rounded-full border border-black bg-[#E24C4C]"></div>
-                        <p className="text-sm leading-normal tracking-wide">
+                        <p className="text-sm leading-tight tracking-wide font-ibmPlexMono">
                           Tomatoes are the downvoting system token. These can be
                           purchased in packs. Throw them at articles you think
                           aren’t helpful, or just plain stupid! There’s a
@@ -336,10 +419,234 @@ export const Landing = () => {
                           of tomatoes to shards, it gets BOO’d off the platform!
                         </p>
                       </div>
-                    </CarouselItem>
-                  ))}
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem className="md:!py-10 py-5">
+                    <div className="space-y-5 md:!w-3/4 w-full mx-auto">
+                      <div className="flex items-center justify-center gap-4">
+                        <img
+                          src="/icons/trophy.svg"
+                          alt="trophy"
+                          className="h-16 w-16"
+                        />{" "}
+                        <h5 className="text-center font-bold text-black text-[clamp(24px,4vw,32px)] font-spaceGrotesk">
+                          Airdrops & Leaderboard{" "}
+                        </h5>
+                      </div>
+
+                      <div className="sm:!p-10 p-5 rounded-xl space-y-4 bg-white shadow-carousel_card">
+                        <div className="flex items-center gap-4">
+                          <img
+                            src="/icons/trophy.svg"
+                            alt="gems"
+                            className="w-9 h-9"
+                          />
+                          <p className="text-sm text-[#1E4890] font-sora">
+                            Winners receive various airdrops and claimables!
+                          </p>
+                        </div>
+
+                        <p className="text-sm leading-tight tracking-wide font-ibmPlexMono">
+                          Leaderboard is made of the top shard-earning posts and
+                          articles. This could be bi-weekly or monthly.
+                        </p>
+                        <p className="text-sm leading-tight tracking-wide font-ibmPlexMono py-10 px-5 bg-[#ECF7F2] rounded-lg">
+                          Disincentives and token sinks are provided in various
+                          ways to reduce the incentive of sybil attacks and
+                          malpractice. However, this is still in the fun stage
+                          so I can’t share all the tips ;)
+                        </p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem className="md:!py-10 py-5">
+                    <div className="space-y-5 md:!w-4/5 w-full mx-auto">
+                      <h5 className="text-center font-bold text-black text-[clamp(24px,4vw,32px)] font-spaceGrotesk">
+                        NFT Profiles Are Back!
+                      </h5>
+
+                      <div className="md:!p-10 p-5 rounded-xl space-y-4 bg-white shadow-carousel_card">
+                        <div className="flex items-center  gap-4">
+                          <img
+                            src="/icons/nft.svg"
+                            alt="gems"
+                            className="w-9 h-9"
+                          />
+                          <p className="text-sm text-[#1E4890] font-sora">
+                            This Could Be You!{" "}
+                          </p>
+                        </div>
+
+                        <p className="text-sm leading-tight tracking-wide font-ibmPlexMono">
+                          Add NFT Profile Pictures to add authenticity to your
+                          posts! All NFT profiles have a distinct Hexagon
+                          Pattern. Only available for Ethereum & Base L2 NFTs.
+                        </p>
+                        <p className="text-sm leading-tight tracking-wide font-ibmPlexMono py-10 px-5 bg-[#ECF7F2] rounded-lg">
+                          All Mental Wealth Academy article posts are onchain
+                          and available via NFTs and arweave blockchain storage.
+                          Deletion of articles due to tomatoes throw doesn’t
+                          delete the content from the internet, as all content
+                          is available onchain.
+                        </p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem className="md:!py-10 py-5">
+                    <div className="space-y-10 w-full mx-auto text-center flex flex-col items-center sm:!justify-center h-full">
+                      <div className="space-y-2">
+                        <img
+                          src="/icons/intro.svg"
+                          alt="intro"
+                          className="w-32 h-32 rounded-full mx-auto"
+                        />
+                        <p className="text-xl font-bold text-[#636363] font-sora ">
+                          INTRODUCING
+                        </p>
+                        <h5 className=" font-bold text-black text-[clamp(24px,4vw,51px)] font-spaceGrotesk leading-none">
+                          Academy Profile{" "}
+                        </h5>
+
+                        <p className="text-sm text-black font-sora">
+                          Sync your account, get started, and rent a book.{" "}
+                        </p>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-5 sm:!flex-row flex-col">
+                          <div className="flex items-center gap-5 justify-between border border-black rounded-lg p-3 max-w-xs w-full bg-white">
+                            <div className="flex items-center gap-2">
+                              <img
+                                src="/icons/circle.svg"
+                                alt="circle"
+                                className="w-6 h-6"
+                              />
+                              <p className="text-sm text-[#1E4890]">
+                                0x4725...2352
+                              </p>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <img
+                                src="/icons/CryptoIcon.svg"
+                                alt="circle"
+                                className="w-5 h-5"
+                              />
+                              <p className="text-sm text-[#1E4890]">0.024E </p>
+                            </div>
+                          </div>
+                          <Button className="text-sm h-auto py-3.5 border-black border px-5 font-ibmPlexMono font-normal text-[#F6F8ED] bg-landing_header_top">
+                            Sync Account <Plus className="h-4 w-4" />
+                          </Button>
+                        </div>
+                        <Link
+                          to={"/"}
+                          className="text-sm text-black font-spaceGrotesk text-left flex sm:!justify-start justify-center tracking-wider"
+                        >
+                          Change Account?{" "}
+                        </Link>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem className="md:!py-10 py-5">
+                    <div className="space-y-10 w-full mx-auto text-center">
+                      <div className="space-y-2">
+                        <h5 className=" font-bold text-black text-[clamp(24px,4vw,32px)] font-spaceGrotesk leading-none">
+                          Ready To Share Your Stories?{" "}
+                        </h5>
+
+                        <p className="text-sm text-black font-sora">
+                          Sync your account, Create a post and get started.{" "}
+                        </p>
+                      </div>
+                      <div className="space-y-2">
+                        <img
+                          src="/icons/story.svg"
+                          alt="intro"
+                          className="max-w-xs h-60 rounded-full mx-auto"
+                        />
+                      </div>
+                      <div className="space-y-2 2xl:!w-4/5 w-full mx-auto">
+                        <div className="flex gap-5 justify-center sm:!flex-row flex-col">
+                          <div className="space-y-2">
+                            <div className="flex items-center gap-5 justify-between border border-black rounded-lg p-3 max-w-xs w-full bg-white">
+                              <div className="flex items-center gap-2">
+                                <img
+                                  src="/icons/circle.svg"
+                                  alt="circle"
+                                  className="w-6 h-6"
+                                />
+                                <p className="text-sm text-[#1E4890]">
+                                  0x4725...2352
+                                </p>
+                              </div>
+                              <div className="flex items-center gap-2">
+                                <img
+                                  src="/icons/CryptoIcon.svg"
+                                  alt="circle"
+                                  className="w-5 h-5"
+                                />
+                                <p className="text-sm text-[#1E4890]">
+                                  0.024E{" "}
+                                </p>
+                              </div>
+                            </div>
+                            <Link
+                              to={"/"}
+                              className="text-sm text-black font-spaceGrotesk text-left flex tracking-wider"
+                            >
+                              Change Account?{" "}
+                            </Link>
+                          </div>
+                          <Button className="text-sm h-fit py-3.5 border-black border px-5 font-ibmPlexMono font-normal text-[#F6F8ED] bg-landing_header_top">
+                            Sync Account <Plus className="h-4 w-4" />
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem className="md:!py-10 py-5">
+                    <div className="space-y-10 w-4/5 mx-auto flex items-center small_tablet:!justify-center small_tablet:!h-full gap-5 small_tablet:!flex-row flex-col">
+                      <div className="flex-1">
+                        <img
+                          src="/icons/intro.svg"
+                          alt="intro"
+                          className="w-32 h-32 rounded-full mx-auto"
+                        />
+                      </div>
+                      <div className="space-y-5 flex-1">
+                        <h5 className=" font-bold text-black text-[clamp(24px,2vw,51px)] font-spaceGrotesk leading-none">
+                          Let’s setup your profile.
+                        </h5>
+                        <div className="flex items-center gap-3">
+                          <Input
+                            className="text-[#3F3F3F] !placeholder-[#3F3F3F] flex-1"
+                            placeholder="James"
+                          />
+                          <Input
+                            className="text-[#3F3F3F] !placeholder-[#3F3F3F] flex-1"
+                            placeholder="Warpcast"
+                          />
+                        </div>
+                        <Textarea
+                          rows={5}
+                          placeholder="Enter your bio here."
+                          className="w-full text-[#3F3F3F] !placeholder-[#3F3F3F]"
+                        />
+                        <div className="flex items-center justify-between">
+                          <Button className="border-none bg-transparent font-spaceGrotesk text-[#939393] p-0 hover:shadow-none gap-1">
+                            {" "}
+                            <ChevronLeft className="h-4 w-4" /> Go Back
+                          </Button>
+                          <Button className="border-none bg-transparent font-spaceGrotesk text-[#939393] p-0 hover:shadow-none gap-1">
+                            {" "}
+                            Press enter
+                            <Undo2 className="rotate-360 h-4 w-4" />
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
                 </CarouselContent>
-                {/* <CarouselPrevious className="left-0 shadow-carousel_btn border-none" /> */}
+                <CarouselPrevious className="left-0 shadow-carousel_btn border-none" />
                 <CarouselNext className="right-0 shadow-carousel_btn border-none" />
               </Carousel>
             </div>
@@ -417,11 +724,175 @@ export const Landing = () => {
         </div>
       </section>
       <section className="bg-skull py-20 bg-cover h-96 overflow-hidden relative"></section>
+      <section className="small_tablet:!py-20 py-10">
+        <div className="container xl:!max-w-7xl mx-auto">
+          <h2 className="font-bold text-white text-[clamp(30px,4vw,64px)] text-center">
+            Strategic Reserve{" "}
+          </h2>
+          <p className="text-[clamp(20px,2vw,32px)] font-light font-ibmPlexMono leading-none text-white max-w-6xl text-center mx-auto">
+            Next-Gen Education requires a diverse set of assets, and funds to
+            better ensure quality doesn’t come at the cost of extraction.
+          </p>
+          <div className="grid md:!grid-cols-2 grid-cols-1 gap-8 small_tablet:!mt-16 mt-8">
+            <div className="space-y-5">
+              <div className="sm:!p-11 p-7 rounded-xl bg-footer bg-no-repeat bg-cover">
+                <div className="flex items-center justify-between sm:!flex-row flex-col-reverse gap-10">
+                  <div className="sm:!space-y-20 space-y-10">
+                    <div className="space-y-4">
+                      <h4 className="bg-reserve_text bg-clip-text text-transparent text-[clamp(20px,2vw,32px)] font-bold font-spaceGrotesk leading-normal">
+                        MWA Crypto Reserve
+                      </h4>
+                      <p className="text-[#BFFFDD] font-light leading-normal">
+                        BTC, ETH, XRP, SOL, & ADA
+                      </p>
+                      <div className="flex items-center">
+                        <img
+                          src="/icons/bitcoin.svg"
+                          alt="bitcoin"
+                          className="h-10 w-10"
+                        />
+                        <img
+                          src="/icons/etherimu.svg"
+                          alt="bitcoin"
+                          className="h-10 w-10 -ml-5"
+                        />
+                        <img
+                          src="/icons/3.svg"
+                          alt="bitcoin"
+                          className="h-10 w-10 -ml-5"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <MoveUp className="text-[#3DE792] h-6" />
+                      <p className="font-spaceGrotesk text-white font-medium">
+                        <span className="text-[#3DE792]">29.23%</span> LAST 24h
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex-0">
+                    <img
+                      src="/images/next_gen.png"
+                      alt="next genration"
+                      className="h-full aspect-square  max-w-44 ml-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+              <p className="font-medium text-[#A8A8A8] text-[clamp(16px,2vw,24px)] font-spaceGrotesk">
+                Mental Wealth Academy is an educational DAO focused on, the
+                reshaping of knowledge & scientific access. A bold step forward
+                in the Next Gen Education requires innovating using crypto &
+                smart contracts, on the foundation of blockchain technology to
+                provide a transparent base-layer for operations. This move
+                cements Mental Wealth Academy at the fore-front, transparently
+                providing critical insight into our system, driving innovation
+                by providing power to each individual. Here’s a look at the key
+                assets shaping our revolutionary initiative.
+              </p>
+            </div>
+            <div className="space-y-5">
+              <div className="rounded-xl bg-footer bg-no-repeat bg-cover sm:!py-10 py-7 space-y-5">
+                <div className="sm:!px-10 px-6 space-y-5">
+                  <h4 className="bg-reserve_text bg-clip-text text-transparent text-[clamp(18px,2vw,24px)] font-bold font-spaceGrotesk leading-normal">
+                    Statistics{" "}
+                  </h4>
+                  <div className="flex items-center justify-between">
+                    <h2 className="text-[#BFFFDD] font-light leading-normal text-[clamp(16px,2vw,20px)]">
+                      Market Cap
+                    </h2>
+                    <p className="text-[#BFFFDD] font-light leading-normal text-[clamp(16px,2vw,20px)]">
+                      $ 2.47T
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <h2 className="text-[#BFFFDD] font-light leading-normal text-[clamp(16px,2vw,20px)]">
+                      24h performance{" "}
+                    </h2>
+                    <div className="flex items-end gap-2">
+                      <MoveUp className="text-[#3DE792] h-6" />
+                      <p className=" text-[#3DE792] font-light leading-normal text-[clamp(16px,2vw,20px)]">
+                        29.16%
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <h2 className="text-[#BFFFDD] font-light leading-normal text-[clamp(16px,2vw,20px)]">
+                      24h volume{" "}
+                    </h2>
+                    <p className="text-[#BFFFDD] font-light leading-normal text-[clamp(16px,2vw,20px)]">
+                      $ 82.24B{" "}
+                    </p>
+                  </div>
+                  <h4 className="bg-reserve_text bg-clip-text text-transparent text-[clamp(18px,2vw,24px)] font-bold font-spaceGrotesk leading-normal">
+                    Crypto in this basket{" "}
+                  </h4>
+                </div>
+                <Carousel
+                  opts={{
+                    align: "center",
+                    loop: true,
+                  }}
+                >
+                  <CarouselContent>
+                    {Crypto_Prices?.map((crypto) => (
+                      <CarouselItem
+                        className="xl:!basis-2/5 md:!basis-2/3 xs:!basis-2/5 basis-2/3"
+                        key={crypto?.coin}
+                      >
+                        <div className="flex items-center gap-5 bg-crpto_card bg-cover bg-no-repeat rounded-xl p-4">
+                          <img
+                            src={crypto?.icon}
+                            alt="etherium"
+                            className="h-12 w-12"
+                          />
+                          <div className="space-y-1 flex-1">
+                            <h2 className="text-[#494949] text-[clamp(18px,1vw,24px)] uppercase">
+                              {crypto?.coin}
+                            </h2>
+                            <h2 className="text-black text-[clamp(18px,1vw,24px)] uppercase font-bold">
+                              {crypto?.price}
+                            </h2>
+                            <div className="flex items-end gap-1">
+                              {crypto?.increase ? (
+                                <MoveUp className="text-[#3DE792] h-5" />
+                              ) : (
+                                <MoveDown className="text-[#FF1280] h-5" />
+                              )}
+                              <p
+                                className={cn(
+                                  "  font-light leading-none text-[clamp(16px,2vw,20px)]",
+                                  crypto?.increase
+                                    ? "text-[#3DE792]"
+                                    : "text-[#FF1280]"
+                                )}
+                              >
+                                {crypto?.exchange}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                </Carousel>
+              </div>
+              <p className="font-normal text-[#A8A8A8] text-[clamp(16px,2vw,18px)] font-spaceGrotesk">
+                This is not financial advice.* Buying the MWA’s Crypto Reserve
+                will automatically purchase the individual assets and store them
+                in your respective separate accounts. If you wish to sell any of
+                the individual assets comprising the Basket, you’ll need to sell
+                each one in a separate transaction.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="py-20">
         <div className="container">
-          <h3 className="font-bold text-white text-[clamp(30px,4vw,64px)]">
+          <h2 className="font-bold text-white text-[clamp(30px,4vw,64px)] text-center">
             Articles & Important Links
-          </h3>
+          </h2>
           <div className="grid md:!grid-cols-3 sm:!grid-cols-2 grid-cols-1 gap-10 mt-10">
             <div className="rounded-xl border-2 border-black bg-mimbership p-2.5">
               <div className="rounded-2xl bg-[#141C2C] py-5 px-2.5 space-y-4">
