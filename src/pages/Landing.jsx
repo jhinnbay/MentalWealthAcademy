@@ -21,6 +21,7 @@ import {
   MoveUp,
   Plus,
   Undo2,
+  X,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -30,7 +31,7 @@ export const Landing = () => {
       <section>
         <div className="2xl:!max-w-7xl mx-auto container space-y-5">
           <div className="border border-[#74C465] rounded-xl shadow-landing_header overflow-hidden">
-            <div className="xs:!flex hidden items-center justify-between border-b border-[#74C465] bg-landing_header_top rounded-[12px_12px_0px_0px] p-3">
+            <div className="sm:!flex hidden items-center justify-between border-b border-[#74C465] bg-landing_header_top rounded-[12px_12px_0px_0px] p-3">
               <p className="text-2xs text-[#74C465] font-normal font-sora tracking-wider">
                 <span className="text-2xs border border-[#74C465] p-1.5 text-white rounded-lg mr-2 ">
                   Academy
@@ -103,7 +104,7 @@ export const Landing = () => {
               alt="next genration"
               className="lg:!max-w-xl aspect-square absolute top-5 left-1/2 -translate-x-1/2 object-cover"
             />
-            <div className="bg-next_gen rounded-[64px] sm:!py-14 p-5 sm:!px-10 bg-cover relative z-30">
+            <div className="bg-next_gen sm:!rounded-[64px] rounded-3xl sm:!py-14 p-5 sm:!px-10 bg-cover relative z-30">
               <h3 className="text-center text-white font-bold text-[clamp(24px,4vw,62px)] font-spaceGrotesk">
                 Offering Next-Gen Access To...
               </h3>
@@ -111,45 +112,21 @@ export const Landing = () => {
                 Digital Classrooms, Spaces, POAPs, Resources/Tools{" "}
               </p>
               <div className="grid lg:!grid-cols-3 small_tablet:!grid-cols-2 grid-cols-1 gap-5 py-10">
-                <div className="w-full rounded-[64px] relative overflow-hidden">
-                  <img
-                    src="/images/vector.png"
-                    alt="certificate"
-                    className="w-full h-full object-cover"
-                  />
-
-                  <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto absolute bottom-12 left-1/2 -translate-x-1/2">
-                    <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto py-2 text-[#F6F8ED] sm:!text-xl text-base font-bold">
-                      Explore
-                    </Button>
-                  </div>
-                </div>
-                <div className="w-full rounded-[64px] relative overflow-hidden">
-                  <img
-                    src="/icons/vector2.svg"
-                    alt="certificate"
-                    className="w-full h-full object-cover"
-                  />
-
-                  <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto absolute bottom-12 left-1/2 -translate-x-1/2">
-                    <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto py-2 text-[#F6F8ED] sm:!text-xl text-base font-bold">
-                      Mint
-                    </Button>
-                  </div>
-                </div>
-                <div className="w-full rounded-[64px] relative overflow-hidden">
-                  <img
-                    src="/icons/vector3.svg"
-                    alt="certificate"
-                    className="w-full h-full object-cover"
-                  />
-
-                  <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto absolute bottom-12 left-1/2 -translate-x-1/2">
-                    <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto py-2 text-[#F6F8ED] sm:!text-xl text-base font-bold">
-                      Search
-                    </Button>
-                  </div>
-                </div>
+                <img
+                  src="/icons/vector.svg"
+                  alt="certificate"
+                  className="w-full h-full object-cover"
+                />
+                <img
+                  src="/icons/vector2.svg"
+                  alt="certificate"
+                  className="w-full h-full object-cover"
+                />
+                <img
+                  src="/icons/vector3.svg"
+                  alt="certificate"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="flex items-center sm:!justify-between justify-center sm:!mt-10 mt-5 flex-wrap">
                 <p className="font-bold text-white">
@@ -186,10 +163,10 @@ export const Landing = () => {
           </div>
         </div>
       </section>
-      <section className="py-10">
+      <section className="pt-10">
         <div className="container">
-          <div className="relative">
-            <div className="flex gap-10 2xl:!w-2/3 w-full small_tablet:!flex-row flex-col 2xl:!pb-0 md:!pb-40 md:!pl-10 pl-0">
+          <div className="relative space-y-3">
+            <div className="flex gap-10 2xl:!w-2/3 w-full small_tablet:!flex-row flex-col 2xl:!pb-0 xs:!pb-40 md:!pl-10 pl-0">
               <img
                 src="/images/next_gen.png"
                 alt="next genration"
@@ -248,11 +225,44 @@ export const Landing = () => {
                 </p>
               </div>
             </div>
-            <img
-              src="/images/tooltip.png"
-              alt="next genration"
-              className="h-72 md:!absolute right-0 md:!-bottom-28 ml-auto"
-            />
+            <div className="xs:!absolute right-0 -bottom-20">
+              <div className="relative xs:!block flex flex-col-reverse">
+                <img
+                  src="/images/bunnyBot.png"
+                  alt="next genration"
+                  className="h-60 ml-auto"
+                />
+                <div
+                  className=" xs:!absolute xs:!top-8  xs:!right-[70%]
+                 font-sora sm:!w-72  "
+                >
+                  <div className="relative rounded-xl bg-white p-4 space-y-3 before:h-3 before:w-3 before:bg-white before:absolute xs:before:!-right-1 xs:before:!left-auto before:left-10 xs:before:!bottom-10 before:-bottom-1 before:rotate-45">
+                    <div className="flex items-center justify-between">
+                      <h3 className="font-semibold text-sm ">
+                        Update Your Schedule
+                      </h3>
+                      <Button className="p-0 border-0 h-auto">
+                        <X className="h-4 w-4 " />
+                      </Button>
+                    </div>
+                    <p className="text-xs text-[#374151]">
+                      Update your AI classroom schedule by integrating a few new
+                      hobby classes, earn POAPs, and continue your journey.
+                    </p>
+                    <div className="text-right">
+                      <Button className="text-[#374151] text-xs">
+                        <img
+                          src="/images/next_gen.png"
+                          alt="next_gen"
+                          className="h-4 w-4"
+                        />
+                        Schedule Your Courses
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -736,8 +746,8 @@ export const Landing = () => {
           <div className="grid md:!grid-cols-2 grid-cols-1 gap-8 small_tablet:!mt-16 mt-8">
             <div className="space-y-5">
               <div className="sm:!p-11 p-7 rounded-xl bg-footer bg-no-repeat bg-cover">
-                <div className="flex items-center justify-between sm:!flex-row flex-col-reverse gap-10">
-                  <div className="sm:!space-y-20 space-y-10">
+                <div className="flex items-center justify-between sm:!flex-row flex-col-reverse gap-5">
+                  <div className="sm:!space-y-20 space-y-10 flex-1">
                     <div className="space-y-4">
                       <h4 className="bg-reserve_text bg-clip-text text-transparent text-[clamp(20px,2vw,32px)] font-bold font-spaceGrotesk leading-normal">
                         MWA Crypto Reserve
@@ -770,11 +780,11 @@ export const Landing = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="flex-0">
+                  <div className="flex-1">
                     <img
                       src="/images/next_gen.png"
                       alt="next genration"
-                      className="h-full aspect-square  max-w-44 ml-auto"
+                      className="w-full aspect-square ml-auto object-cover max-w-44"
                     />
                   </div>
                 </div>
@@ -792,42 +802,44 @@ export const Landing = () => {
               </p>
             </div>
             <div className="space-y-5">
-              <div className="rounded-xl bg-footer bg-no-repeat bg-cover sm:!py-10 py-7 space-y-5">
-                <div className="sm:!px-10 px-6 space-y-5">
+              <div className="rounded-xl bg-footer bg-no-repeat bg-cover sm:!py-10 py-7 space-y-12">
+                <div className="sm:!px-10 px-6 space-y-8">
                   <h4 className="bg-reserve_text bg-clip-text text-transparent text-[clamp(18px,2vw,24px)] font-bold font-spaceGrotesk leading-normal">
                     Statistics{" "}
                   </h4>
-                  <div className="flex items-center justify-between">
-                    <h2 className="text-[#BFFFDD] font-light leading-normal text-[clamp(16px,2vw,20px)]">
-                      Market Cap
-                    </h2>
-                    <p className="text-[#BFFFDD] font-light leading-normal text-[clamp(16px,2vw,20px)]">
-                      $ 2.47T
-                    </p>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <h2 className="text-[#BFFFDD] font-light leading-normal text-[clamp(16px,2vw,20px)]">
-                      24h performance{" "}
-                    </h2>
-                    <div className="flex items-end gap-2">
-                      <MoveUp className="text-[#3DE792] h-6" />
-                      <p className=" text-[#3DE792] font-light leading-normal text-[clamp(16px,2vw,20px)]">
-                        29.16%
+                  <div className="space-y-6">
+                    <div className="flex items-center justify-between">
+                      <h2 className="text-[#BFFFDD] font-light leading-normal text-[clamp(16px,2vw,20px)]">
+                        Market Cap
+                      </h2>
+                      <p className="text-[#BFFFDD] font-light leading-normal text-[clamp(16px,2vw,20px)]">
+                        $ 2.47T
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <h2 className="text-[#BFFFDD] font-light leading-normal text-[clamp(16px,2vw,20px)]">
+                        24h performance{" "}
+                      </h2>
+                      <div className="flex items-end gap-2">
+                        <MoveUp className="text-[#3DE792] h-6" />
+                        <p className=" text-[#3DE792] font-light leading-normal text-[clamp(16px,2vw,20px)]">
+                          29.16%
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <h2 className="text-[#BFFFDD] font-light leading-normal text-[clamp(16px,2vw,20px)]">
+                        24h volume{" "}
+                      </h2>
+                      <p className="text-[#BFFFDD] font-light leading-normal text-[clamp(16px,2vw,20px)]">
+                        $ 82.24B{" "}
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center justify-between">
-                    <h2 className="text-[#BFFFDD] font-light leading-normal text-[clamp(16px,2vw,20px)]">
-                      24h volume{" "}
-                    </h2>
-                    <p className="text-[#BFFFDD] font-light leading-normal text-[clamp(16px,2vw,20px)]">
-                      $ 82.24B{" "}
-                    </p>
-                  </div>
-                  <h4 className="bg-reserve_text bg-clip-text text-transparent text-[clamp(18px,2vw,24px)] font-bold font-spaceGrotesk leading-normal">
-                    Crypto in this basket{" "}
-                  </h4>
                 </div>
+                <h4 className="bg-reserve_text sm:!px-10 px-6 bg-clip-text text-transparent text-[clamp(18px,2vw,24px)] font-bold font-spaceGrotesk leading-normal">
+                  Crypto in this basket{" "}
+                </h4>
                 <Carousel
                   opts={{
                     align: "center",
@@ -837,7 +849,7 @@ export const Landing = () => {
                   <CarouselContent>
                     {Crypto_Prices?.map((crypto) => (
                       <CarouselItem
-                        className="xl:!basis-2/5 md:!basis-2/3 xs:!basis-2/5 basis-2/3"
+                        className="xl:!basis-2/5 md:!basis-2/3 sm:!basis-2/5 basis-2/3"
                         key={crypto?.coin}
                       >
                         <div className="flex items-center gap-5 bg-crpto_card bg-cover bg-no-repeat rounded-xl p-4">
