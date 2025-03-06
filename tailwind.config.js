@@ -58,6 +58,7 @@ module.exports = {
         landing_header: "0px 15px 44.7px 0px #DBE64C26",
         carousel_btn: "0px 1px 6.5px 0px #89EFD0",
         carousel_card: "0px 1px 10.4px 0px #2E2CA666",
+        vector: "0px 9px 8.5px 0px #182A72",
       },
       dropShadow: {
         library_img: "0px 6px 21.6px 0px #00000040",
@@ -159,7 +160,7 @@ module.exports = {
           "radial-gradient(97.14% 97.14% at 50% 2.86%, #4D2AFF 0%, #4D2CA9 32%, #271484 74%, #1F1FE5 100%)",
         next_gen:
           "radial-gradient(96% 107.22% at 88.4% 4%, #2F9A66 0%, #4D2CA9 32%, #148457 74%, #1CDCCF 88%, #0B8B5A 100%)",
-        vector: "url('/images/vector.png')",
+        vector: "url('/icons/vector.svg')",
         fancy_btn: "linear-gradient(180deg, #C7C7C7 0%, #7B7B7B 100%)",
         fancy_btn_outer:
           "linear-gradient(180deg, #C3C3C3 0%, #343434 50.5%, #FFFFFF 100%)",
