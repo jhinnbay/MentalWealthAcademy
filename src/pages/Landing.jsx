@@ -1,28 +1,12 @@
 import { Footer } from "@/components/pages/Home/Footer";
 import { Button } from "@/components/ui/button";
 import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Crypto_Prices } from "@/data/landing";
-import { cn } from "@/lib/utils";
-import {
-  ChevronLeft,
-  Clock,
-  Copy,
-  Globe,
-  Menu,
-  MoveDown,
-  MoveUp,
-  Plus,
-  Undo2,
-  X,
-} from "lucide-react";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Clock, Globe, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Landing = () => {
@@ -68,13 +52,54 @@ export const Landing = () => {
                   alt="mental"
                   className=" ml-auto"
                 />
-                <Button className="p-1 ml-auto bg-transparent text-[#74C465] border-none hover:shadow-none">
-                  <Menu />
-                </Button>
+
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="p-1 ml-auto bg-transparent text-[#74C465] border-none hover:shadow-none">
+                    <Menu />{" "}
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="bg-black sm:!w-40 w-32 mr-4">
+                    <DropdownMenuItem className="hover:!bg-[#121212]">
+                      {" "}
+                      <Link
+                        to={"/"}
+                        className="md:!p-1.5 p-1 font-bold text-[clamp(16px,2vw,20px)] text-[#DBE64C]"
+                      >
+                        Articles
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="hover:!bg-[#121212]">
+                      {" "}
+                      <Link
+                        to={"#"}
+                        className="md:!p-1.5 p-1 font-bold text-[clamp(16px,2vw,20px)] text-[#DBE64C]"
+                      >
+                        Store
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="hover:!bg-[#121212]">
+                      {" "}
+                      <Link
+                        to={"/library"}
+                        className="md:!p-1.5 p-1 font-bold text-[clamp(16px,2vw,20px)] text-[#DBE64C]"
+                      >
+                        Library
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="hover:!bg-[#121212]">
+                      {" "}
+                      <Link
+                        to={"#"}
+                        className="md:!p-1.5 p-1 font-bold text-[clamp(16px,2vw,20px)] text-[#DBE64C]"
+                      >
+                        Classes
+                      </Link>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
             </div>
           </div>
-          <div className="sm:!flex hidden items-center justify-end gap-3">
+          {/* <div className="sm:!flex hidden items-center justify-end gap-3">
             <Link to={"/"} className="p-3 font-bold text-2xl text-[#DBE64C]">
               Articles
             </Link>
@@ -87,17 +112,27 @@ export const Landing = () => {
             <Link to={"/"} className="p-3 font-bold text-2xl text-[#DBE64C]">
               Classes
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
       <section className="md:!pt-28 pt-10 pb-10">
-        <div className="container">
+        <div className="max-w-[95%] mx-auto">
           <h1 className="text-center font-bold text-[#DBE64C] text-[clamp(32px,4vw,62px)] font-spaceGrotesk">
             Warp Drive Into Next-Gen Digital Education
           </h1>
           <p className="text-center text-[clamp(16px,2vw,24px)] text-[#F6F8ED] font-spaceGrotesk">
             Lifetime Access To Classrooms, No More Subscriptions.
           </p>
+          <div className="text-center mt-4">
+            <Button className="bg-crpto_card h-auto sm:!py-5 py-3.5 sm:!px-14 px-7 font-medium text-base text-[#1D1818] ">
+              Enter The Academy{" "}
+              <img
+                src="/icons/globe_sync.svg"
+                alt="globe"
+                className="h-5 w-5 "
+              />
+            </Button>
+          </div>
           <div className="relative pt-20">
             <img
               src="/images/next_gen.png"
@@ -111,24 +146,126 @@ export const Landing = () => {
               <p className="text-center text-[clamp(14px,2vw,24px)] text-white font-spaceGrotesk font-light">
                 Digital Classrooms, Spaces, POAPs, Resources/Tools{" "}
               </p>
-              <div className="grid lg:!grid-cols-3 small_tablet:!grid-cols-2 grid-cols-1 gap-5 py-10">
-                <img
-                  src="/icons/vector.svg"
-                  alt="certificate"
-                  className="w-full h-full object-cover"
-                />
-                <img
-                  src="/icons/vector2.svg"
-                  alt="certificate"
-                  className="w-full h-full object-cover"
-                />
-                <img
-                  src="/icons/vector3.svg"
-                  alt="certificate"
-                  className="w-full h-full object-cover"
-                />
+              <div className="grid xl:!grid-cols-3 small_tablet:!grid-cols-2 grid-cols-1 gap-5 py-10">
+                <div className="relative">
+                  <img
+                    src="/icons/vector.svg"
+                    alt="certificate"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute rounded-[64px] py-16 px-7 inset-0">
+                    <div className="flex flex-col justify-between gap-y-4 h-full ">
+                      <div className="flex items-center lg:!w-2/3 w-3/4 justify-between">
+                        <h3 className="text-[#F6F8ED] font-sora text-sm font-semibold">
+                          Classes
+                        </h3>
+                        <span className="px-4 h-6 bg-[#F6F8ED] text-[#397BED] text-base font-bold rounded-full ">
+                          13
+                        </span>
+                      </div>
+                      <img
+                        src="/images/certificate.png"
+                        alt="certificate"
+                        className="w-full aspect-video"
+                      />
+                      <div className="rounded-full bg-fancy_btn_outer border border-black p-1 sm:!max-w-40 max-w-24 w-full mx-auto ">
+                        <Button
+                          className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto sm
+                        :!py-2 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold"
+                        >
+                          Explore
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="relative bg-vector bg-cover rounded-[64px] py-16 px-10">
+                  <div className="flex flex-col justify-between h-full gap-y-4 ">
+                    <div className="flex items-center lg:!w-2/3 w-3/4 justify-between">
+                      <h3 className="text-[#F6F8ED] font-sora text-sm font-semibold">
+                        <span className="text-[#397BED]">VIP</span>/NFT
+                        Collections
+                      </h3>
+                      <span className="px-4 h-6 bg-[#F6F8ED] text-[#397BED] font-base font-bold rounded-full">
+                        13
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4">
+                      <img
+                        src="/images/vip1.png"
+                        alt="certificate"
+                        className="w-full aspect-square"
+                      />
+                      <img
+                        src="/images/vip2.png"
+                        alt="certificate"
+                        className="w-full aspect-square"
+                      />
+                      <img
+                        src="/images/vip3.png"
+                        alt="certificate"
+                        className="w-full aspect-square"
+                      />
+                      <img
+                        src="/images/vip4.png"
+                        alt="certificate"
+                        className="w-full aspect-square"
+                      />
+                    </div>
+                  </div>
+                  <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto absolute bottom-14 left-1/2 -translate-x-1/2">
+                    <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto py-2 text-[#F6F8ED] sm:!text-xl text-base font-bold ">
+                      Mint
+                    </Button>
+                  </div>
+                  {/* <div className="h-1/3 bg-layer backdrop-blur-sm w-[99%] absolute  bottom-0 "></div> */}
+                </div>
+                <div className="relative">
+                  <img
+                    src="/icons/vector.svg"
+                    alt="certificate"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute w-full h-full inset-0 rounded-3xl sm:!py-16 py-10 px-10">
+                    <div className="flex flex-col justify-between h-full gap-4">
+                      <div className="flex items-center lg:!w-2/3 sm:!w-3/4 w-full justify-between">
+                        <h3 className="text-[#F6F8ED] font-sora text-sm font-semibold">
+                          Library/News
+                        </h3>
+                        <span className="px-4 h-6 bg-[#F6F8ED] text-[#397BED] font-base font-bold rounded-full">
+                          34
+                        </span>
+                      </div>
+                      <div className="flex flex-col items-center gap-3">
+                        <img
+                          src="/images/news.png"
+                          alt="certificate"
+                          className="w-1/2"
+                        />
+                        <img
+                          src="/images/news.png"
+                          alt="certificate"
+                          className="w-1/2"
+                        />
+                        <img
+                          src="/images/news.png"
+                          alt="certificate"
+                          className="w-1/2"
+                        />
+                        <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
+                          <Button
+                            className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto sm
+                        :!py-2 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold"
+                          >
+                            Search
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center sm:!justify-between justify-center sm:!mt-10 mt-5 flex-wrap">
+              <div className="flex items-center sm:!flex-row flex-col gap-3 sm:!justify-between justify-center sm:!mt-10 mt-5 flex-wrap">
                 <p className="font-bold text-white">
                   2025 Mental Wealth Academy™
                 </p>
@@ -311,7 +448,7 @@ export const Landing = () => {
           </div>
         </div>
       </section>
-      <section className="py-20 bg-features bg-cover">
+      {/* <section className="py-20 bg-features bg-cover">
         <div className="container">
           <div className="max-w-3xl mx-auto space-y-5 ">
             <h2 className="font-bold font-spaceGrotesk text-[clamp(24px,4vw,48px)] text-white text-center leading-tight">
@@ -981,7 +1118,7 @@ export const Landing = () => {
             </div>
           </div>
         </div>{" "}
-      </section>
+      </section> */}
       <Footer />
     </main>
   );
