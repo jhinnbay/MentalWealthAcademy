@@ -147,14 +147,14 @@ export const Landing = () => {
                 Digital Classrooms, Spaces, POAPs, Resources/Tools{" "}
               </p>
               <div className="grid xl:!grid-cols-3 small_tablet:!grid-cols-2 grid-cols-1 gap-5 py-10">
-                <div className="relative">
+                <div className="relative  h-full mx-auto w-full">
                   <img
-                    src="/icons/vector.svg"
+                    src="/images/vector.png"
                     alt="certificate"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full small_tablet:!object-contain object-fill absolute inset-0"
                   />
-                  <div className="absolute rounded-[64px] py-16 px-7 inset-0">
-                    <div className="flex flex-col justify-between gap-y-4 h-full ">
+                  <div className=" rounded-[64px] py-16 px-7 relative z-20">
+                    <div className="flex flex-col justify-between h-full space-y-8">
                       <div className="flex items-center lg:!w-2/3 w-3/4 justify-between">
                         <h3 className="text-[#F6F8ED] font-sora text-sm font-semibold">
                           Classes
@@ -179,8 +179,13 @@ export const Landing = () => {
                     </div>
                   </div>
                 </div>
-                <div className="relative bg-vector bg-cover rounded-[64px] py-16 px-10">
-                  <div className="flex flex-col justify-between h-full gap-y-4 ">
+                <div className="relative rounded-[64px] overflow-hidden">
+                  <img
+                    src="/images/vector.png"
+                    alt="certificate"
+                    className="w-full h-full small_tablet:!object-contain object-fill absolute inset-0"
+                  />
+                  <div className="flex flex-col justify-between h-full gap-y-4 relative z-20 py-16 px-10">
                     <div className="flex items-center lg:!w-2/3 w-3/4 justify-between">
                       <h3 className="text-[#F6F8ED] font-sora text-sm font-semibold">
                         <span className="text-[#397BED]">VIP</span>/NFT
@@ -213,20 +218,20 @@ export const Landing = () => {
                       />
                     </div>
                   </div>
-                  <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto absolute bottom-14 left-1/2 -translate-x-1/2">
+                  <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto absolute bottom-14 left-1/2 -translate-x-1/2 z-30">
                     <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto py-2 text-[#F6F8ED] sm:!text-xl text-base font-bold ">
                       Mint
                     </Button>
                   </div>
-                  {/* <div className="h-1/3 bg-layer backdrop-blur-sm w-[99%] absolute  bottom-0 "></div> */}
+                  {/* <div className="h-1/3 bg-layer backdrop-blur-2xl w-[99%] left-1/2 -translate-x-1/2 absolute  bottom-0"></div> */}
                 </div>
                 <div className="relative">
                   <img
-                    src="/icons/vector.svg"
+                    src="/images/vector.png"
                     alt="certificate"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full small_tablet:!object-contain object-fill absolute inset-0"
                   />
-                  <div className="absolute w-full h-full inset-0 rounded-3xl sm:!py-16 py-10 px-10">
+                  <div className="relative z-20 w-full h-full inset-0 rounded-3xl sm:!py-16 py-10 px-10">
                     <div className="flex flex-col justify-between h-full gap-4">
                       <div className="flex items-center lg:!w-2/3 sm:!w-3/4 w-full justify-between">
                         <h3 className="text-[#F6F8ED] font-sora text-sm font-semibold">
