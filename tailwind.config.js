@@ -27,6 +27,7 @@ module.exports = {
         xl: "1200px", // Extra large devices (e.g., large desktops)
         "2xl": "1350px", // 2x extra large devices (e.g., very large desktops)
         "3xl": "1620px", // Example: Custom breakpoint for very large screens
+        "10xl": "2500px",
       },
       fontFamily: {
         spaceGrotesk: ["SpaceGrotesk", "sans-serif"],
