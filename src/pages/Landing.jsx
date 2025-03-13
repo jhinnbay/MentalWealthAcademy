@@ -116,7 +116,7 @@ export const Landing = () => {
         </div>
       </section>
       <section className="md:!pt-28 pt-10 pb-10">
-        <div className="max-w-[95%] mx-auto">
+        <div className="3xl:!container max-w-[95%] mx-auto">
           <h1 className="text-center font-bold text-[#DBE64C] text-[clamp(32px,4vw,62px)] font-spaceGrotesk">
             Warp Drive Into Next-Gen Digital Education
           </h1>
@@ -139,7 +139,7 @@ export const Landing = () => {
               alt="next genration"
               className="lg:!max-w-xl aspect-square absolute top-5 left-1/2 -translate-x-1/2 object-cover"
             />
-            <div className="bg-next_gen sm:!rounded-[64px] rounded-3xl sm:!py-14 p-5 sm:!px-10 bg-cover relative z-30">
+            <div className="bg-next_gen sm:!rounded-[64px] rounded-3xl  sm:!py-14 p-5 sm:!px-10 bg-cover relative z-30">
               <h3 className="text-center text-white font-bold text-[clamp(24px,4vw,62px)] font-spaceGrotesk">
                 Offering Next-Gen Access To...
               </h3>
@@ -151,15 +151,15 @@ export const Landing = () => {
                   <img
                     src="/images/vector.png"
                     alt="certificate"
-                    className="w-full h-full small_tablet:!object-contain object-fill absolute inset-0"
+                    className="w-full h-full object-fill absolute inset-0"
                   />
-                  <div className=" rounded-[64px] py-16 px-7 relative z-20">
+                  <div className=" rounded-[64px] 3xl:!py-20 py-16 px-7 relative z-20 h-full">
                     <div className="flex flex-col justify-between h-full space-y-8">
-                      <div className="flex items-center lg:!w-2/3 w-3/4 justify-between">
-                        <h3 className="text-[#F6F8ED] font-sora text-sm font-semibold">
+                      <div className="flex items-center lg:!w-2/3 xs:!w-3/4 w-full justify-between">
+                        <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
                           Classes
                         </h3>
-                        <span className="px-4 h-6 bg-[#F6F8ED] text-[#397BED] text-base font-bold rounded-full ">
+                        <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full ">
                           13
                         </span>
                       </div>
@@ -168,11 +168,8 @@ export const Landing = () => {
                         alt="certificate"
                         className="w-full aspect-video"
                       />
-                      <div className="rounded-full bg-fancy_btn_outer border border-black p-1 sm:!max-w-40 max-w-24 w-full mx-auto ">
-                        <Button
-                          className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto sm
-                        :!py-2 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold"
-                        >
+                      <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
+                        <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
                           Explore
                         </Button>
                       </div>
@@ -183,15 +180,15 @@ export const Landing = () => {
                   <img
                     src="/images/vector.png"
                     alt="certificate"
-                    className="w-full h-full small_tablet:!object-contain object-fill absolute inset-0"
+                    className="w-full h-full object-fill absolute inset-0"
                   />
-                  <div className="flex flex-col justify-between h-full gap-y-4 relative z-20 py-16 px-10">
-                    <div className="flex items-center lg:!w-2/3 w-3/4 justify-between">
-                      <h3 className="text-[#F6F8ED] font-sora text-sm font-semibold">
+                  <div className="flex flex-col justify-between h-full gap-y-4 relative z-20 3xl:!py-20 py-16 px-10">
+                    <div className="flex items-center lg:!w-2/3 xs:!w-3/4 w-full justify-between">
+                      <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
                         <span className="text-[#397BED]">VIP</span>/NFT
                         Collections
                       </h3>
-                      <span className="px-4 h-6 bg-[#F6F8ED] text-[#397BED] font-base font-bold rounded-full">
+                      <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full">
                         13
                       </span>
                     </div>
@@ -219,52 +216,47 @@ export const Landing = () => {
                     </div>
                   </div>
                   <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto absolute bottom-14 left-1/2 -translate-x-1/2 z-30">
-                    <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto py-2 text-[#F6F8ED] sm:!text-xl text-base font-bold ">
+                    <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-base font-bold ">
                       Mint
                     </Button>
                   </div>
-                  {/* <div className="h-1/3 bg-layer backdrop-blur-2xl w-[99%] left-1/2 -translate-x-1/2 absolute  bottom-0"></div> */}
+                  <div className="h-1/3 bg-layer backdrop-blur-sm w-full left-1/2 -translate-x-1/2 absolute z-20 bottom-0"></div>
                 </div>
                 <div className="relative">
                   <img
                     src="/images/vector.png"
                     alt="certificate"
-                    className="w-full h-full small_tablet:!object-contain object-fill absolute inset-0"
+                    className="w-full h-full object-fill absolute inset-0"
                   />
-                  <div className="relative z-20 w-full h-full inset-0 rounded-3xl sm:!py-16 py-10 px-10">
-                    <div className="flex flex-col justify-between h-full gap-4">
-                      <div className="flex items-center lg:!w-2/3 sm:!w-3/4 w-full justify-between">
-                        <h3 className="text-[#F6F8ED] font-sora text-sm font-semibold">
-                          Library/News
-                        </h3>
-                        <span className="px-4 h-6 bg-[#F6F8ED] text-[#397BED] font-base font-bold rounded-full">
-                          34
-                        </span>
-                      </div>
-                      <div className="flex flex-col items-center gap-3">
-                        <img
-                          src="/images/news.png"
-                          alt="certificate"
-                          className="w-1/2"
-                        />
-                        <img
-                          src="/images/news.png"
-                          alt="certificate"
-                          className="w-1/2"
-                        />
-                        <img
-                          src="/images/news.png"
-                          alt="certificate"
-                          className="w-1/2"
-                        />
-                        <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
-                          <Button
-                            className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto sm
-                        :!py-2 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold"
-                          >
-                            Search
-                          </Button>
-                        </div>
+                  <div className="relative z-20 w-full inset-0 rounded-3xl 3xl:!py-20 py-16 px-10 flex flex-col justify-between h-full gap-4">
+                    <div className="flex items-center lg:!w-2/3 xs:!w-3/4 w-full justify-between">
+                      <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
+                        Library/News
+                      </h3>
+                      <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full">
+                        34
+                      </span>
+                    </div>
+                    <div className="flex flex-col items-center gap-3">
+                      <img
+                        src="/images/news.png"
+                        alt="certificate"
+                        className="w-1/2"
+                      />
+                      <img
+                        src="/images/news.png"
+                        alt="certificate"
+                        className="w-1/2"
+                      />
+                      <img
+                        src="/images/news.png"
+                        alt="certificate"
+                        className="w-1/2"
+                      />
+                      <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
+                        <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
+                          Search
+                        </Button>
                       </div>
                     </div>
                   </div>
