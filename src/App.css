@@ -116,4 +116,8 @@ input[type="number"] {
   body {
     @apply bg-background text-foreground;
   }
+  .squircle {
+    mask-image: paint(4);
+    -webkit-mask-image: paint(4);
+  }
 }
