@@ -175,6 +175,7 @@ module.exports = {
           "radial-gradient(61.79% 87.16% at 81.37% 10.92%, #37A375 0%, #6DF1B9 100%)",
         crpto_card:
           "linear-gradient(120.82deg, #E6A940 1.82%, #FFFBE0 21.15%, #EDCB46 37.47%, #F9D998 66.15%, #816B36 83.45%, #D0A72B 100.71%)",
+        rect: "url('/images/rect.png')",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -210,5 +211,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("tailwind-corner-smoothing"),
+  ],
 };

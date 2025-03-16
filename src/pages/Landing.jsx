@@ -6,15 +6,16 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Squircle } from "corner-smoothing";
 import { Clock, Globe, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Landing = () => {
   return (
     <main className=" bg-landing_bg bg-[#0000009d] bg-blend-overlay pt-6">
-      <section>
-        <div className="2xl:!max-w-7xl mx-auto container space-y-5">
-          <div className="border border-[#74C465] rounded-xl shadow-landing_header overflow-hidden">
+      <section className="sticky top-3 z-50">
+        <div className="container  space-y-5">
+          <div className="max-w-[90%] mx-auto border border-[#74C465] rounded-xl shadow-landing_header overflow-hidden">
             <div className="sm:!flex hidden items-center justify-between border-b border-[#74C465] bg-landing_header_top rounded-[12px_12px_0px_0px] p-3">
               <p className="text-2xs text-[#74C465] font-normal font-sora tracking-wider">
                 <span className="text-2xs border border-[#74C465] p-1.5 text-white rounded-lg mr-2 ">
@@ -139,161 +140,166 @@ export const Landing = () => {
               alt="next genration"
               className="lg:!max-w-xl aspect-square absolute top-5 left-1/2 -translate-x-1/2 object-cover"
             />
-            <div className="bg-next_gen sm:!rounded-[64px] rounded-3xl  sm:!py-14 p-5 sm:!px-10 bg-cover relative z-30">
-              <h3 className="text-center text-white font-bold text-[clamp(24px,4vw,62px)] font-spaceGrotesk">
-                Offering Next-Gen Access To...
-              </h3>
-              <p className="text-center text-[clamp(14px,2vw,24px)] text-white font-spaceGrotesk font-light">
-                Digital Classrooms, Spaces, POAPs, Resources/Tools{" "}
-              </p>
-              <div className="grid xl:!grid-cols-3 small_tablet:!grid-cols-2 grid-cols-1 gap-5 py-10">
-                <div className="relative  h-full mx-auto w-full">
-                  <img
-                    src="/images/vector.png"
-                    alt="certificate"
-                    className="w-full h-full object-fill absolute inset-0"
-                  />
-                  <div className=" rounded-[64px] 3xl:!py-20 py-16 px-7 relative z-20 h-full">
-                    <div className="flex flex-col justify-between h-full space-y-8">
-                      <div className="flex items-center lg:!w-2/3 xs:!w-3/4 w-full justify-between">
+            <Squircle
+              cornerRadius={64}
+              className="sm:!py-14 p-5 sm:!px-10 relative overflow-hidden bg-cover bg-rect bg-no-repeat"
+            >
+              <div>
+                <h3 className="text-center text-white font-bold text-[clamp(24px,4vw,62px)] font-spaceGrotesk">
+                  Offering Next-Gen Access To...
+                </h3>
+                <p className="text-center text-[clamp(14px,2vw,24px)] text-white font-spaceGrotesk font-light">
+                  Digital Classrooms, Spaces, POAPs, Resources/Tools{" "}
+                </p>
+                <div className="grid xl:!grid-cols-3 small_tablet:!grid-cols-2 grid-cols-1 gap-5 py-10">
+                  <div className="relative  h-full mx-auto w-full">
+                    <img
+                      src="/images/vector.png"
+                      alt="certificate"
+                      className="w-full h-full object-fill absolute inset-0"
+                    />
+                    <div className=" rounded-[64px] py-10 sm:py-16 3xl:!py-20  px-6 sm:px-12 3xl:px-14 relative z-20 h-full">
+                      <div className="flex flex-col justify-between h-full space-y-8">
+                        <div className="flex items-center gap-12 3xl:gap-16">
+                          <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
+                            Classes
+                          </h3>
+                          <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full ">
+                            13
+                          </span>
+                        </div>
+                        <img
+                          src="/icons/certificate.svg"
+                          alt="certificate"
+                          className="w-full h-full object-contain"
+                        />
+                        <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
+                          <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
+                            Explore
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="relative rounded-[64px] overflow-hidden">
+                    <img
+                      src="/images/vector.png"
+                      alt="certificate"
+                      className="w-full h-full object-fill absolute inset-0"
+                    />
+                    <div className="flex flex-col justify-between h-full gap-y-4 relative z-20 py-12 sm:py-16 3xl:!py-20  px-6 sm:px-12 3xl:px-14">
+                      <div className="flex items-center gap-5 3xl:gap-10">
                         <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
-                          Classes
+                          <span className="text-[#397BED]">VIP</span>/NFT
+                          Collections
                         </h3>
-                        <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full ">
+                        <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full">
                           13
                         </span>
                       </div>
-                      <img
-                        src="/images/certificate.png"
-                        alt="certificate"
-                        className="w-full aspect-video"
-                      />
-                      <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
-                        <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
-                          Explore
-                        </Button>
+                      <div className="grid grid-cols-2 gap-4">
+                        <img
+                          src="/icons/vip1.svg"
+                          alt="certificate"
+                          className="w-full aspect-square"
+                        />
+                        <img
+                          src="/icons/vip2.svg"
+                          alt="certificate"
+                          className="w-full aspect-square"
+                        />
+                        <img
+                          src="/icons/vip3.svg"
+                          alt="certificate"
+                          className="w-full aspect-square"
+                        />
+                        <img
+                          src="/icons/vip4.svg"
+                          alt="certificate"
+                          className="w-full aspect-square"
+                        />
+                      </div>
+                    </div>
+                    <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto absolute bottom-14 left-1/2 -translate-x-1/2 z-30">
+                      <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-base font-bold ">
+                        Mint
+                      </Button>
+                    </div>
+                    <div className="h-1/3 bg-layer backdrop-blur-sm w-full left-1/2 -translate-x-1/2 absolute z-20 bottom-0"></div>
+                  </div>
+                  <div className="relative">
+                    <img
+                      src="/images/vector.png"
+                      alt="certificate"
+                      className="w-full h-full object-fill absolute inset-0"
+                    />
+                    <div className="relative z-20 w-full inset-0 rounded-3xl py-12 sm:py-16 3xl:!py-20  px-6 sm:px-12 3xl:px-14 flex flex-col justify-between h-full gap-4">
+                      <div className="flex items-center gap-5 3xl:gap-10">
+                        <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
+                          Library/News
+                        </h3>
+                        <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full">
+                          34
+                        </span>
+                      </div>
+                      <div className="flex flex-col items-center gap-3">
+                        <img
+                          src="/icons/news.svg"
+                          alt="certificate"
+                          className="w-1/2"
+                        />
+                        <img
+                          src="/icons/news.svg"
+                          alt="certificate"
+                          className="w-1/2"
+                        />
+                        <img
+                          src="/icons/news.svg"
+                          alt="certificate"
+                          className="w-1/2"
+                        />
+                        <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
+                          <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
+                            Search
+                          </Button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="relative rounded-[64px] overflow-hidden">
-                  <img
-                    src="/images/vector.png"
-                    alt="certificate"
-                    className="w-full h-full object-fill absolute inset-0"
-                  />
-                  <div className="flex flex-col justify-between h-full gap-y-4 relative z-20 3xl:!py-20 py-16 px-10">
-                    <div className="flex items-center lg:!w-2/3 xs:!w-3/4 w-full justify-between">
-                      <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
-                        <span className="text-[#397BED]">VIP</span>/NFT
-                        Collections
-                      </h3>
-                      <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full">
-                        13
-                      </span>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
+                <div className="flex items-center sm:!flex-row flex-col gap-3 sm:!justify-between justify-center sm:!mt-10 mt-5 flex-wrap">
+                  <p className="font-bold text-white">
+                    2025 Mental Wealth Academy™
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <Link to={"/"}>
                       <img
-                        src="/images/vip1.png"
-                        alt="certificate"
-                        className="w-full aspect-square"
+                        src="/icons/twitter_next.svg"
+                        alt="twitter"
+                        className="w-6 h-6"
                       />
+                    </Link>
+                    <Link to={"/"}>
                       <img
-                        src="/images/vip2.png"
-                        alt="certificate"
-                        className="w-full aspect-square"
+                        src="/icons/insta_next.svg"
+                        alt="twitter"
+                        className="w-6 h-6"
                       />
+                    </Link>
+                    <Link to={"/"}>
                       <img
-                        src="/images/vip3.png"
-                        alt="certificate"
-                        className="w-full aspect-square"
+                        src="/icons/youtube_next.svg"
+                        alt="twitter"
+                        className="w-6 h-6"
                       />
-                      <img
-                        src="/images/vip4.png"
-                        alt="certificate"
-                        className="w-full aspect-square"
-                      />
-                    </div>
+                    </Link>
                   </div>
-                  <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto absolute bottom-14 left-1/2 -translate-x-1/2 z-30">
-                    <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-base font-bold ">
-                      Mint
-                    </Button>
-                  </div>
-                  <div className="h-1/3 bg-layer backdrop-blur-sm w-full left-1/2 -translate-x-1/2 absolute z-20 bottom-0"></div>
-                </div>
-                <div className="relative">
-                  <img
-                    src="/images/vector.png"
-                    alt="certificate"
-                    className="w-full h-full object-fill absolute inset-0"
-                  />
-                  <div className="relative z-20 w-full inset-0 rounded-3xl 3xl:!py-20 py-16 px-10 flex flex-col justify-between h-full gap-4">
-                    <div className="flex items-center lg:!w-2/3 xs:!w-3/4 w-full justify-between">
-                      <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
-                        Library/News
-                      </h3>
-                      <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full">
-                        34
-                      </span>
-                    </div>
-                    <div className="flex flex-col items-center gap-3">
-                      <img
-                        src="/images/news.png"
-                        alt="certificate"
-                        className="w-1/2"
-                      />
-                      <img
-                        src="/images/news.png"
-                        alt="certificate"
-                        className="w-1/2"
-                      />
-                      <img
-                        src="/images/news.png"
-                        alt="certificate"
-                        className="w-1/2"
-                      />
-                      <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
-                        <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
-                          Search
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
+                  <p className="text-white">
+                    <Globe className="inline h-6 w-6" /> Metawavestudio.com ↗
+                  </p>
                 </div>
               </div>
-              <div className="flex items-center sm:!flex-row flex-col gap-3 sm:!justify-between justify-center sm:!mt-10 mt-5 flex-wrap">
-                <p className="font-bold text-white">
-                  2025 Mental Wealth Academy™
-                </p>
-                <div className="flex items-center gap-2">
-                  <Link to={"/"}>
-                    <img
-                      src="/icons/twitter_next.svg"
-                      alt="twitter"
-                      className="w-6 h-6"
-                    />
-                  </Link>
-                  <Link to={"/"}>
-                    <img
-                      src="/icons/insta_next.svg"
-                      alt="twitter"
-                      className="w-6 h-6"
-                    />
-                  </Link>
-                  <Link to={"/"}>
-                    <img
-                      src="/icons/youtube_next.svg"
-                      alt="twitter"
-                      className="w-6 h-6"
-                    />
-                  </Link>
-                </div>
-                <p className="text-white">
-                  <Globe className="inline h-6 w-6" /> Metawavestudio.com ↗
-                </p>
-              </div>
-            </div>
+            </Squircle>
           </div>
         </div>
       </section>
