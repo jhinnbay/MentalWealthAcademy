@@ -6,8 +6,8 @@ export const Footer = () => {
   return (
     <footer className=" pt-5 text-[#E5E5E5]">
       <div className=" bg-footer bg-no-repeat bg-left bg-contain rounded-t-xl">
-        <div className="container xl:max-w-6xl">
-          <div className="py-[64px] flex flex-col gap-[64px]">
+        <div className="container">
+          <div className="py-[64px] flex flex-col gap-[64px] max-w-[90%] mx-auto">
             <div className="flex flex-wrap justify-between gap-8">
               <div>
                 <img src="/icons/footer_logo.svg" alt="Company Logo" />

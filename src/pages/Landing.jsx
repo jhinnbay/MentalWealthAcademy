@@ -15,7 +15,7 @@ export const Landing = () => {
     <main className=" bg-landing_bg bg-[#0000009d] bg-blend-overlay pt-6">
       <section className="sticky top-3 z-50">
         <div className="container  space-y-5">
-          <div className="max-w-[90%] mx-auto border border-[#74C465] rounded-xl shadow-landing_header overflow-hidden">
+          <div className="max-w-[85%] mx-auto border border-[#74C465] rounded-xl shadow-landing_header overflow-hidden">
             <div className="sm:!flex hidden items-center justify-between border-b border-[#74C465] bg-landing_header_top rounded-[12px_12px_0px_0px] p-3">
               <p className="text-2xs text-[#74C465] font-normal font-sora tracking-wider">
                 <span className="text-2xs border border-[#74C465] p-1.5 text-white rounded-lg mr-2 ">
@@ -116,24 +116,294 @@ export const Landing = () => {
           </div> */}
         </div>
       </section>
+      <section className="py-7 sm:py-12 md:py-20">
+        <div className="  container">
+          <div className="max-w-full small_tablet:max-w-[95%] mx-auto">
+            <h1 className="text-center font-bold text-transparent bg-wrap bg-clip-text text-[clamp(32px,3vw,68px)] font-spaceGrotesk">
+              Warp Drive Into Next-Gen Digital Education
+            </h1>
+            <p className="text-center text-[clamp(20px,2vw,42px)] text-[#F6F8ED] font-spaceGrotesk font-light ">
+              Lifetime Access To Classrooms, No More Subscriptions.
+            </p>
+            <div className="grid xl:!grid-cols-5 lg:!grid-cols-2 grid-cols-1 gap-5 mt-7 sm:mt-14 lg:mt-20 place-items-center">
+              <div className="space-y-10 pb-5 xl:!col-span-3">
+                <div className="space-y-3.5  text-center lg:text-left">
+                  <div className="flex items-center justify-center lg:!justify-start gap-3 sm:gap-5 3xl:gap-10">
+                    <img
+                      src="/icons/landinglogo.svg"
+                      alt="landing logo"
+                      className="h-16 md:!h-24 w-16 md:!w-24"
+                    />
+                    <h2 className="text-left font-bold text-transparent bg-wrap bg-clip-text text-[clamp(24px,3vw,68px)] font-spaceGrotesk">
+                      Mental Wealth Academy{" "}
+                    </h2>
+                  </div>
+                  <p className="text-[clamp(20px,2vw,42px)] font-semibold text-[#B2B2B2] leading-none">
+                    A Stand For Affordable Education{" "}
+                  </p>
+                </div>
+                <div className="space-y-4 text-center lg:text-left">
+                  <p className=" text-base lg:!text-xl 3xl:!text-2xl text-[#8F8F8F] !leading-tight font-sora font-normal">
+                    Education shouldn’t be confined to a classroom. That’s why
+                    we’ve designed a space where you can explore a wide range of
+                    topics, earn rewards for your progress, and engage with
+                    content that evolves with you. Seamlessly integrated, always
+                    accessible, Mental Wealth Academy lets you learn at your own
+                    pace, anywhere, anytime.
+                  </p>
+                  <p className=" text-base lg:!text-xl 3xl:!text-2xl text-[#8F8F8F] !leading-tight font-sora font-normal">
+                    Knowledge is power. Within your private, secure library,
+                    you’ll gain access to the digital library chain where
+                    developers can upload and share resources. You can explore
+                    repeat books, lend knowledge, and even vote on changes,
+                    ensuring that what you learn stays relevant and evolves with
+                    the community. You’re not just a learner; you’re part of a
+                    dynamic ecosystem where your voice matters.
+                  </p>
+                  <p className=" text-base lg:!text-xl 3xl:!text-2xl text-[#8F8F8F] !leading-tight font-sora font-normal">
+                    This isn’t just another platform—it’s a movement. A place
+                    where learning has no limits, rewards come fast, and every
+                    step you take helps you grow. Whether you’re here to gain
+                    new skills, share what you know, or connect with others,
+                    Mental Wealth Academy gives you the chance to build a better
+                    future. We’re here to support everyone, including those in
+                    underserved communities, so everyone has the chance to
+                    succeed and rise up.
+                  </p>
+                </div>
+              </div>
+              <div className="relative xl:!col-span-2 col-span-1 xl:ml-auto">
+                <img
+                  src="/images/home.png"
+                  alt="home "
+                  className="w-auto h-full max-h-[650px] aspect-square"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="container">
+          <Squircle
+            cornerRadius={20}
+            className="lg:max-w-[80%] mx-auto bg-cover border-0 bg-card bg-bottom py-6 sm:py-12 lg:py-16 px-8 sm:px-16 md:px-20 3xl:px-30"
+          >
+            <div className="flex gap-5 flex-col lg:!flex-row">
+              <div className="space-y-5 flex-1 flex flex-col justify-between">
+                <h5 className="font-bold text-transparent bg-wrap bg-clip-text text-base sm:text-xl md:text-2xl font-spaceGrotesk">
+                  At Mental Wealth Academy, they provide a truly brilliant
+                  experience! It’s easy to use and scale, and is really handy to
+                  customize for any skill.{" "}
+                </h5>
+                <div className="flex items-center gap-3">
+                  <img
+                    src="/images/avatar.png"
+                    alt="avatar"
+                    className="w-12 h-12 aspect-square rounded-lg border-2 border-[#494A79]"
+                  />
+                  <div className="space-y-0">
+                    <h5 className="text-sm font-medium font-sf text-white">
+                      Emma Hemsworth
+                    </h5>
+                    <p className="text-sm font-sf text-[#f3f3f3] font-normal">
+                      VC of Etherum S7 Foundation
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col justify-between space-y-5 flex-1">
+                <p className="text-[#4B60E9] sm:text-base text-sm font-sf">
+                  I never thought learning could fit so seamlessly into my crazy
+                  schedule until I found Mental Wealth Academy. This platform is
+                  a total game-changer—intuitive, engaging, and packed with
+                  top-notch courses from real experts who make everything feel
+                  approachable. I jumped into their filmmaking masterclass last
+                  month, and it’s already sparking ideas for my next project.
+                </p>
+                <div className="flex items-center justify-end gap-4">
+                  <p className="font-mono text-[#3DE792] font-normal tracking-tight">
+                    Review Article
+                  </p>
+                  <img
+                    src="/icons/paper.svg"
+                    alt="newspaper"
+                    className="w-5 h-5"
+                  />
+                </div>
+              </div>
+            </div>
+          </Squircle>
+        </div>
+      </section>
+      <section className="py-10 lg:py-20">
+        <div className="container">
+          <h1 className="text-center font-bold text-white text-[clamp(32px,3vw,68px)] font-sora">
+            Features{" "}
+          </h1>
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10  mt-8 md:mt-16 max-w-[90%] mx-auto">
+            <Squircle
+              cornerRadius={26}
+              className="border border-[#85AFEEB5] max-w-xl mx-auto bg-white"
+            >
+              <div className="bg-card px-10 py-5 h-60 md:h-80 grid place-items-center">
+                <img
+                  src="/icons/mwa.svg"
+                  alt=""
+                  className="w-full h-36 sm:!h-48 aspect-video"
+                />
+              </div>
+              <div className="p-5 md:px-9 md:py-12 bg-white space-y-4 md:!space-y-7">
+                <h6 className="font-bold text-xl md:text-3xl font-spaceGrotesk">
+                  One Purchase, Lifetime Access
+                </h6>
+                <div className="flex items-center gap-2 shadow-badge justify-center bg-badge rounded-full py-3 px-9 w-fit border border-[#F6F8ED]">
+                  <span className="font-mono text-sm sm:text-base md:text-xl">
+                    Forever Access
+                  </span>
+                  <img src="/icons/glob.svg" alt="earth" className="w-5 h-5" />
+                </div>
+                <p className="text-[#494A79] font-sf text-base sm:text-lg lg:text-2xl">
+                  Enjoy unlimited, lifetime access to all of Mental Wealth
+                  Academy's educational resources. Your membership lasts as long
+                  as your hunger for knowledge does—no expiration date.
+                </p>
+              </div>
+            </Squircle>
+            <Squircle
+              cornerRadius={26}
+              className="border border-[#85AFEEB5] max-w-xl bg-white mx-auto"
+            >
+              <div className="bg-card p-10 h-60 md:h-80 grid place-items-center">
+                <img
+                  src="/icons/header_logo.svg"
+                  alt=""
+                  className="w-40 sm:!w-52 h-40 sm:!h-52 mx-auto aspect-square"
+                />
+              </div>
+              <div className="p-5 md:px-9 md:py-12 bg-white space-y-4 md:!space-y-7">
+                <h6 className="font-bold text-xl md:text-3xl font-spaceGrotesk">
+                  Endless Learning{" "}
+                </h6>
+                <div className="flex items-center gap-2 shadow-badge justify-center bg-badge rounded-full py-3 px-9 w-fit border border-[#F6F8ED]">
+                  <span className="font-mono text-sm sm:text-base md:text-xl">
+                    Onchain Library{" "}
+                  </span>
+                  <img src="/icons/glob.svg" alt="earth" className="w-5 h-5" />
+                </div>
+                <p className="text-[#494A79] font-sf text-base sm:text-lg lg:text-2xl">
+                  Unlock a world of knowledge with seamless access to expert
+                  insights, strategies, and essential resources. Learn at your
+                  own pace, stay ahead, and master the game—no limits, no
+                  barriers.
+                </p>
+              </div>
+            </Squircle>
+            <Squircle
+              cornerRadius={26}
+              className="border border-[#85AFEEB5] max-w-xl mx-auto bg-white"
+            >
+              <div className="bg-card px-10 py-5 h-60 md:h-80 grid place-items-center">
+                <img
+                  src="/icons/proof.svg"
+                  alt=""
+                  className="w-full h-40 sm:!h-60 aspect-video"
+                />
+              </div>
+              <div className="p-5 md:px-9 md:py-12 bg-white space-y-4 md:!space-y-7">
+                <h6 className="font-bold text-xl md:text-3xl font-spaceGrotesk">
+                  Better Proof-Of-Learning{" "}
+                </h6>
+                <div className="flex items-center gap-2 shadow-badge justify-center bg-badge rounded-full py-3 px-9 w-fit border border-[#F6F8ED]">
+                  <span className="font-mono text-sm sm:text-base md:text-xl">
+                    Digital Certifications{" "}
+                  </span>
+                  <img src="/icons/glob.svg" alt="earth" className="w-5 h-5" />
+                </div>
+                <p className="text-[#494A79] font-sf text-base sm:text-lg lg:text-2xl">
+                  Secure your education with on-chain degrees. Verified on the
+                  blockchain, your credentials are permanent, accessible, and
+                  always authentic—no more lost diplomas.
+                </p>
+              </div>
+            </Squircle>
+          </div>
+        </div>
+      </section>
+      <section className="pt-8 sm:py-10 md:py-16">
+        <div className="container">
+          <div className="relative space-y-3">
+            <div className="flex gap-10 w-full sm:!w-3/5 lg:!w-full 2xl:!w-3/5 small_tablet:!flex-row flex-col 2xl:!pb-0 lg:!pb-56 sm:!pb-0  md:!pl-10 pl-0">
+              <img
+                src="/images/next_gen.png"
+                alt="next genration"
+                className="h-full aspect-square sm:!max-w-max max-w-44 hidden lg:block"
+              />
+              <div className="bg-card bg-cover border border-[#74C465] rounded-3xl py-7 px-6 w-full flex-1">
+                <div className="flex items-center justify-between flex-wrap">
+                  <div className="flex items-center gap-3">
+                    <img
+                      src="/icons/data.svg"
+                      alt="data science"
+                      className="w-10 h-10"
+                    />
+                    <p className="font-bold text-[clamp(24px,4vw,40px)] text-white font-spaceGrotesk">
+                      AI Agent Rubi{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className={`mt-8 text-xs leading-6 text-white`}>
+                  <p>
+                    Introducing Rubi AI, 456ghz of data, translated into our
+                    quantum computation educational model. Our newest
+                    computational assistants designed to delve into the
+                    intricate dynamics of science & educational reformation and
+                    deliver advanced level pathways to knowledge and
+                    higher-learning. Become a master at what you love and what
+                    interests you. Legendary tech-stack harnesses the power of
+                    collective intelligence, enabling analyzation and predictive
+                    learning with unprecedented accuracy. Our knowledge
+                    consensus, equalizing contribution towards a vast pool of
+                    knowledge that transcends traditional boundaries. The New
+                    Digital World.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="xs:!absolute right-0 -bottom-10 md:-bottom-16">
+              <div className="relative xs:!block flex flex-col-reverse">
+                <img
+                  src="/images/bunnyBot.png"
+                  alt="next genration"
+                  className="h-80 3xl:h-96 ml-auto"
+                />
+                <div
+                  className=" sm:!absolute sm:!top-1/2 -translate-y-1/2  sm:!right-[70%]
+                 font-sora sm:!w-full max-w-xs hidden lg:block"
+                >
+                  <div className="relative rounded-xl bg-white p-4 space-y-3 before:h-3 before:w-3 before:bg-white before:absolute xs:before:!-right-1 xs:before:!left-auto before:left-10 xs:before:!bottom-10 before:-bottom-1 before:rotate-45">
+                    <div className="flex items-center justify-between">
+                      <h3 className="font-semibold text-sm ">
+                        Update Your Schedule
+                      </h3>
+                      <Button className="p-0 border-0 h-auto">
+                        <X className="h-4 w-4 " />
+                      </Button>
+                    </div>
+                    <p className="text-xs text-[#374151]">
+                      Update your AI classroom schedule by integrating a few new
+                      hobby classes, earn POAPs, and continue your journey.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="bg-separator h-1 w-full"></div>
       <section className="md:!pt-28 pt-10 pb-10">
         <div className="3xl:!container max-w-[95%] mx-auto">
-          <h1 className="text-center font-bold text-[#DBE64C] text-[clamp(32px,4vw,62px)] font-spaceGrotesk">
-            Warp Drive Into Next-Gen Digital Education
-          </h1>
-          <p className="text-center text-[clamp(16px,2vw,24px)] text-[#F6F8ED] font-spaceGrotesk">
-            Lifetime Access To Classrooms, No More Subscriptions.
-          </p>
-          <div className="text-center mt-4">
-            <Button className="bg-crpto_card h-auto sm:!py-5 py-3.5 sm:!px-14 px-7 font-medium text-base text-[#1D1818] ">
-              Enter The Academy{" "}
-              <img
-                src="/icons/globe_sync.svg"
-                alt="globe"
-                className="h-5 w-5 "
-              />
-            </Button>
-          </div>
           <div className="relative pt-20">
             <img
               src="/images/next_gen.png"
@@ -145,37 +415,38 @@ export const Landing = () => {
               className="sm:!py-14 p-5 sm:!px-10 relative overflow-hidden bg-cover bg-rect bg-no-repeat"
             >
               <div>
-                <h3 className="text-center text-white font-bold text-[clamp(24px,4vw,62px)] font-spaceGrotesk">
-                  Offering Next-Gen Access To...
+                <h3 className="text-center text-transparent bg-wrap bg-clip-text font-bold text-3xl font-spaceGrotesk">
+                  Get Started{" "}
                 </h3>
-                <p className="text-center text-[clamp(14px,2vw,24px)] text-white font-spaceGrotesk font-light">
-                  Digital Classrooms, Spaces, POAPs, Resources/Tools{" "}
+                <p className="text-center text-xl text-white font-spaceGrotesk font-light mt-2">
+                  Digital Books, Knowledge, & Live Rooms To Enhance Your
+                  Personal Development{" "}
                 </p>
-                <div className="grid xl:!grid-cols-3 small_tablet:!grid-cols-2 grid-cols-1 gap-5 py-10">
+                <div className="grid xl:!grid-cols-3 small_tablet:!grid-cols-2 grid-cols-1 gap-5 py-10 xl:py-20">
                   <div className="relative  h-full mx-auto w-full">
                     <img
                       src="/images/vector.png"
                       alt="certificate"
                       className="w-full h-full object-fill absolute inset-0"
                     />
-                    <div className=" rounded-[64px] py-10 sm:py-16 3xl:!py-20  px-6 sm:px-12 3xl:px-14 relative z-20 h-full">
+                    <div className=" rounded-[64px] pt-14 pb-6 sm:!py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14 relative z-20 h-full">
                       <div className="flex flex-col justify-between h-full space-y-8">
-                        <div className="flex items-center gap-12 3xl:gap-16">
+                        <div className="flex items-center gap-4">
                           <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
-                            Classes
+                            News/Announcements
                           </h3>
                           <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full ">
-                            13
+                            34
                           </span>
                         </div>
                         <img
-                          src="/icons/certificate.svg"
+                          src="/icons/certi.svg"
                           alt="certificate"
                           className="w-full h-full object-contain"
                         />
                         <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
                           <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
-                            Explore
+                            Search
                           </Button>
                         </div>
                       </div>
@@ -187,17 +458,16 @@ export const Landing = () => {
                       alt="certificate"
                       className="w-full h-full object-fill absolute inset-0"
                     />
-                    <div className="flex flex-col justify-between h-full gap-y-4 relative z-20 py-12 sm:py-16 3xl:!py-20  px-6 sm:px-12 3xl:px-14">
-                      <div className="flex items-center gap-5 3xl:gap-10">
+                    <div className="flex flex-col gap-y-8 h-full relative z-20 py-12 sm:py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14">
+                      <div className="flex items-center gap-4">
                         <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
-                          <span className="text-[#397BED]">VIP</span>/NFT
-                          Collections
+                          Membership/Access
                         </h3>
                         <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full">
                           13
                         </span>
                       </div>
-                      <div className="grid grid-cols-2 gap-4">
+                      <div className="grid grid-cols-2 gap-2 sm:!gap-4">
                         <img
                           src="/icons/vip1.svg"
                           alt="certificate"
@@ -233,10 +503,10 @@ export const Landing = () => {
                       alt="certificate"
                       className="w-full h-full object-fill absolute inset-0"
                     />
-                    <div className="relative z-20 w-full inset-0 rounded-3xl py-12 sm:py-16 3xl:!py-20  px-6 sm:px-12 3xl:px-14 flex flex-col justify-between h-full gap-4">
+                    <div className="relative z-20 w-full inset-0 rounded-3xl py-12 sm:py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14 flex flex-col justify-between h-full gap-4">
                       <div className="flex items-center gap-5 3xl:gap-10">
                         <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
-                          Library/News
+                          Collaboration{" "}
                         </h3>
                         <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full">
                           34
@@ -246,21 +516,12 @@ export const Landing = () => {
                         <img
                           src="/icons/news.svg"
                           alt="certificate"
-                          className="w-1/2"
+                          className="w-2/3 h-full"
                         />
-                        <img
-                          src="/icons/news.svg"
-                          alt="certificate"
-                          className="w-1/2"
-                        />
-                        <img
-                          src="/icons/news.svg"
-                          alt="certificate"
-                          className="w-1/2"
-                        />
+
                         <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
                           <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
-                            Search
+                            Vote
                           </Button>
                         </div>
                       </div>
@@ -303,154 +564,7 @@ export const Landing = () => {
           </div>
         </div>
       </section>
-      <section className="pt-10">
-        <div className="container">
-          <div className="relative space-y-3">
-            <div className="flex gap-10 2xl:!w-2/3 w-full small_tablet:!flex-row flex-col 2xl:!pb-0 xs:!pb-40 md:!pl-10 pl-0">
-              <img
-                src="/images/next_gen.png"
-                alt="next genration"
-                className="h-full aspect-square sm:!max-w-max max-w-44"
-              />
-              <div className="bg-ai_agent bg-cover border border-[#74C465] rounded-3xl py-7 px-6 w-full flex-1">
-                <div className="flex items-center justify-between flex-wrap">
-                  <div className="flex items-center gap-3">
-                    <img
-                      src="/icons/data.svg"
-                      alt="data science"
-                      className="w-10 h-10"
-                    />
-                    <p className="font-bold text-[clamp(24px,4vw,40px)] text-white font-spaceGrotesk">
-                      AI Agent Rubi{" "}
-                    </p>
-                  </div>
-                  <div className="space-y-1 ml-auto">
-                    <div className="flex gap-2.5 justify-center items-center w-full text-white bg-landing_header_top p-2 rounded-lg">
-                      <p className="self-stretch my-auto text-sm">
-                        Total Portfolio Breakdown
-                      </p>
-                      <Clock className="w-4 h-4" />
-                    </div>
-                    <p className="font-bold font-spaceGrotesk text-white text-sm text-right">
-                      <span>Treasury 240E </span>
-                      <span className="text-[rgb(149,244,146)]">+758%</span>
-                    </p>{" "}
-                  </div>
-                </div>
-                <div className={`mt-8 text-xs leading-6 text-white`}>
-                  <p>
-                    Introducing Rubi AI, 456ghz of data, translated into our
-                    quantum computation educational model. Our newest
-                    computational assistants designed to delve into the
-                    intricate dynamics of science & educational reformation and
-                    deliver advanced level pathways to knowledge and
-                    higher-learning. Become a master at what you love and what
-                    interests you. Legendary tech-stack harnesses the power of
-                    collective intelligence, enabling analyzation and predictive
-                    learning with unprecedented accuracy. Our knowledge
-                    consensus, equalizing contribution towards a vast pool of
-                    knowledge that transcends traditional boundaries. The New
-                    Digital World.{" "}
-                    <span className="text-[#1115ff]" role="button" tabIndex={0}>
-                      See more
-                    </span>
-                  </p>
-                </div>
-                <p
-                  className="z-10 mt-0 mr-9 text-xs font-bold text-right text-yellow-300 max-md:mr-2.5"
-                  role="status"
-                  aria-label="Current ETH price in USD"
-                >
-                  1 ETH = $3,834
-                </p>
-              </div>
-            </div>
-            <div className="xs:!absolute right-0 -bottom-20">
-              <div className="relative xs:!block flex flex-col-reverse">
-                <img
-                  src="/images/bunnyBot.png"
-                  alt="next genration"
-                  className="h-60 ml-auto"
-                />
-                <div
-                  className=" xs:!absolute xs:!top-8  xs:!right-[70%]
-                 font-sora sm:!w-72  "
-                >
-                  <div className="relative rounded-xl bg-white p-4 space-y-3 before:h-3 before:w-3 before:bg-white before:absolute xs:before:!-right-1 xs:before:!left-auto before:left-10 xs:before:!bottom-10 before:-bottom-1 before:rotate-45">
-                    <div className="flex items-center justify-between">
-                      <h3 className="font-semibold text-sm ">
-                        Update Your Schedule
-                      </h3>
-                      <Button className="p-0 border-0 h-auto">
-                        <X className="h-4 w-4 " />
-                      </Button>
-                    </div>
-                    <p className="text-xs text-[#374151]">
-                      Update your AI classroom schedule by integrating a few new
-                      hobby classes, earn POAPs, and continue your journey.
-                    </p>
-                    <div className="text-right">
-                      <Button className="text-[#374151] text-xs">
-                        <img
-                          src="/images/next_gen.png"
-                          alt="next_gen"
-                          className="h-4 w-4"
-                        />
-                        Schedule Your Courses
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="pt-20 bg-[#0E0E0E]">
-        <div className="container">
-          <div className="grid xl:!grid-cols-5 lg:!grid-cols-2 grid-cols-1 gap-5">
-            <div className="space-y-16 md:!pl-10 pl-0 pb-5 xl:!col-span-2">
-              <div className="space-y-3.5">
-                <h4 className="text-[clamp(30px,4vw,48px)] font-bold text-white leading-none">
-                  Academy
-                </h4>
-                <p className="text-[clamp(24px,4vw,42px)] font-semibold text-[#B2B2B2] leading-none">
-                  Lorem episom marikus bealo expersectie els insoas ta ldaoendo.
-                </p>
-                <p className="md:!text-xl text-base text-[#B2B2B2] !leading-tight">
-                  Knowledge is power. Access the digital library chain in your
-                  private, secure library where devs can upload and share
-                  resources, repeat books, and lend and vote on changes.
-                </p>
-              </div>
-              <div className="space-y-4">
-                <p className="md:!text-xl text-base text-[#8F8F8F] !leading-tight font-sora font-normal">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Accedere ad bibliothecam digitalem in privata et secure
-                  catena, ubi developeri possunt resources communicare, libros
-                  iterare, mutare, et mutationes suffragari. In hac bibliotheca
-                  decentralizata, scientia manet libera et accessibilis omnibus
-                  qui eam quaerunt. Per innovationem et collaborationem, membra
-                  communitatis possunt libros recensere, novum contentum addere,
-                  et de futuro bibliothecae digitalis deliberare. Scientia est
-                  potentia, et haec potestas nunc in manibus tuis est.
-                </p>
 
-                <Button className="shadow-membership_card bg-fancy_btn max-w-32 w-full justify-center rounded-full h-auto py-3 text-[#F6F8ED] sm:!text-xl text-base font-bold border border-black">
-                  Explore
-                </Button>
-              </div>
-            </div>
-            <div className="relative xl:!col-span-3 col-span-1">
-              <img
-                src="/images/home.png"
-                alt="home "
-                className="w-full h-full"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
       {/* <section className="py-20 bg-features bg-cover">
         <div className="container">
           <div className="max-w-3xl mx-auto space-y-5 ">

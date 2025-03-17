@@ -60,6 +60,7 @@ module.exports = {
         carousel_btn: "0px 1px 6.5px 0px #89EFD0",
         carousel_card: "0px 1px 10.4px 0px #2E2CA666",
         vector: "0px 9px 8.5px 0px #182A72",
+        badge: "0px 4px 4px 0px #9B9B9B40 inset",
       },
       dropShadow: {
         library_img: "0px 6px 21.6px 0px #00000040",
@@ -176,6 +177,11 @@ module.exports = {
         crpto_card:
           "linear-gradient(120.82deg, #E6A940 1.82%, #FFFBE0 21.15%, #EDCB46 37.47%, #F9D998 66.15%, #816B36 83.45%, #D0A72B 100.71%)",
         rect: "url('/images/rect.png')",
+        wrap: "linear-gradient(90.83deg, #44E990 0.21%, #16BD8B 70.21%)",
+        card: " radial-gradient(100% 100% at 50% 0%, #191919 0%, #114843 65%, #3DC087 87.5%, rgba(130, 98, 237, 0.59) 100%)",
+        badge: "linear-gradient(180deg, #ECECFF 0%, #E1E1FE 100%)",
+        separator:
+          "radial-gradient(61.79% 87.16% at 81.37% 10.92%, #37A375 0%, #6DF1B9 100%),radial-gradient(50% 50% at 50% 50%, rgba(246, 80, 80, 0.1) 0%, rgba(74, 227, 202, 0.2) 100%),radial-gradient(37.62% 53.06% at 25.47% 8.82%, rgba(69, 254, 214, 0.275) 0%, rgba(131, 125, 250, 0.55) 100%)",
       },
       borderRadius: {
         lg: "var(--radius)",
