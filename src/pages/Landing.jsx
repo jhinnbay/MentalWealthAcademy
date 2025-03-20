@@ -6,8 +6,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Input } from "@/components/ui/input";
+import { Faq, Testimonials } from "@/data/landing";
 import { Squircle } from "corner-smoothing";
-import { Clock, Globe, Menu, X } from "lucide-react";
+import { Clock, Globe, Mail, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Landing = () => {
@@ -116,15 +118,9 @@ export const Landing = () => {
           </div> */}
         </div>
       </section>
-      <section className="py-7 sm:py-12 md:py-20">
+      <section className="py-7 sm:py-12 ">
         <div className="  container">
           <div className="max-w-full small_tablet:max-w-[95%] mx-auto">
-            <h1 className="text-center font-bold text-transparent bg-wrap bg-clip-text text-[clamp(32px,3vw,68px)] font-spaceGrotesk">
-              Warp Drive Into Next-Gen Digital Education
-            </h1>
-            <p className="text-center text-[clamp(20px,2vw,42px)] text-[#F6F8ED] font-spaceGrotesk font-light ">
-              Lifetime Access To Classrooms, No More Subscriptions.
-            </p>
             <div className="grid xl:!grid-cols-5 lg:!grid-cols-2 grid-cols-1 gap-5 mt-7 sm:mt-14 lg:mt-20 place-items-center">
               <div className="space-y-10 pb-5 xl:!col-span-3">
                 <div className="space-y-3.5  text-center lg:text-left">
@@ -171,6 +167,27 @@ export const Landing = () => {
                     succeed and rise up.
                   </p>
                 </div>
+                <div className="flex items-center gap-2">
+                  <div className="flex items-center border border-[#404040] rounded-lg bg-white flex-1 h-14">
+                    <Input
+                      placeholder="Youremail@Mentalwealthacademy.net"
+                      className="border-0 bg-transparent text-[#404040] text-sm font-sf"
+                    />
+                    <Button className="border-0 rounded-none gap-2 hover:shadow-none">
+                      <span className="text-sm font-normal text-[#737373]">
+                        Built on Polygon
+                      </span>
+                      <img
+                        src="/icons/polygon.svg"
+                        alt="polygon"
+                        className="w-5 h-5"
+                      />
+                    </Button>
+                  </div>
+                  <Button className="bg-signup shadow-signup h-14 text-black font-mono capitalize px-5 tracking-wide">
+                    Signup for Alerts <Mail className="w-5 h-5" />
+                  </Button>
+                </div>
               </div>
               <div className="relative xl:!col-span-2 col-span-1 xl:ml-auto">
                 <img
@@ -185,140 +202,132 @@ export const Landing = () => {
       </section>
       <section>
         <div className="container">
-          <Squircle
-            cornerRadius={20}
-            className="lg:max-w-[80%] mx-auto bg-cover border-0 bg-card bg-bottom py-6 sm:py-12 lg:py-16 px-8 sm:px-16 md:px-20 3xl:px-30"
-          >
-            <div className="flex gap-5 flex-col lg:!flex-row">
-              <div className="space-y-5 flex-1 flex flex-col justify-between">
-                <h5 className="font-bold text-transparent bg-wrap bg-clip-text text-base sm:text-xl md:text-2xl font-spaceGrotesk">
-                  At Mental Wealth Academy, they provide a truly brilliant
-                  experience! It’s easy to use and scale, and is really handy to
-                  customize for any skill.{" "}
-                </h5>
+          <h1 className="text-center font-bold text-[#5168FF] text-[clamp(32px,3vw,68px)] font-spaceGrotesk">
+            Warp Drive Into Next-Gen Digital Education
+          </h1>
+          <p className="text-center text-[clamp(20px,2vw,42px)] text-[#F6F8ED] font-spaceGrotesk font-light ">
+            Digital Classrooms. Real-Life People, Resources, & Tools.{" "}
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[95%] mt-10 sm:mt-14 lg:mt-20 mx-auto">
+            {Testimonials?.map((data, i) => (
+              <div
+                className="bg-wrap_card shadow-wrap_card p-6 rounded-md space-y-5 bg-center"
+                key={data?.name + i}
+              >
+                <p className="text-black text-sm small_tablet:text-base lg:text-lg">
+                  {data?.testimonial}
+                </p>
                 <div className="flex items-center gap-3">
                   <img
-                    src="/images/avatar.png"
+                    src={data?.icon}
                     alt="avatar"
-                    className="w-12 h-12 aspect-square rounded-lg border-2 border-[#494A79]"
+                    className="w-12 h-12 aspect-square rounded-full"
                   />
                   <div className="space-y-0">
-                    <h5 className="text-sm font-medium font-sf text-white">
-                      Emma Hemsworth
+                    <h5 className="text-sm font-medium font-sf text-black">
+                      {data?.name}{" "}
                     </h5>
-                    <p className="text-sm font-sf text-[#f3f3f3] font-normal">
-                      VC of Etherum S7 Foundation
+                    <p className="text-sm font-sf text-[#6B7280] font-normal tracking-wide">
+                      {data?.position}
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col justify-between space-y-5 flex-1">
-                <p className="text-[#4B60E9] sm:text-base text-sm font-sf">
-                  I never thought learning could fit so seamlessly into my crazy
-                  schedule until I found Mental Wealth Academy. This platform is
-                  a total game-changer—intuitive, engaging, and packed with
-                  top-notch courses from real experts who make everything feel
-                  approachable. I jumped into their filmmaking masterclass last
-                  month, and it’s already sparking ideas for my next project.
-                </p>
-                <div className="flex items-center justify-end gap-4">
-                  <p className="font-mono text-[#3DE792] font-normal tracking-tight">
-                    Review Article
-                  </p>
-                  <img
-                    src="/icons/paper.svg"
-                    alt="newspaper"
-                    className="w-5 h-5"
-                  />
-                </div>
-              </div>
-            </div>
-          </Squircle>
+            ))}
+          </div>
         </div>
       </section>
       <section className="py-10 lg:py-20">
         <div className="container">
-          <h1 className="text-center font-bold text-white text-[clamp(32px,3vw,68px)] font-sora">
-            Features{" "}
+          <h1 className="text-center font-bold text-[#5168FF] text-[clamp(32px,3vw,68px)] font-spaceGrotesk">
+            Pathway To The Dream You{" "}
           </h1>
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10  mt-8 md:mt-16 max-w-[90%] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6  mt-8 md:mt-16 max-w-[90%] mx-auto">
             <Squircle
               cornerRadius={26}
-              className="border border-[#85AFEEB5] max-w-xl mx-auto bg-white"
+              className="border border-[#85AFEEB5] max-w-xl mx-auto bg-[#F4F5FE]"
             >
-              <div className="bg-card px-10 py-5 h-60 md:h-80 grid place-items-center">
+              <div className="bg-card h-64 sm:h-80 relative">
                 <img
                   src="/icons/mwa.svg"
                   alt=""
-                  className="w-full h-36 sm:!h-48 aspect-video"
+                  className="w-auto h-auto max-h-72 object-cover absolute bottom-0 left-1/2 -translate-x-1/2"
                 />
               </div>
-              <div className="p-5 md:px-9 md:py-12 bg-white space-y-4 md:!space-y-7">
-                <h6 className="font-bold text-xl md:text-3xl font-spaceGrotesk">
-                  One Purchase, Lifetime Access
+              <div className="p-5 2xl:px-9 2xl:py-12 bg-[#F4F5FE] space-y-4 md:!space-y-7">
+                <h6 className="font-bold text-xl md:text-3xl font-spaceGrotesk text-center">
+                  Rubi Helps w/ Accountability{" "}
                 </h6>
-                <div className="flex items-center gap-2 shadow-badge justify-center bg-badge rounded-full py-3 px-9 w-fit border border-[#F6F8ED]">
+                <div className="flex items-center mx-auto gap-2 shadow-badge justify-center bg-badge rounded-full py-3 px-9 w-fit border border-[#F6F8ED]">
                   <span className="font-mono text-sm sm:text-base md:text-xl">
-                    Forever Access
+                    AI Powered Scheduling{" "}
                   </span>
-                  <img src="/icons/glob.svg" alt="earth" className="w-5 h-5" />
+                  <img
+                    src="/icons/student.svg"
+                    alt="earth"
+                    className="w-5 h-5"
+                  />
                 </div>
                 <p className="text-[#494A79] font-sf text-base sm:text-lg lg:text-2xl">
-                  Enjoy unlimited, lifetime access to all of Mental Wealth
-                  Academy's educational resources. Your membership lasts as long
-                  as your hunger for knowledge does—no expiration date.
+                  Stay connected to what you truly desire. Rubi AI helps you
+                  build accountability schedules, organize classrooms & events,
+                  and guides your toward optimal path of success.
                 </p>
               </div>
             </Squircle>
             <Squircle
               cornerRadius={26}
-              className="border border-[#85AFEEB5] max-w-xl bg-white mx-auto"
+              className="border border-[#85AFEEB5] max-w-xl bg-[#F4F5FE] mx-auto"
             >
-              <div className="bg-card p-10 h-60 md:h-80 grid place-items-center">
+              <div className="bg-card h-64 sm:h-80 grid place-items-center">
                 <img
-                  src="/icons/header_logo.svg"
+                  src="/images/next_gen.png"
                   alt=""
-                  className="w-40 sm:!w-52 h-40 sm:!h-52 mx-auto aspect-square"
+                  className="w-40 sm:w-60 h-40 sm:h-60  aspect-square"
                 />
               </div>
-              <div className="p-5 md:px-9 md:py-12 bg-white space-y-4 md:!space-y-7">
-                <h6 className="font-bold text-xl md:text-3xl font-spaceGrotesk">
-                  Endless Learning{" "}
+              <div className="p-5 2xl:px-9 2xl:py-12 bg-[#F4F5FE] space-y-4 md:!space-y-7">
+                <h6 className="font-bold text-xl md:text-3xl font-spaceGrotesk text-center">
+                  Own Your Knowledge
                 </h6>
-                <div className="flex items-center gap-2 shadow-badge justify-center bg-badge rounded-full py-3 px-9 w-fit border border-[#F6F8ED]">
+                <div className="flex items-center gap-2 mx-auto shadow-badge justify-center bg-badge rounded-full py-3 px-9 w-fit border border-[#F6F8ED]">
                   <span className="font-mono text-sm sm:text-base md:text-xl">
-                    Onchain Library{" "}
+                    Voting Rights
                   </span>
                   <img src="/icons/glob.svg" alt="earth" className="w-5 h-5" />
                 </div>
                 <p className="text-[#494A79] font-sf text-base sm:text-lg lg:text-2xl">
-                  Unlock a world of knowledge with seamless access to expert
-                  insights, strategies, and essential resources. Learn at your
-                  own pace, stay ahead, and master the game—no limits, no
-                  barriers.
+                  Voting tokens allow you to own crypto that contains voting
+                  power for the Academy. This empowers you to own your
+                  knowledge, and make decisions that reshape the platform.
                 </p>
               </div>
             </Squircle>
             <Squircle
               cornerRadius={26}
-              className="border border-[#85AFEEB5] max-w-xl mx-auto bg-white"
+              className="border border-[#85AFEEB5] max-w-xl mx-auto bg-[#F4F5FE]"
             >
-              <div className="bg-card px-10 py-5 h-60 md:h-80 grid place-items-center">
+              <div className="bg-card py-5 h-64 sm:h-80 relative">
                 <img
                   src="/icons/proof.svg"
                   alt=""
-                  className="w-full h-40 sm:!h-60 aspect-video"
+                  className="w-full h-full absolute inset-0"
                 />
               </div>
-              <div className="p-5 md:px-9 md:py-12 bg-white space-y-4 md:!space-y-7">
-                <h6 className="font-bold text-xl md:text-3xl font-spaceGrotesk">
-                  Better Proof-Of-Learning{" "}
+              <div className="p-5 2xl:px-9 2xl:py-12 bg-[#F4F5FE] space-y-4 md:!space-y-7">
+                <h6 className="font-bold text-xl md:text-3xl font-spaceGrotesk text-center">
+                  Live Courses, Real Proof{" "}
                 </h6>
-                <div className="flex items-center gap-2 shadow-badge justify-center bg-badge rounded-full py-3 px-9 w-fit border border-[#F6F8ED]">
+                <div className="flex items-center gap-2 mx-auto shadow-badge justify-center bg-badge rounded-full py-3 px-9 w-fit border border-[#F6F8ED]">
                   <span className="font-mono text-sm sm:text-base md:text-xl">
                     Digital Certifications{" "}
                   </span>
-                  <img src="/icons/glob.svg" alt="earth" className="w-5 h-5" />
+                  <img
+                    src="/icons/student.svg"
+                    alt="earth"
+                    className="w-5 h-5"
+                  />
                 </div>
                 <p className="text-[#494A79] font-sf text-base sm:text-lg lg:text-2xl">
                   Secure your education with on-chain degrees. Verified on the
@@ -330,79 +339,53 @@ export const Landing = () => {
           </div>
         </div>
       </section>
-      <section className="pt-8 sm:py-10 md:py-16">
+      <section className="pb-10 lg:pb-20">
         <div className="container">
-          <div className="relative space-y-3">
-            <div className="flex gap-10 w-full sm:!w-3/5 lg:!w-full 2xl:!w-3/5 small_tablet:!flex-row flex-col 2xl:!pb-0 lg:!pb-56 sm:!pb-0  md:!pl-10 pl-0">
-              <img
-                src="/images/next_gen.png"
-                alt="next genration"
-                className="h-full aspect-square sm:!max-w-max max-w-44 hidden lg:block"
-              />
-              <div className="bg-card bg-cover border border-[#74C465] rounded-3xl py-7 px-6 w-full flex-1">
-                <div className="flex items-center justify-between flex-wrap">
-                  <div className="flex items-center gap-3">
+          <h2 className="text-center font-bold text-[#5168FF] text-[clamp(32px,3vw,68px)] font-spaceGrotesk">
+            F.A.X.{" "}
+          </h2>
+          <Squircle
+            cornerRadius={36}
+            border={true}
+            className="max-w-[95%] mx-auto bg-landing_header_top py-10 px-6 sm:!px-10 2xl:!px-20 border-2 border-[#45FED680] mt-5"
+          >
+            <h2 className="text-center font-bold text-transparent bg-dashboard_tab bg-clip-text text-[clamp(24px,3vw,68px)] font-spaceGrotesk">
+              Still Thirsty? Here’s Some More F.A.X!{" "}
+            </h2>
+            <div className="xl:!w-3/4 w-full mx-auto mt-7 sm:!mt-14">
+              {Faq?.map((data, i) => (
+                <div
+                  className="py-6 border-b border-[#F3F3F3] space-y-4 last:border-0"
+                  key={data?.question}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <img
+                        src={data?.icon}
+                        alt="earth"
+                        className="w-6 sm:w-9 h-6 sm:h-9"
+                      />
+                      <h5 className="font-bold text-transparent bg-mimbership_btn bg-clip-text font-spaceGrotesk capitalize text-base sm:!text-xl md:!text-2xl">
+                        {data?.question}
+                      </h5>
+                    </div>
                     <img
-                      src="/icons/data.svg"
-                      alt="data science"
-                      className="w-10 h-10"
+                      src="/icons/arrow-up-right.svg"
+                      alt="earth"
+                      className="w-6 sm:w-9 h-6 sm:h-9"
                     />
-                    <p className="font-bold text-[clamp(24px,4vw,40px)] text-white font-spaceGrotesk">
-                      AI Agent Rubi{" "}
-                    </p>
                   </div>
-                </div>
-                <div className={`mt-8 text-xs leading-6 text-white`}>
-                  <p>
-                    Introducing Rubi AI, 456ghz of data, translated into our
-                    quantum computation educational model. Our newest
-                    computational assistants designed to delve into the
-                    intricate dynamics of science & educational reformation and
-                    deliver advanced level pathways to knowledge and
-                    higher-learning. Become a master at what you love and what
-                    interests you. Legendary tech-stack harnesses the power of
-                    collective intelligence, enabling analyzation and predictive
-                    learning with unprecedented accuracy. Our knowledge
-                    consensus, equalizing contribution towards a vast pool of
-                    knowledge that transcends traditional boundaries. The New
-                    Digital World.
+                  <p className="font-sf text-sm sm:!text-base text-white font-thin">
+                    {data?.answer}
                   </p>
                 </div>
-              </div>
+              ))}
             </div>
-            <div className="xs:!absolute right-0 -bottom-10 md:-bottom-16">
-              <div className="relative xs:!block flex flex-col-reverse">
-                <img
-                  src="/images/bunnyBot.png"
-                  alt="next genration"
-                  className="h-80 3xl:h-96 ml-auto"
-                />
-                <div
-                  className=" sm:!absolute sm:!top-1/2 -translate-y-1/2  sm:!right-[70%]
-                 font-sora sm:!w-full max-w-xs hidden lg:block"
-                >
-                  <div className="relative rounded-xl bg-white p-4 space-y-3 before:h-3 before:w-3 before:bg-white before:absolute xs:before:!-right-1 xs:before:!left-auto before:left-10 xs:before:!bottom-10 before:-bottom-1 before:rotate-45">
-                    <div className="flex items-center justify-between">
-                      <h3 className="font-semibold text-sm ">
-                        Update Your Schedule
-                      </h3>
-                      <Button className="p-0 border-0 h-auto">
-                        <X className="h-4 w-4 " />
-                      </Button>
-                    </div>
-                    <p className="text-xs text-[#374151]">
-                      Update your AI classroom schedule by integrating a few new
-                      hobby classes, earn POAPs, and continue your journey.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          </Squircle>
         </div>
       </section>
-      <div className="bg-separator h-1 w-full"></div>
-      <section className="md:!pt-28 pt-10 pb-10">
+
+      <section className="xl:!pt-14 pt-10 pb-10">
         <div className="3xl:!container max-w-[95%] mx-auto">
           <div className="relative pt-20">
             <img
@@ -422,12 +405,12 @@ export const Landing = () => {
                   Digital Books, Knowledge, & Live Rooms To Enhance Your
                   Personal Development{" "}
                 </p>
-                <div className="grid xl:!grid-cols-3 small_tablet:!grid-cols-2 grid-cols-1 gap-5 py-10 xl:py-20">
-                  <div className="relative  h-full mx-auto w-full">
+                <div className="grid xl:!grid-cols-3 small_tablet:!grid-cols-2 grid-cols-1 gap-5 py-10 xl:!py-20">
+                  <div className="relative  h-full mx-auto w-full ">
                     <img
                       src="/images/vector.png"
                       alt="certificate"
-                      className="w-full h-full object-fill absolute inset-0"
+                      className="w-full h-full object-fill absolute inset-0 "
                     />
                     <div className=" rounded-[64px] pt-14 pb-6 sm:!py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14 relative z-20 h-full">
                       <div className="flex flex-col justify-between h-full space-y-8">
@@ -564,7 +547,78 @@ export const Landing = () => {
           </div>
         </div>
       </section>
-
+      {/* <section className="pt-8 sm:py-10 md:py-16">
+        <div className="container">
+          <div className="relative space-y-3">
+            <div className="flex gap-10 w-full sm:!w-3/5 lg:!w-full 2xl:!w-3/5 small_tablet:!flex-row flex-col 2xl:!pb-0 lg:!pb-56 sm:!pb-0  md:!pl-10 pl-0">
+              <img
+                src="/images/next_gen.png"
+                alt="next genration"
+                className="h-full aspect-square sm:!max-w-max max-w-44 hidden lg:block"
+              />
+              <div className="bg-card bg-cover border border-[#74C465] rounded-3xl py-7 px-6 w-full flex-1">
+                <div className="flex items-center justify-between flex-wrap">
+                  <div className="flex items-center gap-3">
+                    <img
+                      src="/icons/data.svg"
+                      alt="data science"
+                      className="w-10 h-10"
+                    />
+                    <p className="font-bold text-[clamp(24px,4vw,40px)] text-white font-spaceGrotesk">
+                      AI Agent Rubi{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className={`mt-8 text-xs leading-6 text-white`}>
+                  <p>
+                    Introducing Rubi AI, 456ghz of data, translated into our
+                    quantum computation educational model. Our newest
+                    computational assistants designed to delve into the
+                    intricate dynamics of science & educational reformation and
+                    deliver advanced level pathways to knowledge and
+                    higher-learning. Become a master at what you love and what
+                    interests you. Legendary tech-stack harnesses the power of
+                    collective intelligence, enabling analyzation and predictive
+                    learning with unprecedented accuracy. Our knowledge
+                    consensus, equalizing contribution towards a vast pool of
+                    knowledge that transcends traditional boundaries. The New
+                    Digital World.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="xs:!absolute right-0 -bottom-10 md:-bottom-16">
+              <div className="relative xs:!block flex flex-col-reverse">
+                <img
+                  src="/images/bunnyBot.png"
+                  alt="next genration"
+                  className="h-80 3xl:h-96 ml-auto"
+                />
+                <div
+                  className=" sm:!absolute sm:!top-1/2 -translate-y-1/2  sm:!right-[70%]
+                 font-sora sm:!w-full max-w-xs hidden lg:block"
+                >
+                  <div className="relative rounded-xl bg-white p-4 space-y-3 before:h-3 before:w-3 before:bg-white before:absolute xs:before:!-right-1 xs:before:!left-auto before:left-10 xs:before:!bottom-10 before:-bottom-1 before:rotate-45">
+                    <div className="flex items-center justify-between">
+                      <h3 className="font-semibold text-sm ">
+                        Update Your Schedule
+                      </h3>
+                      <Button className="p-0 border-0 h-auto">
+                        <X className="h-4 w-4 " />
+                      </Button>
+                    </div>
+                    <p className="text-xs text-[#374151]">
+                      Update your AI classroom schedule by integrating a few new
+                      hobby classes, earn POAPs, and continue your journey.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="bg-separator h-1 w-full"></div> */}
       {/* <section className="py-20 bg-features bg-cover">
         <div className="container">
           <div className="max-w-3xl mx-auto space-y-5 ">

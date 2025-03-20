@@ -23,9 +23,14 @@
 
 @font-face {
   font-family: "sf-pro";
-  src: url("/fonts/sfpro/SFPRODISPLAYREGULAR.OTF");
+  src: url("/fonts/SFProDisplay-Regular.eot");
+  src: url("/fonts/SFProDisplay-Regular.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/SFProDisplay-Regular.woff2") format("woff2"),
+    url("/fonts/SFProDisplay-Regular.woff") format("woff"),
+    url("/fonts/SFProDisplay-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {

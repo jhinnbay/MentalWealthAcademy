@@ -61,6 +61,9 @@ module.exports = {
         carousel_card: "0px 1px 10.4px 0px #2E2CA666",
         vector: "0px 9px 8.5px 0px #182A72",
         badge: "0px 4px 4px 0px #9B9B9B40 inset",
+        signup:
+          "0px 4px 4px 0px #00000040, 0px 4px 0px 0px #FFFFFF40 inset, 0px -6px 0px 0px #00000080 inset",
+        wrap_card: "0px 2px 6px 0px #1018280F",
       },
       dropShadow: {
         library_img: "0px 6px 21.6px 0px #00000040",
@@ -157,7 +160,7 @@ module.exports = {
           "linear-gradient(90.83deg, #E9444C 0.21%, #943031 70.21%)",
         discord: "url('/images/discord.png')",
         landing_bg:
-          "url('/images/landing_bg.png'), linear-gradient(0deg, rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.9)) ",
+          "url('/images/landing_bg.png'), linear-gradient(0deg, #121212, #121212), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)) ",
         landing_header_top:
           "radial-gradient(97.14% 97.14% at 50% 2.86%, #4D2AFF 0%, #4D2CA9 32%, #271484 74%, #1F1FE5 100%)",
         next_gen:
@@ -182,6 +185,14 @@ module.exports = {
         badge: "linear-gradient(180deg, #ECECFF 0%, #E1E1FE 100%)",
         separator:
           "radial-gradient(61.79% 87.16% at 81.37% 10.92%, #37A375 0%, #6DF1B9 100%),radial-gradient(50% 50% at 50% 50%, rgba(246, 80, 80, 0.1) 0%, rgba(74, 227, 202, 0.2) 100%),radial-gradient(37.62% 53.06% at 25.47% 8.82%, rgba(69, 254, 214, 0.275) 0%, rgba(131, 125, 250, 0.55) 100%)",
+        signup: "linear-gradient(90.83deg, #797EED 0.21%, #79EABA 70.21%)",
+        wrap_card:
+          "radial-gradient(61.79% 87.16% at 81.37% 10.92%, #37A375 0%, #6DF1B9 100%), radial-gradient(50% 50% at 50% 50%, rgba(246, 80, 80, 0.1) 0%, rgba(74, 227, 202, 0.2) 100%), radial-gradient(37.62% 53.06% at 25.47% 8.82%, rgba(69, 254, 214, 0.275) 0%, rgba(131, 125, 250, 0.55) 100%)",
+        angular:
+          "conic-gradient(from 135deg at 50% 50%, #661A02 -14.4deg, #CE0901 18deg, #EB5202 45deg, #F4BD01 90deg, #02C96E 136.8deg, #014EB8 183.6deg, #390164 230.4deg, #251919 280.8deg, #661A02 345.6deg, #CE0901 378deg)",
+        creator: "url('/images/creator.jpg')",
+        layer_classes:
+          "linear-gradient(90deg, rgba(0, 0, 0, 0.74) 21.5%, rgba(0, 0, 0, 0.4218) 56%, rgba(0, 0, 0, 0.74) 94%)",
       },
       borderRadius: {
         lg: "var(--radius)",
