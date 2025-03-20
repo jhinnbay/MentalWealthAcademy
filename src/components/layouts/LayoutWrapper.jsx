@@ -8,7 +8,14 @@ export const LayoutWrapper = ({ children }) => {
   return (
     <section className="pt-5 bg-header">
       <div className="container">
-        <div className="md:!bg-home_banner bg-transparent rounded-t-2xl sm:!pt-5 sm:!px-5  pt-3 px-3">
+        <div
+          className={cn(
+            " rounded-t-2xl sm:!pt-5 sm:!px-5  pt-3 px-3",
+            route.pathname === "/classes"
+              ? "bg-[#494A79] border border-black"
+              : "md:!bg-home_banner bg-transparent"
+          )}
+        >
           <div className="h-auto w-full gap-4 flex-wrap md:!flex hidden items-center pb-3">
             <Link
               to="/"
@@ -39,7 +46,7 @@ export const LayoutWrapper = ({ children }) => {
               Library
             </Link>
             <Link
-              to="/"
+              to="/classes"
               data-state={route.pathname === "/classes" ? "active" : ""}
               className={cn(
                 "flex-1 flex items-center justify-center bg-dashboard_tab text-black md:!py-5 py-2.5 rounded-full border border-black data-[state=active]:bg-dashboard_tab_active data-[state=active]:text-white data-[state=active]:!border-[#CDFFE6] group gap-3 min-w-32"
