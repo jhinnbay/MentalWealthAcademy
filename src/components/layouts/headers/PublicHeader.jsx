@@ -55,7 +55,10 @@ export const PublicHeader = () => {
       <div className="container">
         <div className="flex gap-[18px] items-center">
           <Link to="/">
-            <img src="/icons/header_logo.svg" className="w-[75px] md:w-auto" />
+            <img
+              src="/icons/header_logo.svg"
+              className="w-14 sm:!w-[75px] md:w-auto"
+            />
           </Link>
           <h4 className="text-2xl font-bold  hidden md:flex tracking-[-1.68px]">
             Mental Wealth Academy
