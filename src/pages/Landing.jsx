@@ -1,6 +1,11 @@
 import { Footer } from "@/components/pages/Home/Footer";
 import { Button } from "@/components/ui/button";
 import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -8,11 +13,14 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import { Faq, Testimonials } from "@/data/landing";
+import { cn } from "@/lib/utils";
 import { Squircle } from "corner-smoothing";
 import { Clock, Globe, Mail, Menu, X } from "lucide-react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export const Landing = () => {
+  const [active, setActive] = useState("");
   return (
     <main className=" bg-landing_bg bg-[#0000009d] bg-blend-overlay pt-6">
       <section className="sticky top-3 z-50">
@@ -167,14 +175,14 @@ export const Landing = () => {
                     succeed and rise up.
                   </p>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="flex items-center border border-[#404040] rounded-lg bg-white flex-1 h-14">
+                <div className="flex items-center gap-2 flex-col sm:!flex-row">
+                  <div className="flex items-center border  border-[#404040] rounded-lg bg-white flex-1 h-14">
                     <Input
                       placeholder="Youremail@Mentalwealthacademy.net"
                       className="border-0 bg-transparent text-[#404040] text-sm font-sf"
                     />
                     <Button className="border-0 rounded-none gap-2 hover:shadow-none">
-                      <span className="text-sm font-normal text-[#737373]">
+                      <span className="text-xs sm:!text-sm font-normal text-[#737373]">
                         Built on Polygon
                       </span>
                       <img
@@ -184,7 +192,7 @@ export const Landing = () => {
                       />
                     </Button>
                   </div>
-                  <Button className="bg-signup shadow-signup h-14 text-black font-mono capitalize px-5 tracking-wide">
+                  <Button className="bg-signup shadow-signup h-14 text-black font-mono capitalize px-5 tracking-wide text-sm sm:!text-base">
                     Signup for Alerts <Mail className="w-5 h-5" />
                   </Button>
                 </div>
@@ -193,7 +201,7 @@ export const Landing = () => {
                 <img
                   src="/images/home.png"
                   alt="home "
-                  className="w-auto h-full max-h-[650px] aspect-square"
+                  className="w-auto h-full max-h-[650px] aspect-square object-contain"
                 />
               </div>
             </div>
@@ -202,14 +210,14 @@ export const Landing = () => {
       </section>
       <section>
         <div className="container">
-          <h1 className="text-center font-bold text-[#5168FF] text-[clamp(32px,3vw,68px)] font-spaceGrotesk">
+          <h1 className="text-center font-bold text-[#5168FF] text-[clamp(24px,3vw,68px)] font-spaceGrotesk">
             Warp Drive Into Next-Gen Digital Education
           </h1>
           <p className="text-center text-[clamp(20px,2vw,42px)] text-[#F6F8ED] font-spaceGrotesk font-light ">
             Digital Classrooms. Real-Life People, Resources, & Tools.{" "}
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[95%] mt-10 sm:mt-14 lg:mt-20 mx-auto">
+          <div className="hidden sm:!grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[95%] mt-10 sm:mt-14 lg:mt-20 mx-auto">
             {Testimonials?.map((data, i) => (
               <div
                 className="bg-wrap_card shadow-wrap_card p-6 rounded-md space-y-5 bg-center"
@@ -236,14 +244,45 @@ export const Landing = () => {
               </div>
             ))}
           </div>
+          <Carousel className=" sm:!hidden mt-10" opts={{ loop: true }}>
+            <CarouselContent>
+              {Testimonials?.map((data, i) => (
+                <CarouselItem
+                  key={data?.name + i}
+                  className="basis-[95%] xs:!basis-9/12"
+                >
+                  <div className="bg-wrap_card shadow-wrap_card p-6 rounded-md space-y-5 bg-center">
+                    <p className="text-black text-sm small_tablet:text-base lg:text-lg">
+                      {data?.testimonial}
+                    </p>
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={data?.icon}
+                        alt="avatar"
+                        className="w-12 h-12 aspect-square rounded-full"
+                      />
+                      <div className="space-y-0">
+                        <h5 className="text-sm font-medium font-sf text-black">
+                          {data?.name}{" "}
+                        </h5>
+                        <p className="text-sm font-sf text-[#6B7280] font-normal tracking-wide">
+                          {data?.position}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </section>
       <section className="py-10 lg:py-20">
         <div className="container">
-          <h1 className="text-center font-bold text-[#5168FF] text-[clamp(32px,3vw,68px)] font-spaceGrotesk">
+          <h1 className="text-center font-bold text-[#5168FF] text-[clamp(24px,3vw,68px)] font-spaceGrotesk">
             Pathway To The Dream You{" "}
           </h1>
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6  mt-8 md:mt-16 max-w-[90%] mx-auto">
+          <div className="hidden sm:!grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6  mt-8 md:mt-16 max-w-[90%] mx-auto">
             <Squircle
               cornerRadius={26}
               className="border border-[#85AFEEB5] max-w-xl mx-auto bg-[#F4F5FE]"
@@ -255,11 +294,11 @@ export const Landing = () => {
                   className="w-auto h-auto max-h-72 object-cover absolute bottom-0 left-1/2 -translate-x-1/2"
                 />
               </div>
-              <div className="p-5 2xl:px-9 2xl:py-12 bg-[#F4F5FE] space-y-4 md:!space-y-7">
-                <h6 className="font-bold text-xl md:text-3xl font-spaceGrotesk text-center">
+              <div className="px-3 py-5 sm:!p-5 2xl:px-9 2xl:py-12 bg-[#F4F5FE] space-y-4 md:!space-y-7">
+                <h6 className="font-bold text-lg md:text-3xl font-spaceGrotesk text-center">
                   Rubi Helps w/ Accountability{" "}
                 </h6>
-                <div className="flex items-center mx-auto gap-2 shadow-badge justify-center bg-badge rounded-full py-3 px-9 w-fit border border-[#F6F8ED]">
+                <div className="flex items-center mx-auto gap-2 shadow-badge justify-center bg-badge rounded-full py-3 px-3 sm:!px-9 w-fit border border-[#F6F8ED]">
                   <span className="font-mono text-sm sm:text-base md:text-xl">
                     AI Powered Scheduling{" "}
                   </span>
@@ -287,11 +326,11 @@ export const Landing = () => {
                   className="w-40 sm:w-60 h-40 sm:h-60  aspect-square"
                 />
               </div>
-              <div className="p-5 2xl:px-9 2xl:py-12 bg-[#F4F5FE] space-y-4 md:!space-y-7">
-                <h6 className="font-bold text-xl md:text-3xl font-spaceGrotesk text-center">
+              <div className="px-3 py-5 sm:!p-5 2xl:px-9 2xl:py-12 bg-[#F4F5FE] space-y-4 md:!space-y-7">
+                <h6 className="font-bold text-lg md:text-3xl font-spaceGrotesk text-center">
                   Own Your Knowledge
                 </h6>
-                <div className="flex items-center gap-2 mx-auto shadow-badge justify-center bg-badge rounded-full py-3 px-9 w-fit border border-[#F6F8ED]">
+                <div className="flex items-center gap-2 mx-auto shadow-badge justify-center bg-badge rounded-full py-3 px-3 sm:!px-9 w-fit border border-[#F6F8ED]">
                   <span className="font-mono text-sm sm:text-base md:text-xl">
                     Voting Rights
                   </span>
@@ -308,18 +347,18 @@ export const Landing = () => {
               cornerRadius={26}
               className="border border-[#85AFEEB5] max-w-xl mx-auto bg-[#F4F5FE]"
             >
-              <div className="bg-card py-5 h-64 sm:h-80 relative">
+              <div className="bg-card py-5 h-60 sm:h-80 relative">
                 <img
                   src="/icons/proof.svg"
                   alt=""
                   className="w-full h-full absolute inset-0"
                 />
               </div>
-              <div className="p-5 2xl:px-9 2xl:py-12 bg-[#F4F5FE] space-y-4 md:!space-y-7">
-                <h6 className="font-bold text-xl md:text-3xl font-spaceGrotesk text-center">
+              <div className="px-3 py-5 sm:!p-5 2xl:px-9 2xl:py-12 bg-[#F4F5FE] space-y-4 md:!space-y-7">
+                <h6 className="font-bold text-lg md:text-3xl font-spaceGrotesk text-center">
                   Live Courses, Real Proof{" "}
                 </h6>
-                <div className="flex items-center gap-2 mx-auto shadow-badge justify-center bg-badge rounded-full py-3 px-9 w-fit border border-[#F6F8ED]">
+                <div className="flex items-center gap-2 mx-auto shadow-badge justify-center bg-badge rounded-full py-3 px-3 sm:!px-9 w-fit border border-[#F6F8ED]">
                   <span className="font-mono text-sm sm:text-base md:text-xl">
                     Digital Certifications{" "}
                   </span>
@@ -337,6 +376,112 @@ export const Landing = () => {
               </div>
             </Squircle>
           </div>
+          <Carousel className="mt-8 sm:!hidden">
+            <CarouselContent>
+              <CarouselItem className="basis-full">
+                <Squircle
+                  cornerRadius={26}
+                  className="border border-[#85AFEEB5] max-w-xl mx-auto bg-[#F4F5FE] h-full"
+                >
+                  <div className="bg-card h-64 sm:h-80 relative">
+                    <img
+                      src="/icons/mwa.svg"
+                      alt=""
+                      className="w-auto h-auto max-h-72 object-cover absolute bottom-0 left-1/2 -translate-x-1/2"
+                    />
+                  </div>
+                  <div className="px-3 py-5 sm:!p-5 2xl:px-9 2xl:py-12 bg-[#F4F5FE] space-y-4 md:!space-y-7">
+                    <h6 className="font-bold text-lg md:text-3xl font-spaceGrotesk text-center">
+                      Rubi Helps w/ Accountability{" "}
+                    </h6>
+                    <div className="flex items-center mx-auto gap-2 shadow-badge justify-center bg-badge rounded-full py-3 px-3 sm:!px-9 w-fit border border-[#F6F8ED]">
+                      <span className="font-mono text-sm sm:text-base md:text-xl">
+                        AI Powered Scheduling{" "}
+                      </span>
+                      <img
+                        src="/icons/student.svg"
+                        alt="earth"
+                        className="w-5 h-5"
+                      />
+                    </div>
+                    <p className="text-[#494A79] font-sf text-base sm:text-lg lg:text-2xl">
+                      Stay connected to what you truly desire. Rubi AI helps you
+                      build accountability schedules, organize classrooms &
+                      events, and guides your toward optimal path of success.
+                    </p>
+                  </div>
+                </Squircle>
+              </CarouselItem>
+              <CarouselItem className="basis-full">
+                <Squircle
+                  cornerRadius={26}
+                  className="border border-[#85AFEEB5] max-w-xl bg-[#F4F5FE] mx-auto h-full"
+                >
+                  <div className="bg-card h-64 sm:h-80 grid place-items-center">
+                    <img
+                      src="/images/next_gen.png"
+                      alt=""
+                      className="w-40 sm:w-60 h-40 sm:h-60  aspect-square"
+                    />
+                  </div>
+                  <div className="px-3 py-5 sm:!p-5 2xl:px-9 2xl:py-12 bg-[#F4F5FE] space-y-4 md:!space-y-7">
+                    <h6 className="font-bold text-lg md:text-3xl font-spaceGrotesk text-center">
+                      Own Your Knowledge
+                    </h6>
+                    <div className="flex items-center gap-2 mx-auto shadow-badge justify-center bg-badge rounded-full py-3 px-3 sm:!px-9 w-fit border border-[#F6F8ED]">
+                      <span className="font-mono text-sm sm:text-base md:text-xl">
+                        Voting Rights
+                      </span>
+                      <img
+                        src="/icons/glob.svg"
+                        alt="earth"
+                        className="w-5 h-5"
+                      />
+                    </div>
+                    <p className="text-[#494A79] font-sf text-base sm:text-lg lg:text-2xl">
+                      Voting tokens allow you to own crypto that contains voting
+                      power for the Academy. This empowers you to own your
+                      knowledge, and make decisions that reshape the platform.
+                    </p>
+                  </div>
+                </Squircle>
+              </CarouselItem>
+              <CarouselItem className="basis-full">
+                <Squircle
+                  cornerRadius={26}
+                  className="border border-[#85AFEEB5] max-w-xl mx-auto bg-[#F4F5FE] h-full"
+                >
+                  <div className="bg-card py-5 h-60 sm:h-80 relative">
+                    <img
+                      src="/icons/proof.svg"
+                      alt=""
+                      className="w-full h-full absolute inset-0"
+                    />
+                  </div>
+                  <div className="px-3 py-5 sm:!p-5 2xl:px-9 2xl:py-12 bg-[#F4F5FE] space-y-4 md:!space-y-7">
+                    <h6 className="font-bold text-lg md:text-3xl font-spaceGrotesk text-center">
+                      Live Courses, Real Proof{" "}
+                    </h6>
+                    <div className="flex items-center gap-2 mx-auto shadow-badge justify-center bg-badge rounded-full py-3 px-3 sm:!px-9 w-fit border border-[#F6F8ED]">
+                      <span className="font-mono text-sm sm:text-base md:text-xl">
+                        Digital Certifications{" "}
+                      </span>
+                      <img
+                        src="/icons/student.svg"
+                        alt="earth"
+                        className="w-5 h-5"
+                      />
+                    </div>
+                    <p className="text-[#494A79] font-sf text-base sm:text-lg lg:text-2xl">
+                      Secure your education with on-chain degrees. Verified on
+                      the blockchain, your credentials are permanent,
+                      accessible, and always authentic—no more lost diplomas.
+                    </p>
+                  </div>
+                </Squircle>
+              </CarouselItem>
+            </CarouselContent>
+          </Carousel>
         </div>
       </section>
       <section className="pb-10 lg:pb-20">
@@ -347,16 +492,24 @@ export const Landing = () => {
           <Squircle
             cornerRadius={36}
             border={true}
-            className="max-w-[95%] mx-auto bg-landing_header_top py-10 px-6 sm:!px-10 2xl:!px-20 border-2 border-[#45FED680] mt-5"
+            className="max-w-[95%] mx-auto bg-landing_header_top py-10 px-5 sm:!px-10 2xl:!px-20 border-2 border-[#45FED680] mt-5"
           >
             <h2 className="text-center font-bold text-transparent bg-dashboard_tab bg-clip-text text-[clamp(24px,3vw,68px)] font-spaceGrotesk">
               Still Thirsty? Here’s Some More F.A.X!{" "}
             </h2>
-            <div className="xl:!w-3/4 w-full mx-auto mt-7 sm:!mt-14">
+            <div className="xl:!w-3/4 w-full mx-auto mt-5 sm:!mt-14">
               {Faq?.map((data, i) => (
                 <div
-                  className="py-6 border-b border-[#F3F3F3] space-y-4 last:border-0"
+                  className={cn(
+                    "py-3 sm:!py-6 border-b border-[#F3F3F3] sm:!space-y-4 last:border-0 transition-all"
+                  )}
                   key={data?.question}
+                  onClick={() =>
+                    setActive(() => {
+                      if (active === data?.question) return "";
+                      return data?.question;
+                    })
+                  }
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
@@ -375,7 +528,14 @@ export const Landing = () => {
                       className="w-6 sm:w-9 h-6 sm:h-9"
                     />
                   </div>
-                  <p className="font-sf text-sm sm:!text-base text-white font-thin">
+                  <p
+                    className={cn(
+                      "font-sf text-sm sm:!text-base text-white font-thin transition-all duration-300 h-auto",
+                      active === data?.question
+                        ? "h-full mt-2 sm:!mt-0"
+                        : "h-0 sm:!h-full overflow-hidden"
+                    )}
+                  >
                     {data?.answer}
                   </p>
                 </div>
@@ -385,13 +545,13 @@ export const Landing = () => {
         </div>
       </section>
 
-      <section className="xl:!pt-14 pt-10 pb-10">
+      <section className="xl:!pt-14 xs:!pt-10 pt-0 pb-10">
         <div className="3xl:!container max-w-[95%] mx-auto">
           <div className="relative pt-20">
             <img
               src="/images/next_gen.png"
               alt="next genration"
-              className="lg:!max-w-xl aspect-square absolute top-5 left-1/2 -translate-x-1/2 object-cover"
+              className="lg:!max-w-xl sm:!max-w-full max-w-xs aspect-square absolute top-5 left-1/2 -translate-x-1/2 object-cover"
             />
             <Squircle
               cornerRadius={64}
@@ -405,7 +565,7 @@ export const Landing = () => {
                   Digital Books, Knowledge, & Live Rooms To Enhance Your
                   Personal Development{" "}
                 </p>
-                <div className="grid xl:!grid-cols-3 small_tablet:!grid-cols-2 grid-cols-1 gap-5 py-10 xl:!py-20">
+                <div className="hidden sm:!grid xl:!grid-cols-3 small_tablet:!grid-cols-2 grid-cols-1 gap-5 py-10 xl:!py-20">
                   <div className="relative  h-full mx-auto w-full ">
                     <img
                       src="/images/vector.png"
@@ -511,6 +671,121 @@ export const Landing = () => {
                     </div>
                   </div>
                 </div>
+                <Carousel className="sm:!hidden py-10">
+                  <CarouselContent>
+                    <CarouselItem className="basis-full">
+                      {" "}
+                      <div className="relative  h-full mx-auto w-full ">
+                        <img
+                          src="/images/vector.png"
+                          alt="certificate"
+                          className="w-full h-full object-fill absolute inset-0 "
+                        />
+                        <div className=" rounded-[64px] pt-14 pb-6 sm:!py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14 relative z-20 h-full">
+                          <div className="flex flex-col justify-between h-full space-y-8">
+                            <div className="flex items-center gap-4">
+                              <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
+                                News/Announcements
+                              </h3>
+                              <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full ">
+                                34
+                              </span>
+                            </div>
+                            <img
+                              src="/icons/certi.svg"
+                              alt="certificate"
+                              className="w-full h-full object-contain"
+                            />
+                            <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
+                              <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
+                                Search
+                              </Button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem className="basis-full">
+                      <div className="relative rounded-[64px] overflow-hidden h-full">
+                        <img
+                          src="/images/vector.png"
+                          alt="certificate"
+                          className="w-full h-full object-fill absolute inset-0"
+                        />
+                        <div className="flex flex-col gap-y-8 h-full relative z-20 py-12 sm:py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14">
+                          <div className="flex items-center gap-4">
+                            <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
+                              Membership/Access
+                            </h3>
+                            <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full">
+                              13
+                            </span>
+                          </div>
+                          <div className="grid grid-cols-2 gap-2 sm:!gap-4">
+                            <img
+                              src="/icons/vip1.svg"
+                              alt="certificate"
+                              className="w-full aspect-square"
+                            />
+                            <img
+                              src="/icons/vip2.svg"
+                              alt="certificate"
+                              className="w-full aspect-square"
+                            />
+                            <img
+                              src="/icons/vip3.svg"
+                              alt="certificate"
+                              className="w-full aspect-square"
+                            />
+                            <img
+                              src="/icons/vip4.svg"
+                              alt="certificate"
+                              className="w-full aspect-square"
+                            />
+                          </div>
+                        </div>
+                        <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto absolute bottom-14 left-1/2 -translate-x-1/2 z-30">
+                          <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-base font-bold ">
+                            Mint
+                          </Button>
+                        </div>
+                        <div className="h-1/3 bg-layer backdrop-blur-sm w-full left-1/2 -translate-x-1/2 absolute z-20 bottom-0"></div>
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem className="basis-full">
+                      <div className="relative h-full">
+                        <img
+                          src="/images/vector.png"
+                          alt="certificate"
+                          className="w-full h-full object-fill absolute inset-0"
+                        />
+                        <div className="relative z-20 w-full inset-0 rounded-3xl py-12 sm:py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14 flex flex-col justify-between h-full gap-4">
+                          <div className="flex items-center gap-5 3xl:gap-10">
+                            <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
+                              Collaboration{" "}
+                            </h3>
+                            <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full">
+                              34
+                            </span>
+                          </div>
+                          <div className="flex flex-col items-center gap-3">
+                            <img
+                              src="/icons/news.svg"
+                              alt="certificate"
+                              className="w-2/3 h-full"
+                            />
+
+                            <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
+                              <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
+                                Vote
+                              </Button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  </CarouselContent>
+                </Carousel>
                 <div className="flex items-center sm:!flex-row flex-col gap-3 sm:!justify-between justify-center sm:!mt-10 mt-5 flex-wrap">
                   <p className="font-bold text-white">
                     2025 Mental Wealth Academy™

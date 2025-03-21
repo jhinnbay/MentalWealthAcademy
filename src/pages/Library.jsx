@@ -15,6 +15,7 @@ import { ethers } from "ethers";
 import { create } from "ipfs-http-client";
 import { useState } from "react";
 import BookStorageABI from "../../ABI/bookStorageABI.json";
+import { Header } from "@/components/pages/Home/Header";
 
 const pinataApiKey = import.meta.env.VITE_PINATA_API_KEY;
 const pinataSecretApiKey = import.meta.env.VITE_PINATA_API_SECRET;
@@ -160,7 +161,7 @@ const Library = () => {
   return (
     <main>
       <div className="md:!pt-9 pt-5">
-        <section className="">
+        <section className="md:!block hidden">
           <div className="md:!border border-none border-white md:!p-3 bg-[#FFFFFF40] md:!rounded-2xl">
             <div className="md:!bg-library bg-library_tablet  md:!bg-center bg-right bg-cover p-6 rounded-lg text-white ">
               <div className="flex gap-2 items-center invisible opacity-0">
@@ -178,6 +179,9 @@ const Library = () => {
               </h3>
             </div>
           </div>
+        </section>
+        <section className="pb-2.5 md:!hidden block">
+          <Header />
         </section>
 
         <div className=" mt-5">
