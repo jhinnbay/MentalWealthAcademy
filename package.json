@@ -29,6 +29,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "corner-smoothing": "^0.1.5",
+    "embla-carousel-autoplay": "^8.5.2",
     "embla-carousel-react": "^8.5.2",
     "ethers": "^6.1.0",
     "hardhat": "^2.22.4",

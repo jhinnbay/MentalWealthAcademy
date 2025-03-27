@@ -193,6 +193,13 @@ module.exports = {
         creator: "url('/images/creator.jpg')",
         layer_classes:
           "linear-gradient(90deg, rgba(0, 0, 0, 0.74) 21.5%, rgba(0, 0, 0, 0.4218) 56%, rgba(0, 0, 0, 0.74) 94%)",
+        pathway_border:
+          "linear-gradient(0deg, #536DB0, #536DB0), conic-gradient(from 180deg at 50% 50%, rgba(84, 110, 177, 0) 0deg, rgba(133, 175, 238, 0.71) 185.46deg, rgba(84, 110, 177, 0) 360deg)",
+        fax: "radial-gradient(61.79% 87.16% at 81.37% 10.92%, #37A375 0%, #6DF1B9 100%),radial-gradient(50% 50% at 50% 50%, rgba(246, 80, 80, 0.1) 0%, rgba(74, 227, 202, 0.2) 100%),radial-gradient(37.62% 53.06% at 25.47% 8.82%, rgba(69, 254, 214, 0.275) 0%, rgba(131, 125, 250, 0.55) 100%)",
+        start:
+          "radial-gradient(96% 107.22% at 88.4% 4%, #2F9A66 0%, #4D2CA9 32%, #148457 74%, #1CDCCF 88%, #0B8B5A 100%) ",
+        horizontal_layer:
+          "linear-gradient(270deg, #3DE792 0%, #BD8AFF 49.5%, #49B7D2 100%)",
       },
       borderRadius: {
         lg: "var(--radius)",
