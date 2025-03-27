@@ -3,6 +3,7 @@ import * as React from "react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const CarouselContext = React.createContext(null);
 
@@ -179,7 +180,8 @@ const CarouselPrevious = React.forwardRef(
         onClick={scrollPrev}
         {...props}
       >
-        <img src="/icons/prev.svg" alt="prev" className="h-6 w-6" />
+        {/* <img src="/icons/prev.svg" alt="prev" className="h-6 w-6" /> */}
+        <ArrowLeft className="h-6 w-6" />
         <span className="sr-only">Previous slide</span>
       </Button>
     );
@@ -207,7 +209,8 @@ const CarouselNext = React.forwardRef(
         onClick={scrollNext}
         {...props}
       >
-        <img src="/icons/next.svg" alt="prev" className="h-6 w-6" />
+        {/* <img src="/icons/next.svg" alt="prev" className="h-6 w-6" /> */}
+        <ArrowRight className="h-6 w-6" />
         <span className="sr-only">Next slide</span>
       </Button>
     );

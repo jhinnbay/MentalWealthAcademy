@@ -732,8 +732,8 @@ export const Landing = () => {
                     className="sm:!hidden pb-10 pt-16"
                     opts={{ loop: true }}
                   >
-                    <CarouselPrevious className="top-10 left-auto right-20 bg-transparent" />
-                    <CarouselNext className="top-10 right-5 bg-transparent" />
+                    <CarouselPrevious className="top-10 left-auto right-20 bg-transparent border-white text-white" />
+                    <CarouselNext className="top-10 right-5 bg-transparent border-white text-white" />
                     <CarouselContent>
                       <CarouselItem className="basis-full">
                         {" "}
