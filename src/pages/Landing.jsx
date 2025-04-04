@@ -146,11 +146,10 @@ export const Landing = () => {
               >
                 <div>
                   <h3 className="text-center text-transparent bg-wrap bg-clip-text font-bold text-3xl font-spaceGrotesk">
-                    Warp Drive Into Next Gen Blockchain Education{" "}
+                    Next Gen Blockchain-Based Education{" "}
                   </h3>
                   <p className="text-center text-xl text-white font-spaceGrotesk font-light mt-2">
-                    Digital Books, Knowledge, & Live Rooms To Enhance Your
-                    Personal Development{" "}
+                    Academy is here to help you warp drive into a better you{" "}
                   </p>
                   <div className="hidden sm:!grid xl:!grid-cols-3 small_tablet:!grid-cols-2 grid-cols-1 gap-5 py-10 xl:!py-20">
                     <div className="relative  h-full mx-auto w-full ">
