@@ -129,6 +129,292 @@ export const Landing = () => {
           </div> */}
         </div>
       </section>
+
+            <section className="xl:!pt-14 xs:!pt-10 pt-0 pb-10">
+        <div className="3xl:!container max-w-[95%] mx-auto">
+          <div className="relative pt-20">
+            <img
+              src="/images/next_gen.png"
+              alt="next genration"
+              className="lg:!max-w-xl sm:!max-w-full max-w-xs aspect-square absolute top-5 left-1/2 -translate-x-1/2 object-cover"
+            />
+            <Squircle cornerRadius={64} className="bg-start p-px">
+              <Squircle
+                cornerRadius={64}
+                className="sm:!py-14 p-5 sm:!px-10 relative overflow-hidden bg-cover bg-rect bg-no-repeat"
+              >
+                <div>
+                  <h3 className="text-center text-transparent bg-wrap bg-clip-text font-bold text-3xl font-spaceGrotesk">
+                    Get Started{" "}
+                  </h3>
+                  <p className="text-center text-xl text-white font-spaceGrotesk font-light mt-2">
+                    Digital Books, Knowledge, & Live Rooms To Enhance Your
+                    Personal Development{" "}
+                  </p>
+                  <div className="hidden sm:!grid xl:!grid-cols-3 small_tablet:!grid-cols-2 grid-cols-1 gap-5 py-10 xl:!py-20">
+                    <div className="relative  h-full mx-auto w-full ">
+                      <img
+                        src="/images/vector.png"
+                        alt="certificate"
+                        className="w-full h-full object-fill absolute inset-0 "
+                      />
+                      <div className=" rounded-[64px] pt-14 pb-6 sm:!py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14 relative z-20 h-full">
+                        <div className="flex flex-col justify-between h-full space-y-8">
+                          <div className="flex items-center gap-4">
+                            <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
+                              News/Announcements
+                            </h3>
+                            <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full ">
+                              34
+                            </span>
+                          </div>
+                          <img
+                            src="/icons/certi.svg"
+                            alt="certificate"
+                            className="w-full h-full object-contain"
+                          />
+                          <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
+                            <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
+                              Search
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="relative rounded-[64px] overflow-hidden">
+                      <img
+                        src="/images/vector.png"
+                        alt="certificate"
+                        className="w-full h-full object-fill absolute inset-0"
+                      />
+                      <div className="flex flex-col gap-y-8 h-full relative z-20 py-12 sm:py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14">
+                        <div className="flex items-center gap-4">
+                          <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
+                            Membership/Access
+                          </h3>
+                          <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full">
+                            13
+                          </span>
+                        </div>
+                        <div className="grid grid-cols-2 gap-2 sm:!gap-4">
+                          <img
+                            src="/icons/vip1.svg"
+                            alt="certificate"
+                            className="w-full aspect-square"
+                          />
+                          <img
+                            src="/icons/vip2.svg"
+                            alt="certificate"
+                            className="w-full aspect-square"
+                          />
+                          <img
+                            src="/icons/vip3.svg"
+                            alt="certificate"
+                            className="w-full aspect-square"
+                          />
+                          <img
+                            src="/icons/vip4.svg"
+                            alt="certificate"
+                            className="w-full aspect-square"
+                          />
+                        </div>
+                      </div>
+                      <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto absolute bottom-14 left-1/2 -translate-x-1/2 z-30">
+                        <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-base font-bold ">
+                          Mint
+                        </Button>
+                      </div>
+                      <div className="h-1/3 bg-layer backdrop-blur-sm w-full left-1/2 -translate-x-1/2 absolute z-20 bottom-0"></div>
+                    </div>
+                    <div className="relative">
+                      <img
+                        src="/images/vector.png"
+                        alt="certificate"
+                        className="w-full h-full object-fill absolute inset-0"
+                      />
+                      <div className="relative z-20 w-full inset-0 rounded-3xl py-12 sm:py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14 flex flex-col justify-between h-full gap-4">
+                        <div className="flex items-center gap-5 3xl:gap-10">
+                          <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
+                            Collaboration{" "}
+                          </h3>
+                          <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full">
+                            34
+                          </span>
+                        </div>
+                        <div className="flex flex-col items-center gap-3">
+                          <img
+                            src="/icons/news.svg"
+                            alt="certificate"
+                            className="w-2/3 h-full"
+                          />
+
+                          <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
+                            <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
+                              Vote
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <Carousel
+                    className="sm:!hidden pb-10 pt-16"
+                    opts={{ loop: true }}
+                  >
+                    <CarouselPrevious className="top-10 left-auto right-20 bg-transparent border-white text-white" />
+                    <CarouselNext className="top-10 right-5 bg-transparent border-white text-white" />
+                    <CarouselContent>
+                      <CarouselItem className="basis-full">
+                        {" "}
+                        <div className="relative  h-full mx-auto w-full ">
+                          <img
+                            src="/images/vector.png"
+                            alt="certificate"
+                            className="w-full h-full object-fill absolute inset-0 "
+                          />
+                          <div className=" rounded-[64px] pt-14 pb-6 sm:!py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14 relative z-20 h-full">
+                            <div className="flex flex-col justify-between h-full space-y-8">
+                              <div className="flex items-center gap-4">
+                                <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
+                                  News/Announcements
+                                </h3>
+                                <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full ">
+                                  34
+                                </span>
+                              </div>
+                              <img
+                                src="/icons/certi.svg"
+                                alt="certificate"
+                                className="w-full h-full object-contain"
+                              />
+                              <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
+                                <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
+                                  Search
+                                </Button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem className="basis-full">
+                        <div className="relative rounded-[64px] overflow-hidden h-full">
+                          <img
+                            src="/images/vector.png"
+                            alt="certificate"
+                            className="w-full h-full object-fill absolute inset-0"
+                          />
+                          <div className="flex flex-col gap-y-8 h-full relative z-20 py-12 sm:py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14">
+                            <div className="flex items-center gap-4">
+                              <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
+                                Membership/Access
+                              </h3>
+                              <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full">
+                                13
+                              </span>
+                            </div>
+                            <div className="grid grid-cols-2 gap-2 sm:!gap-4">
+                              <img
+                                src="/icons/vip1.svg"
+                                alt="certificate"
+                                className="w-full aspect-square"
+                              />
+                              <img
+                                src="/icons/vip2.svg"
+                                alt="certificate"
+                                className="w-full aspect-square"
+                              />
+                              <img
+                                src="/icons/vip3.svg"
+                                alt="certificate"
+                                className="w-full aspect-square"
+                              />
+                              <img
+                                src="/icons/vip4.svg"
+                                alt="certificate"
+                                className="w-full aspect-square"
+                              />
+                            </div>
+                          </div>
+                          <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto absolute bottom-14 left-1/2 -translate-x-1/2 z-30">
+                            <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-base font-bold ">
+                              Mint
+                            </Button>
+                          </div>
+                          <div className="h-1/3 bg-layer backdrop-blur-sm w-full left-1/2 -translate-x-1/2 absolute z-20 bottom-0"></div>
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem className="basis-full">
+                        <div className="relative h-full">
+                          <img
+                            src="/images/vector.png"
+                            alt="certificate"
+                            className="w-full h-full object-fill absolute inset-0"
+                          />
+                          <div className="relative z-20 w-full inset-0 rounded-3xl py-12 sm:py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14 flex flex-col justify-between h-full gap-4">
+                            <div className="flex items-center gap-5 3xl:gap-10">
+                              <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
+                                Collaboration{" "}
+                              </h3>
+                              <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full">
+                                34
+                              </span>
+                            </div>
+                            <div className="flex flex-col items-center gap-3">
+                              <img
+                                src="/icons/news.svg"
+                                alt="certificate"
+                                className="w-2/3 h-full"
+                              />
+
+                              <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
+                                <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
+                                  Vote
+                                </Button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </CarouselItem>
+                    </CarouselContent>
+                  </Carousel>
+                  <div className="flex items-center sm:!flex-row flex-col gap-3 sm:!justify-between justify-center sm:!mt-10 mt-5 flex-wrap">
+                    <p className="font-bold text-white">
+                      2025 Mental Wealth Academy™
+                    </p>
+                    <div className="flex items-center gap-2">
+                      <Link to={"/"}>
+                        <img
+                          src="/icons/twitter_next.svg"
+                          alt="twitter"
+                          className="w-6 h-6"
+                        />
+                      </Link>
+                      <Link to={"/"}>
+                        <img
+                          src="/icons/insta_next.svg"
+                          alt="twitter"
+                          className="w-6 h-6"
+                        />
+                      </Link>
+                      <Link to={"/"}>
+                        <img
+                          src="/icons/youtube_next.svg"
+                          alt="twitter"
+                          className="w-6 h-6"
+                        />
+                      </Link>
+                    </div>
+                    <p className="text-white">
+                      <Globe className="inline h-6 w-6" /> Metawavestudio.com ↗
+                    </p>
+                  </div>
+                </div>
+              </Squircle>
+            </Squircle>
+          </div>
+        </div>
+      </section>
+      
       <section className="pb-7 pt-4 sm:py-12 ">
         <div className="  container">
           <div className="max-w-full small_tablet:max-w-[95%] mx-auto">
@@ -598,291 +884,6 @@ export const Landing = () => {
               </div>
             </Squircle>
           </Squircle>
-        </div>
-      </section>
-
-      <section className="xl:!pt-14 xs:!pt-10 pt-0 pb-10">
-        <div className="3xl:!container max-w-[95%] mx-auto">
-          <div className="relative pt-20">
-            <img
-              src="/images/next_gen.png"
-              alt="next genration"
-              className="lg:!max-w-xl sm:!max-w-full max-w-xs aspect-square absolute top-5 left-1/2 -translate-x-1/2 object-cover"
-            />
-            <Squircle cornerRadius={64} className="bg-start p-px">
-              <Squircle
-                cornerRadius={64}
-                className="sm:!py-14 p-5 sm:!px-10 relative overflow-hidden bg-cover bg-rect bg-no-repeat"
-              >
-                <div>
-                  <h3 className="text-center text-transparent bg-wrap bg-clip-text font-bold text-3xl font-spaceGrotesk">
-                    Get Started{" "}
-                  </h3>
-                  <p className="text-center text-xl text-white font-spaceGrotesk font-light mt-2">
-                    Digital Books, Knowledge, & Live Rooms To Enhance Your
-                    Personal Development{" "}
-                  </p>
-                  <div className="hidden sm:!grid xl:!grid-cols-3 small_tablet:!grid-cols-2 grid-cols-1 gap-5 py-10 xl:!py-20">
-                    <div className="relative  h-full mx-auto w-full ">
-                      <img
-                        src="/images/vector.png"
-                        alt="certificate"
-                        className="w-full h-full object-fill absolute inset-0 "
-                      />
-                      <div className=" rounded-[64px] pt-14 pb-6 sm:!py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14 relative z-20 h-full">
-                        <div className="flex flex-col justify-between h-full space-y-8">
-                          <div className="flex items-center gap-4">
-                            <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
-                              News/Announcements
-                            </h3>
-                            <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full ">
-                              34
-                            </span>
-                          </div>
-                          <img
-                            src="/icons/certi.svg"
-                            alt="certificate"
-                            className="w-full h-full object-contain"
-                          />
-                          <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
-                            <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
-                              Search
-                            </Button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="relative rounded-[64px] overflow-hidden">
-                      <img
-                        src="/images/vector.png"
-                        alt="certificate"
-                        className="w-full h-full object-fill absolute inset-0"
-                      />
-                      <div className="flex flex-col gap-y-8 h-full relative z-20 py-12 sm:py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14">
-                        <div className="flex items-center gap-4">
-                          <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
-                            Membership/Access
-                          </h3>
-                          <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full">
-                            13
-                          </span>
-                        </div>
-                        <div className="grid grid-cols-2 gap-2 sm:!gap-4">
-                          <img
-                            src="/icons/vip1.svg"
-                            alt="certificate"
-                            className="w-full aspect-square"
-                          />
-                          <img
-                            src="/icons/vip2.svg"
-                            alt="certificate"
-                            className="w-full aspect-square"
-                          />
-                          <img
-                            src="/icons/vip3.svg"
-                            alt="certificate"
-                            className="w-full aspect-square"
-                          />
-                          <img
-                            src="/icons/vip4.svg"
-                            alt="certificate"
-                            className="w-full aspect-square"
-                          />
-                        </div>
-                      </div>
-                      <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto absolute bottom-14 left-1/2 -translate-x-1/2 z-30">
-                        <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-base font-bold ">
-                          Mint
-                        </Button>
-                      </div>
-                      <div className="h-1/3 bg-layer backdrop-blur-sm w-full left-1/2 -translate-x-1/2 absolute z-20 bottom-0"></div>
-                    </div>
-                    <div className="relative">
-                      <img
-                        src="/images/vector.png"
-                        alt="certificate"
-                        className="w-full h-full object-fill absolute inset-0"
-                      />
-                      <div className="relative z-20 w-full inset-0 rounded-3xl py-12 sm:py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14 flex flex-col justify-between h-full gap-4">
-                        <div className="flex items-center gap-5 3xl:gap-10">
-                          <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
-                            Collaboration{" "}
-                          </h3>
-                          <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full">
-                            34
-                          </span>
-                        </div>
-                        <div className="flex flex-col items-center gap-3">
-                          <img
-                            src="/icons/news.svg"
-                            alt="certificate"
-                            className="w-2/3 h-full"
-                          />
-
-                          <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
-                            <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
-                              Vote
-                            </Button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <Carousel
-                    className="sm:!hidden pb-10 pt-16"
-                    opts={{ loop: true }}
-                  >
-                    <CarouselPrevious className="top-10 left-auto right-20 bg-transparent border-white text-white" />
-                    <CarouselNext className="top-10 right-5 bg-transparent border-white text-white" />
-                    <CarouselContent>
-                      <CarouselItem className="basis-full">
-                        {" "}
-                        <div className="relative  h-full mx-auto w-full ">
-                          <img
-                            src="/images/vector.png"
-                            alt="certificate"
-                            className="w-full h-full object-fill absolute inset-0 "
-                          />
-                          <div className=" rounded-[64px] pt-14 pb-6 sm:!py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14 relative z-20 h-full">
-                            <div className="flex flex-col justify-between h-full space-y-8">
-                              <div className="flex items-center gap-4">
-                                <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
-                                  News/Announcements
-                                </h3>
-                                <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full ">
-                                  34
-                                </span>
-                              </div>
-                              <img
-                                src="/icons/certi.svg"
-                                alt="certificate"
-                                className="w-full h-full object-contain"
-                              />
-                              <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
-                                <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
-                                  Search
-                                </Button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem className="basis-full">
-                        <div className="relative rounded-[64px] overflow-hidden h-full">
-                          <img
-                            src="/images/vector.png"
-                            alt="certificate"
-                            className="w-full h-full object-fill absolute inset-0"
-                          />
-                          <div className="flex flex-col gap-y-8 h-full relative z-20 py-12 sm:py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14">
-                            <div className="flex items-center gap-4">
-                              <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
-                                Membership/Access
-                              </h3>
-                              <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full">
-                                13
-                              </span>
-                            </div>
-                            <div className="grid grid-cols-2 gap-2 sm:!gap-4">
-                              <img
-                                src="/icons/vip1.svg"
-                                alt="certificate"
-                                className="w-full aspect-square"
-                              />
-                              <img
-                                src="/icons/vip2.svg"
-                                alt="certificate"
-                                className="w-full aspect-square"
-                              />
-                              <img
-                                src="/icons/vip3.svg"
-                                alt="certificate"
-                                className="w-full aspect-square"
-                              />
-                              <img
-                                src="/icons/vip4.svg"
-                                alt="certificate"
-                                className="w-full aspect-square"
-                              />
-                            </div>
-                          </div>
-                          <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto absolute bottom-14 left-1/2 -translate-x-1/2 z-30">
-                            <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-base font-bold ">
-                              Mint
-                            </Button>
-                          </div>
-                          <div className="h-1/3 bg-layer backdrop-blur-sm w-full left-1/2 -translate-x-1/2 absolute z-20 bottom-0"></div>
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem className="basis-full">
-                        <div className="relative h-full">
-                          <img
-                            src="/images/vector.png"
-                            alt="certificate"
-                            className="w-full h-full object-fill absolute inset-0"
-                          />
-                          <div className="relative z-20 w-full inset-0 rounded-3xl py-12 sm:py-16 3xl:!py-20 px-8 sm:!px-12 3xl:!px-14 flex flex-col justify-between h-full gap-4">
-                            <div className="flex items-center gap-5 3xl:gap-10">
-                              <h3 className="text-[#F6F8ED] font-sora xs:!text-sm text-xs font-semibold">
-                                Collaboration{" "}
-                              </h3>
-                              <span className="px-4 sm:!h-6 h-4 flex items-center justify-center bg-[#F6F8ED] text-[#397BED] sm:!text-base text-xs font-bold rounded-full">
-                                34
-                              </span>
-                            </div>
-                            <div className="flex flex-col items-center gap-3">
-                              <img
-                                src="/icons/news.svg"
-                                alt="certificate"
-                                className="w-2/3 h-full"
-                              />
-
-                              <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
-                                <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
-                                  Vote
-                                </Button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </CarouselItem>
-                    </CarouselContent>
-                  </Carousel>
-                  <div className="flex items-center sm:!flex-row flex-col gap-3 sm:!justify-between justify-center sm:!mt-10 mt-5 flex-wrap">
-                    <p className="font-bold text-white">
-                      2025 Mental Wealth Academy™
-                    </p>
-                    <div className="flex items-center gap-2">
-                      <Link to={"/"}>
-                        <img
-                          src="/icons/twitter_next.svg"
-                          alt="twitter"
-                          className="w-6 h-6"
-                        />
-                      </Link>
-                      <Link to={"/"}>
-                        <img
-                          src="/icons/insta_next.svg"
-                          alt="twitter"
-                          className="w-6 h-6"
-                        />
-                      </Link>
-                      <Link to={"/"}>
-                        <img
-                          src="/icons/youtube_next.svg"
-                          alt="twitter"
-                          className="w-6 h-6"
-                        />
-                      </Link>
-                    </div>
-                    <p className="text-white">
-                      <Globe className="inline h-6 w-6" /> Metawavestudio.com ↗
-                    </p>
-                  </div>
-                </div>
-              </Squircle>
-            </Squircle>
-          </div>
         </div>
       </section>
       {/* <section className="pt-8 sm:py-10 md:py-16">
