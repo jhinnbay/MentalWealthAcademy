@@ -146,7 +146,7 @@ export const Landing = () => {
               >
                 <div>
                   <h3 className="text-center text-transparent bg-wrap bg-clip-text font-bold text-3xl font-spaceGrotesk">
-                    Get Started{" "}
+                    Warp Drive Into Next Gen Blockchain Education{" "}
                   </h3>
                   <p className="text-center text-xl text-white font-spaceGrotesk font-light mt-2">
                     Digital Books, Knowledge, & Live Rooms To Enhance Your
