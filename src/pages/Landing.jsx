@@ -303,9 +303,9 @@ export const Landing = () => {
                         </div>
                       </div>
                       <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto absolute bottom-14 left-1/2 -translate-x-1/2 z-30">
-                        <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-base font-bold ">
+                        <a href="https://mentalwealthacademy.net/"><Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-base font-bold ">
                           Mint
-                        </Button>
+                        </Button></a>
                       </div>
                       <div className="h-1/3 bg-layer backdrop-blur-sm w-full left-1/2 -translate-x-1/2 absolute z-20 bottom-0"></div>
                     </div>
@@ -332,9 +332,11 @@ export const Landing = () => {
                           />
 
                           <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
+                            <Link href="/Dashboard">
                             <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
                               Vote
                             </Button>
+                          </Link>
                           </div>
                         </div>
                       </div>
@@ -499,83 +501,49 @@ export const Landing = () => {
       </section>
 
       
-      <section>
-        <div className="container">
-          <h1 className="text-center font-bold text-[#5168FF] text-[clamp(24px,3vw,68px)] font-spaceGrotesk">
-            Warp Drive Into Next-Gen Digital Education
-          </h1>
-          <p className="text-center text-[clamp(18px,2vw,42px)] text-[#F6F8ED] font-spaceGrotesk font-light mt-2 sm:!mt-0">
-            Digital Classrooms. Real-Life People, Resources, & Tools.{" "}
-          </p>
+<section>
+  <div className="container">
+    <h1 className="text-center font-bold text-[#5168FF] text-[clamp(24px,3vw,68px)] font-spaceGrotesk">
+      Warp Drive Into Next-Gen Digital Education
+    </h1>
+    <p className="text-center text-[clamp(18px,2vw,42px)] text-[#F6F8ED] font-spaceGrotesk font-light mt-2 sm:mt-0">
+      Digital Classrooms. Real-Life People, Resources, & Tools.
+    </p>
 
-          <div className="hidden sm:!grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[95%] mt-10 sm:mt-14 lg:mt-20 mx-auto">
-            {Testimonials?.map((data, i) => (
-              <div
-                className="bg-wrap_card shadow-wrap_card p-6 rounded-md space-y-5 bg-center"
-                key={data?.name + i}
-              >
-                <p className="text-black text-sm small_tablet:text-base lg:text-lg">
-                  {data?.testimonial}
-                </p>
-                <div className="flex items-center gap-3">
-                  <img
-                    src={data?.icon}
-                    alt="avatar"
-                    className="w-12 h-12 aspect-square rounded-full"
-                  />
-                  <div className="space-y-0">
-                    <h5 className="text-sm font-medium font-sf text-black">
-                      {data?.name}{" "}
-                    </h5>
-                    <p className="text-sm font-sf text-[#6B7280] font-normal tracking-wide">
-                      {data?.position}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <Carousel
-            className=" sm:!hidden mt-10"
-            opts={{ loop: true, center: true }}
-            plugins={[
-              Autoplay({
-                delay: 3000,
-              }),
-            ]}
-          >
-            <CarouselContent>
-              {Testimonials?.map((data, i) => (
-                <CarouselItem
-                  key={data?.name + i}
-                  className="basis-[95%] xs:!basis-9/12"
-                >
-                  <div className="bg-wrap_card shadow-wrap_card p-6 rounded-md space-y-5 bg-center">
-                    <p className="text-black text-sm small_tablet:text-base lg:text-lg">
-                      {data?.testimonial}
-                    </p>
-                    <div className="flex items-center gap-3">
-                      <img
-                        src={data?.icon}
-                        alt="avatar"
-                        className="w-12 h-12 aspect-square rounded-full"
-                      />
-                      <div className="space-y-0">
-                        <h5 className="text-sm font-medium font-sf text-black">
-                          {data?.name}{" "}
-                        </h5>
-                        <p className="text-sm font-sf text-[#6B7280] font-normal tracking-wide">
-                          {data?.position}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
-        </div>
-      </section>
+    {/* Testimonials Grid */}
+    <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[95%] mt-10 sm:mt-14 lg:mt-20 mx-auto">
+      {Testimonials?.map((data, i) => (
+        <TestimonialCard key={data?.name + i} data={data} />
+      ))}
+    </div>
+
+    {/* Testimonials Carousel */}
+    <Carousel className="sm:hidden mt-10" opts={{ loop: true, center: true }} plugins={[Autoplay({ delay: 3000 })]}>
+      <CarouselContent>
+        {Testimonials?.map((data, i) => (
+          <CarouselItem key={data?.name + i} className="basis-[95%] xs:basis-9/12">
+            <TestimonialCard data={data} />
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
+  </div>
+</section>
+
+// Testimonial Card Component
+const TestimonialCard = ({ data }) => (
+  <div className="bg-wrap_card shadow-wrap_card p-6 rounded-md space-y-5 bg-center">
+    <p className="text-black text-sm small_tablet:text-base lg:text-lg">
+      {data?.testimonial}
+    </p>
+    <div className="flex items-center gap-3">
+      <img src={data?.icon} alt="avatar" className="w-12 h-12 aspect-square rounded-full" />
+      <div className="space-y-0">
+        <h5 className="text-sm font-medium font-sf text-black">{data?.name}</h5>
+        <p className="text-sm font-sf text-[#6B7280] font-normal tracking-wide">{data?.position}</p>
+      </div>
+    </div>
+  </div>
       <section className="py-10 lg:py-20">
         <div className="container">
           <h1 className="text-center font-bold text-[#5168FF] text-[clamp(24px,3vw,68px)] font-spaceGrotesk">
