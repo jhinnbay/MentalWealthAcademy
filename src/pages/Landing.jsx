@@ -129,8 +129,91 @@ export const Landing = () => {
           </div> */}
         </div>
       </section>
+      
+      <section className="pb-7 pt-4 sm:py-12 ">
+        <div className="  container">
+          <div className="max-w-full small_tablet:max-w-[95%] mx-auto">
+            <div className="grid xl:!grid-cols-5 lg:!grid-cols-2 grid-cols-1 gap-5 mt-7 sm:mt-14 lg:mt-20 place-items-center">
+              <div className="space-y-10 pb-5 xl:!col-span-3">
+                <div className="space-y-3.5  text-center lg:text-left">
+                  <div className="flex items-center justify-center lg:!justify-start gap-3 sm:gap-5 3xl:gap-10">
+                    <img
+                      src="/icons/landinglogo.svg"
+                      alt="landing logo"
+                      className="h-16 md:!h-24 w-16 md:!w-24"
+                    />
+                    <h2 className="text-left font-bold text-transparent bg-wrap bg-clip-text text-[clamp(24px,3vw,68px)] font-spaceGrotesk">
+                      Mental Wealth Academy{" "}
+                    </h2>
+                  </div>
+                  <p className="text-[clamp(20px,2vw,42px)] font-semibold text-[#B2B2B2] leading-none">
+                    A Stand For Affordable Education{" "}
+                  </p>
+                </div>
+                <div className="space-y-4 text-center lg:text-left text-sm sm:!text-base lg:!text-xl 3xl:!text-2xl text-[#8F8F8F] !leading-tight font-sora font-normal">
+                  <p>
+                    Education shouldn’t be confined to a classroom. That’s why
+                    we’ve designed a space where you can explore a wide range of
+                    topics, earn rewards for your progress, and engage with
+                    content that evolves with you. Seamlessly integrated, always
+                    accessible, Mental Wealth Academy lets you learn at your own
+                    pace, anywhere, anytime.
+                  </p>
+                  <p>
+                    Knowledge is power. Within your private, secure library,
+                    you’ll gain access to the digital library chain where
+                    developers can upload and share resources. You can explore
+                    repeat books, lend knowledge, and even vote on changes,
+                    ensuring that what you learn stays relevant and evolves with
+                    the community. You’re not just a learner; you’re part of a
+                    dynamic ecosystem where your voice matters.
+                  </p>
+                  <p>
+                    This isn’t just another platform—it’s a movement. A place
+                    where learning has no limits, rewards come fast, and every
+                    step you take helps you grow. Whether you’re here to gain
+                    new skills, share what you know, or connect with others,
+                    Mental Wealth Academy gives you the chance to build a better
+                    future. We’re here to support everyone, including those in
+                    underserved communities, so everyone has the chance to
+                    succeed and rise up.
+                  </p>
+                </div>
+                <div className="flex items-center gap-2 flex-col sm:!flex-row">
+                  <div className="flex items-center border  border-[#404040] rounded-lg bg-white flex-1 h-14">
+                    <Input
+                      placeholder="Youremail@Mentalwealthacademy.net"
+                      className="border-0 bg-transparent text-[#404040] text-sm font-sf"
+                    />
+                    <Button className="border-0 rounded-none gap-2 hover:shadow-none">
+                      <span className="text-xs sm:!text-sm font-normal text-[#737373]">
+                        Built on Polygon
+                      </span>
+                      <img
+                        src="/icons/polygon.svg"
+                        alt="polygon"
+                        className="w-5 h-5"
+                      />
+                    </Button>
+                  </div>
+                  <Button className="bg-signup shadow-signup h-14 text-black font-mono capitalize px-5 tracking-wide text-sm sm:!text-base">
+                    Signup for Alerts <Mail className="w-5 h-5" />
+                  </Button>
+                </div>
+              </div>
+              <div className="relative xl:!col-span-2 col-span-1 xl:ml-auto">
+                <img
+                  src="/images/home.png"
+                  alt="home "
+                  className="w-auto h-full max-h-[650px] aspect-square object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <section className="xl:!pt-14 xs:!pt-10 pt-0 pb-10">
+               <section className="xl:!pt-14 xs:!pt-10 pt-0 pb-10">
         <div className="3xl:!container max-w-[95%] mx-auto">
           <div className="relative pt-20">
             <img
@@ -145,7 +228,7 @@ export const Landing = () => {
               >
                 <div>
                   <h3 className="text-center text-transparent bg-wrap bg-clip-text font-bold text-3xl font-spaceGrotesk">
-                    Get Started{" "}
+                    Warp Drive Into Next Gen Blockchain Education{" "}
                   </h3>
                   <p className="text-center text-xl text-white font-spaceGrotesk font-light mt-2">
                     Digital Books, Knowledge, & Live Rooms To Enhance Your
@@ -414,89 +497,8 @@ export const Landing = () => {
           </div>
         </div>
       </section>
+
       
-      <section className="pb-7 pt-4 sm:py-12 ">
-        <div className="  container">
-          <div className="max-w-full small_tablet:max-w-[95%] mx-auto">
-            <div className="grid xl:!grid-cols-5 lg:!grid-cols-2 grid-cols-1 gap-5 mt-7 sm:mt-14 lg:mt-20 place-items-center">
-              <div className="space-y-10 pb-5 xl:!col-span-3">
-                <div className="space-y-3.5  text-center lg:text-left">
-                  <div className="flex items-center justify-center lg:!justify-start gap-3 sm:gap-5 3xl:gap-10">
-                    <img
-                      src="/icons/landinglogo.svg"
-                      alt="landing logo"
-                      className="h-16 md:!h-24 w-16 md:!w-24"
-                    />
-                    <h2 className="text-left font-bold text-transparent bg-wrap bg-clip-text text-[clamp(24px,3vw,68px)] font-spaceGrotesk">
-                      Mental Wealth Academy{" "}
-                    </h2>
-                  </div>
-                  <p className="text-[clamp(20px,2vw,42px)] font-semibold text-[#B2B2B2] leading-none">
-                    A Stand For Affordable Education{" "}
-                  </p>
-                </div>
-                <div className="space-y-4 text-center lg:text-left text-sm sm:!text-base lg:!text-xl 3xl:!text-2xl text-[#8F8F8F] !leading-tight font-sora font-normal">
-                  <p>
-                    Education shouldn’t be confined to a classroom. That’s why
-                    we’ve designed a space where you can explore a wide range of
-                    topics, earn rewards for your progress, and engage with
-                    content that evolves with you. Seamlessly integrated, always
-                    accessible, Mental Wealth Academy lets you learn at your own
-                    pace, anywhere, anytime.
-                  </p>
-                  <p>
-                    Knowledge is power. Within your private, secure library,
-                    you’ll gain access to the digital library chain where
-                    developers can upload and share resources. You can explore
-                    repeat books, lend knowledge, and even vote on changes,
-                    ensuring that what you learn stays relevant and evolves with
-                    the community. You’re not just a learner; you’re part of a
-                    dynamic ecosystem where your voice matters.
-                  </p>
-                  <p>
-                    This isn’t just another platform—it’s a movement. A place
-                    where learning has no limits, rewards come fast, and every
-                    step you take helps you grow. Whether you’re here to gain
-                    new skills, share what you know, or connect with others,
-                    Mental Wealth Academy gives you the chance to build a better
-                    future. We’re here to support everyone, including those in
-                    underserved communities, so everyone has the chance to
-                    succeed and rise up.
-                  </p>
-                </div>
-                <div className="flex items-center gap-2 flex-col sm:!flex-row">
-                  <div className="flex items-center border  border-[#404040] rounded-lg bg-white flex-1 h-14">
-                    <Input
-                      placeholder="Youremail@Mentalwealthacademy.net"
-                      className="border-0 bg-transparent text-[#404040] text-sm font-sf"
-                    />
-                    <Button className="border-0 rounded-none gap-2 hover:shadow-none">
-                      <span className="text-xs sm:!text-sm font-normal text-[#737373]">
-                        Built on Polygon
-                      </span>
-                      <img
-                        src="/icons/polygon.svg"
-                        alt="polygon"
-                        className="w-5 h-5"
-                      />
-                    </Button>
-                  </div>
-                  <Button className="bg-signup shadow-signup h-14 text-black font-mono capitalize px-5 tracking-wide text-sm sm:!text-base">
-                    Signup for Alerts <Mail className="w-5 h-5" />
-                  </Button>
-                </div>
-              </div>
-              <div className="relative xl:!col-span-2 col-span-1 xl:ml-auto">
-                <img
-                  src="/images/home.png"
-                  alt="home "
-                  className="w-auto h-full max-h-[650px] aspect-square object-contain"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section>
         <div className="container">
           <h1 className="text-center font-bold text-[#5168FF] text-[clamp(24px,3vw,68px)] font-spaceGrotesk">
