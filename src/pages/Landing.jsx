@@ -195,7 +195,7 @@ export const Landing = () => {
                       />
                     </Button>
                   </div>
-                  <Button className="bg-signup shadow-signup h-14 text-black font-mono capitalize px-5 tracking-wide text-sm sm:!text-base">
+                  <Button className="bg-signup shadow-signup h-14 text-black font-space mono capitalize px-10 tracking-wide text-sm sm:!text-base">
                     Signup for Alerts <Mail className="w-5 h-5" />
                   </Button>
                 </div>
