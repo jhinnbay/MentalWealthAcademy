@@ -4,8 +4,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselPrevious,
   CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import {
   DropdownMenu,
@@ -17,10 +17,9 @@ import { Input } from "@/components/ui/input";
 import { Faq, Testimonials } from "@/data/landing";
 import { cn } from "@/lib/utils";
 import { Squircle } from "corner-smoothing";
-import { Clock, Globe, Mail, Menu, X } from "lucide-react";
+import { Globe, Mail, Menu } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Autoplay from "embla-carousel-autoplay";
 
 export const Landing = () => {
   const [active, setActive] = useState("");
@@ -130,7 +129,6 @@ export const Landing = () => {
         </div>
       </section>
 
-
       <section className="xl:!pt-14 xs:!pt-10 pt-0 pb-10">
         <div className="3xl:!container max-w-[95%] mx-auto">
           <div className="relative pt-20">
@@ -181,7 +179,7 @@ export const Landing = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="relative rounded-[64px] overflow-hidden">
+                    <div className="relative rounded-[0px_0px_64px_64px] overflow-hidden">
                       <img
                         src="/images/vector.png"
                         alt="certificate"
@@ -297,7 +295,7 @@ export const Landing = () => {
                         </div>
                       </CarouselItem>
                       <CarouselItem className="basis-full">
-                        <div className="relative rounded-[64px] overflow-hidden h-full">
+                        <div className="relative rounded-[0px_0px_64px_64px] overflow-hidden h-full">
                           <img
                             src="/images/vector.png"
                             alt="certificate"
@@ -414,20 +412,20 @@ export const Landing = () => {
           </div>
         </div>
       </section>
-      
+
       <section>
         <div className="container">
           <h1 className="text-center font-bold text-[#5168FF] text-[clamp(24px,3vw,68px)] font-spaceGrotesk">
-            What They Like About Us
+            Warp Drive Into Next-Gen Digital Education{" "}
           </h1>
           <p className="text-center text-[clamp(18px,2vw,42px)] text-[#F6F8ED] font-spaceGrotesk font-light mt-2 sm:!mt-0">
             Digital Classrooms. Real-Life People, Resources, & Tools.{" "}
           </p>
 
-          <div className="hidden sm:!grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[95%] mt-10 sm:mt-14 lg:mt-20 mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[95%] mt-10 sm:mt-14 lg:mt-20 mx-auto">
             {Testimonials?.map((data, i) => (
               <div
-                className="bg-wrap_card shadow-wrap_card p-6 rounded-md space-y-5 bg-center"
+                className="bg-wrap_card bg-blend-hard-light shadow-wrap_card p-6 rounded-md space-y-5 bg-center"
                 key={data?.name + i}
               >
                 <p className="text-black text-sm small_tablet:text-base lg:text-lg">
@@ -451,7 +449,7 @@ export const Landing = () => {
               </div>
             ))}
           </div>
-          <Carousel
+          {/* <Carousel
             className=" sm:!hidden mt-10"
             opts={{ loop: true, center: true }}
             plugins={[
@@ -466,7 +464,7 @@ export const Landing = () => {
                   key={data?.name + i}
                   className="basis-[95%] xs:!basis-9/12"
                 >
-                  <div className="bg-wrap_card shadow-wrap_card p-6 rounded-md space-y-5 bg-center">
+                  <div className="bg-wrap_card bg-blend-hard-light shadow-wrap_card p-6 rounded-md space-y-5 bg-center">
                     <p className="text-black text-sm small_tablet:text-base lg:text-lg">
                       {data?.testimonial}
                     </p>
@@ -489,7 +487,7 @@ export const Landing = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-          </Carousel>
+          </Carousel> */}
         </div>
       </section>
       <section className="py-10 lg:py-20">
@@ -757,7 +755,7 @@ export const Landing = () => {
                 Still Thirsty? Here’s Some More F.A.X!{" "}
               </h2>
               <div className="xl:!w-3/4 w-full mx-auto mt-5 sm:!mt-14">
-                {Faq?.map((data, i) => (
+                {Faq?.map((data) => (
                   <div
                     className={cn(
                       "py-3 sm:!py-6 border-b border-[#F3F3F3] sm:!space-y-4 last:border-0 transition-all"
@@ -805,7 +803,7 @@ export const Landing = () => {
         </div>
       </section>
 
-            <section className="pb-7 pt-4 sm:py-12 ">
+      <section className="pb-7 pt-4 sm:py-12 ">
         <div className="  container">
           <div className="max-w-full small_tablet:max-w-[95%] mx-auto">
             <div className="grid xl:!grid-cols-5 lg:!grid-cols-2 grid-cols-1 gap-5 mt-7 sm:mt-14 lg:mt-20 place-items-center">
@@ -887,7 +885,6 @@ export const Landing = () => {
           </div>
         </div>
       </section>
-
 
       {/* <section className="pt-8 sm:py-10 md:py-16">
         <div className="container">
