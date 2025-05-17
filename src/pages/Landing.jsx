@@ -71,7 +71,7 @@ export const Landing = () => {
                     <Menu />{" "}
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="bg-black sm:!w-40 w-32 mr-4">
-                    <DropdownMenuItem className="hover:!bg-[#121212]">
+                    {/* <DropdownMenuItem className="hover:!bg-[#121212]">
                       {" "}
                       <Link
                         to={"/"}
@@ -79,11 +79,11 @@ export const Landing = () => {
                       >
                         Articles
                       </Link>
-                    </DropdownMenuItem>
+                    </DropdownMenuItem> */}
                     <DropdownMenuItem className="hover:!bg-[#121212]">
                       {" "}
                       <Link
-                        to={"#"}
+                        to={"/marketplace"}
                         className="md:!p-1.5 p-1 font-bold text-[clamp(16px,2vw,20px)] text-[#DBE64C]"
                       >
                         Store
@@ -101,7 +101,7 @@ export const Landing = () => {
                     <DropdownMenuItem className="hover:!bg-[#121212]">
                       {" "}
                       <Link
-                        to={"#"}
+                        to={"/classes"}
                         className="md:!p-1.5 p-1 font-bold text-[clamp(16px,2vw,20px)] text-[#DBE64C]"
                       >
                         Classes

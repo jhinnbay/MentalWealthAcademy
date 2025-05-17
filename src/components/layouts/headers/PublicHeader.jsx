@@ -129,7 +129,7 @@ export const PublicHeader = () => {
                 <DropdownMenuItem>
                   {" "}
                   <Link
-                    to={"#"}
+                    to={"/marketplace"}
                     className=" gap-1 items-center justify-center text-sm   flex  hover:bg-white/25 rounded-lg"
                   >
                     <img src="/icons/newspaper.svg" width={20} height={20} />
