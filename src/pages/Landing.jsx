@@ -172,8 +172,16 @@ export const Landing = () => {
                             className="w-full h-full object-contain"
                           />
                           <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
-                            <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
-                              Search
+                            <Button
+                              onClick={() =>
+                                window.open(
+                                  "https://mentalwealthacademy.net",
+                                  "_blank"
+                                )
+                              }
+                              className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold"
+                            >
+                              Browse
                             </Button>
                           </div>
                         </div>
@@ -286,8 +294,16 @@ export const Landing = () => {
                                 className="w-full h-full object-contain"
                               />
                               <div className="rounded-full bg-fancy_btn_outer border border-black p-1 max-w-40 w-full mx-auto ">
-                                <Button className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold">
-                                  Search
+                                <Button
+                                  onClick={() =>
+                                    window.open(
+                                      "https://mentalwealthacademy.net",
+                                      "_blank"
+                                    )
+                                  }
+                                  className="shadow-membership_card bg-fancy_btn  w-full justify-center rounded-full h-auto lg:!py-2.5 py-1.5 text-[#F6F8ED] sm:!text-xl text-sm font-bold"
+                                >
+                                  Browse
                                 </Button>
                               </div>
                             </div>
