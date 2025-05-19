@@ -40,44 +40,38 @@ export const Testimonials = [
   {
     icon: "/icons/avatar1.svg",
     testimonial:
-      "Quis neque, eu et ipsum amet, vel et. Varius integer enim pellentesque ornare pharetra faucibs arcu. Mauris blandit egestas nibh.",
+      "Mental Wealth Academy introduced me to a reading circle on crypto-anarchism that felt more like a quiet revolution than a class. The way they pair foundational texts with real-time DAO governance experiments is unmatched.",
     name: "Emma Hemsworth",
-    position: "Founder, Bitcoin (BTC)",
   },
   {
     icon: "/icons/avatar2.svg",
     testimonial:
-      "Quis neque, eu et ipsum amet, vel et. Varius integer enim pellentesque ornare pharetra faucibs arcu. Mauris blandit egestas nibh.",
-    name: "Loki Bright",
-    position: "Founder, Bitcoin (BTC)",
+      "I came for the blockchain insights but stayed for the reading of Mutual Aid through a crypto lens. It's rare to find a space that links financial autonomy to literary critique so effortlessly.",
+    name: "Marcus Chen",
   },
   {
     icon: "/icons/avatar3.svg",
     testimonial:
-      "Quis neque, eu et ipsum amet, vel et. Varius integer enim pellentesque ornare pharetra faucibs arcu. Mauris blandit egestas nibh.",
-    name: "Loki Bright",
-    position: "Founder, Bitcoin (BTC)",
+      "Their session on The Dispossessed as a proto-whitepaper for decentralized futures changed how I approach both fiction and code. Mental Wealth Academy collapses the false binary between literature and ledgers.",
+    name: "Jamal Washington",
   },
   {
     icon: "/icons/avatar4.svg",
     testimonial:
-      "Quis neque, eu et ipsum amet, vel et. Varius integer enim pellentesque ornare pharetra faucibs arcu. Mauris blandit egestas nibh.",
-    name: "Loki Bright",
-    position: "Founder, Bitcoin (BTC)",
+      "The platform's approach to crypto isn't speculative hype but political infrastructure. Studying post-capitalist texts alongside wallet tutorials gave me both tools and vision.",
+    name: "Sophia Rodriguez",
   },
   {
     icon: "/icons/avatar5.svg",
     testimonial:
-      "Quis neque, eu et ipsum amet, vel et. Varius integer enim pellentesque ornare pharetra faucibs arcu. Mauris blandit egestas nibh.",
-    name: "Loki Bright",
-    position: "Founder, Bitcoin (BTC)",
+      "The book club on Debt: The First 5,000 Years helped me understand smart contracts as rituals, not just code. Mental Wealth Academy doesn't teach crypto, it teaches context.",
+    name: "Noah Kingsley",
   },
   {
     icon: "/icons/avatar6.svg",
     testimonial:
-      "Quis neque, eu et ipsum amet, vel et. Varius integer enim pellentesque ornare pharetra faucibs arcu. Mauris blandit egestas nibh.",
-    name: "Loki Bright",
-    position: "Founder, Bitcoin (BTC)",
+      "I joined out of curiosity and left with a reading list that felt like a manifesto. This is one of the few places where learning about web3 actually feels liberating.",
+    name: "Anika Patel",
   },
 ];
 
@@ -92,7 +86,7 @@ export const Faq = [
     icon: "/icons/instant.svg",
     question: "Instant-Access To Interesting Content",
     answer:
-      "Traditional education requires applications, waitlists, and scheduled semesters. Here, learning starts the moment you’re ready. Whether you’re picking up a new skill or deepening your expertise, all resources are available immediately—no delays, no barriers.",
+      "Traditional education requires applications, waitlists, and scheduled semesters. Here, learning starts the moment you're ready. Whether you're picking up a new skill or deepening your expertise, all resources are available immediately—no delays, no barriers.",
   },
   {
     icon: "/icons/learn.svg",
@@ -104,7 +98,7 @@ export const Faq = [
     icon: "/icons/paint-brush.svg",
     question: "Highest Quality & Standards Assured",
     answer:
-      "Many online learning platforms lack credibility or don’t offer proof of achievement. Here, credentials are verified and stored securely, making it easy to prove your skills without needing approval from a third party.",
+      "Many online learning platforms lack credibility or don't offer proof of achievement. Here, credentials are verified and stored securely, making it easy to prove your skills without needing approval from a third party.",
   },
   {
     icon: "/icons/puzzle.svg",
